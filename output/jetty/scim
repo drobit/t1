@@ -1,0 +1,12 @@
+JAVA_HOME=/opt/jre
+JAVA=$JAVA_HOME/bin/java
+JAVA_OPTIONS="-server -Xms256m -Xmx592m -XX:MaxMetaspaceSize=128m -XX:+DisableExplicitGC -Dgluu.base=/etc/gluu -Dserver.base=/opt/gluu/jetty/scim -Dlog.base=/opt/gluu/jetty/scim -Dpython.home=/opt/jython"
+
+JETTY_HOME=/opt/jetty
+JETTY_BASE=/opt/gluu/jetty/scim
+JETTY_USER=jetty
+JETTY_ARGS="jetty.http.host=localhost jetty.http.port=8087"
+TMPDIR=/opt/jetty-9.4/temp
+
+export PYTHON_HOME=/opt/jython
+

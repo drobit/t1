@@ -1,0 +1,1452 @@
+14:39:52 08/21/20 Removed /install/community-edition-setup/setup.log
+14:39:52 08/21/20 Removed /install/community-edition-setup/setup_error.log
+14:39:52 08/21/20 Installing Gluu Server
+14:39:52 08/21/20 Determining key generator path
+14:41:16 08/21/20 Calculating memory setting for applications
+14:41:21 08/21/20 Checking properties
+14:41:21 08/21/20 Rendering template /install/community-edition-setup/templates/system_profile_systemd
+14:41:21 08/21/20 Writing file /install/community-edition-setup/output/system_profile_systemd
+14:41:21 08/21/20 Running: cp -f /etc/profile /etc/profile.gluu-4.2.0-1~
+14:41:21 08/21/20 Writing file /etc/profile
+14:41:21 08/21/20 Running: cp -f /etc/profile /etc/profile.gluu-4.2.0-2~
+14:41:21 08/21/20 Running: /bin/chmod 644 /etc/profile
+14:41:21 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/bash --create-home --home-dir /home/ldap ldap
+14:41:21 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/bash --create-home --home-dir /home/jetty jetty
+14:41:21 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/bash --create-home --home-dir /home/node node
+14:41:22 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/false --create-home --home-dir /opt/gluu/radius radius
+14:41:22 08/21/20 Running: /usr/sbin/groupadd gluu
+14:41:22 08/21/20 Running: /usr/sbin/usermod -a -G gluu ldap
+14:41:22 08/21/20 Running: /usr/sbin/usermod -a -G gluu jetty
+14:41:22 08/21/20 Running: /usr/sbin/usermod -a -G gluu node
+14:41:22 08/21/20 Running: /usr/sbin/usermod -a -G gluu radius
+14:41:22 08/21/20 Running: /usr/sbin/usermod -a -G adm ldap
+14:41:22 08/21/20 Running: /bin/chmod ga+w /tmp
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/gluu
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/gluu/bin
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/gluu/system
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/gluu/python
+14:41:22 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf
+14:41:22 08/21/20 Running: /bin/mkdir -p /etc/certs
+14:41:22 08/21/20 Running: /bin/mkdir -p /install/community-edition-setup/output
+14:41:22 08/21/20 Running: /bin/mkdir -p /home/jetty/lib
+14:41:22 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2
+14:41:22 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//authenticator_cert
+14:41:22 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//mds/cert
+14:41:22 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//mds/toc
+14:41:22 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//server_metadata
+14:41:22 08/21/20 Running: /bin/mkdir -m 775 -p /var/gluu/photos
+14:41:22 08/21/20 Running: /bin/mkdir -m 775 -p /var/gluu/identity/removed
+14:41:22 08/21/20 Running: /bin/mkdir -m 775 -p /var/gluu/identity/cr-snapshots
+14:41:22 08/21/20 Running: /bin/chown -R root:gluu /var/gluu/photos
+14:41:22 08/21/20 Running: /bin/chown -R root:gluu /var/gluu/identity/removed
+14:41:22 08/21/20 Running: /bin/chown -R root:gluu /var/gluu/identity/cr-snapshots
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/metadata
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/metadata/credentials
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/logs
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/lib
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/conf
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/conf/authn
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/credentials
+14:41:22 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/webapp
+14:41:22 08/21/20 Running: /bin/chown -R jetty:jetty /opt/shibboleth-idp
+14:41:22 08/21/20 Running: /usr/bin/wget https://ox.gluu.org/maven/org/gluu/oxauth-rp/4.2.0.Final/oxauth-rp-4.2.0.Final.war --no-verbose --retry-connrefused --tries=10 -O /opt/dist/gluu/oxauth-rp.war
+14:41:23 08/21/20 2020-08-21 14:41:23 URL:https://ox.gluu.org/maven/org/gluu/oxauth-rp/4.2.0.Final/oxauth-rp-4.2.0.Final.war [35858131/35858131] -> "/opt/dist/gluu/oxauth-rp.war" [1]
+
+14:41:23 08/21/20 Calculating memory setting for applications
+14:41:23 08/21/20 Installing server JRE amazon-corretto-11-x64-linux-jdk.tar.gz ...
+14:41:23 08/21/20 Extracting amazon-corretto-11-x64-linux-jdk.tar.gz into /opt/
+14:41:23 08/21/20 Running: tar -xzf /opt/dist/app/amazon-corretto-11-x64-linux-jdk.tar.gz -C /opt/ --no-xattrs --no-same-owner --no-same-permissions
+14:41:27 08/21/20 Running: /bin/ln -sf /opt/amazon-corretto-11.0.7.10.1-linux-x64 /opt/jre
+14:41:27 08/21/20 Running: /bin/chmod -R 755 /opt/amazon-corretto-11.0.7.10.1-linux-x64/bin/
+14:41:27 08/21/20 Running: /bin/chown -R root:root /opt/amazon-corretto-11.0.7.10.1-linux-x64
+14:41:27 08/21/20 Running: /bin/chown -h root:root /opt/jre
+14:41:27 08/21/20 Running: /bin/mkdir -p /opt/jre/jre
+14:41:27 08/21/20 Running: /bin/ln -s /opt/jre/lib /opt/jre/jre/lib
+14:41:27 08/21/20 Running: sed -i /^#crypto.policy=unlimited/s/^#// /opt/jre/conf/security/java.security
+14:41:27 08/21/20 Installing jetty %s...
+14:41:27 08/21/20 Running: /bin/mkdir -p /opt/jetty-9.4/temp
+14:41:27 08/21/20 Running: /bin/chown -R jetty:jetty /opt/jetty-9.4/temp
+14:41:27 08/21/20 Extracting /opt/dist/app/jetty-distribution-9.4.26.v20200117.tar.gz into /opt/jetty
+14:41:27 08/21/20 Running: tar -xzf /opt/dist/app/jetty-distribution-9.4.26.v20200117.tar.gz -C /opt/jetty-9.4 --no-xattrs --no-same-owner --no-same-permissions
+14:41:27 08/21/20 Running: /bin/ln -sf /opt/jetty-9.4/jetty-distribution-9.4.26.v20200117 /opt/jetty
+14:41:27 08/21/20 Running: /bin/chmod -R 755 /opt/jetty-9.4/jetty-distribution-9.4.26.v20200117/bin/
+14:41:27 08/21/20 Applying changes to jetty files...
+14:41:27 08/21/20 Writing file /opt/jetty/etc/webdefault.xml.bak
+14:41:27 08/21/20 Created backup of jetty file /opt/jetty/etc/webdefault.xml.bak...
+14:41:27 08/21/20 Writing file /opt/jetty/etc/webdefault.xml
+14:41:27 08/21/20 Running: cp -f /opt/jetty/etc/webdefault.xml /opt/jetty/etc/webdefault.xml.gluu-4.2.0-1~
+14:41:27 08/21/20 Wrote updated jetty file /opt/jetty/etc/webdefault.xml...
+14:41:27 08/21/20 Writing file /opt/jetty/etc/jetty.xml.bak
+14:41:27 08/21/20 Created backup of jetty file /opt/jetty/etc/jetty.xml.bak...
+14:41:27 08/21/20 Writing file /opt/jetty/etc/jetty.xml
+14:41:27 08/21/20 Running: cp -f /opt/jetty/etc/jetty.xml /opt/jetty/etc/jetty.xml.gluu-4.2.0-1~
+14:41:27 08/21/20 Wrote updated jetty file /opt/jetty/etc/jetty.xml...
+14:41:27 08/21/20 Running: /bin/chown -R jetty:jetty /opt/jetty-9.4/jetty-distribution-9.4.26.v20200117
+14:41:27 08/21/20 Running: /bin/chown -h jetty:jetty /opt/jetty
+14:41:27 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty
+14:41:27 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty
+14:41:27 08/21/20 Running: /bin/mkdir -p /var/run/jetty
+14:41:27 08/21/20 Running: /bin/chmod -R 775 /var/run/jetty
+14:41:27 08/21/20 Running: /bin/chgrp -R jetty /var/run/jetty
+14:41:27 08/21/20 Running: rm -rf /opt/jetty/bin/jetty.sh
+14:41:27 08/21/20 Copying file /install/community-edition-setup/static/system/initd/jetty.sh to /opt/jetty/bin/jetty.sh
+14:41:27 08/21/20 Copied /install/community-edition-setup/static/system/initd/jetty.sh to /opt/jetty/bin/jetty.sh
+14:41:27 08/21/20 Running: /bin/chown -R jetty:jetty /opt/jetty/bin/jetty.sh
+14:41:27 08/21/20 Running: /bin/chmod -R 755 /opt/jetty/bin/jetty.sh
+14:41:27 08/21/20 Installing Jython
+14:41:27 08/21/20 Running: rm -rf /opt*-2.7.2
+14:41:27 08/21/20 Running: /opt/jre/bin/java -jar /opt/dist/app/jython-installer-2.7.2.jar -v -s -d /opt/jython-2.7.2 -t standard -e ensurepip
+14:41:30 08/21/20 system properties dumped to /tmp/System17101142602303368381.properties
+reading jar info
+using the console installer
+Performing silent installation
+specification version: '11'
+excluding directory META-INF/
+excluding directory extlibs/
+excluding directory grammar/
+excluding directory org/
+excluding directory org/apache/
+excluding directory org/apache/commons/
+excluding directory org/apache/commons/cli/
+excluding directory org/python/
+excluding directory org/python/util/
+excluding directory org/python/util/install/
+excluding directory org/python/util/install/driver/
+excluding directory src/
+excluding directory src/com/
+excluding directory src/com/xhaus/
+excluding directory src/com/xhaus/modjy/
+excluding directory src/com/ziclix/
+excluding directory src/com/ziclix/python/
+excluding directory src/com/ziclix/python/sql/
+excluding directory src/com/ziclix/python/sql/connect/
+excluding directory src/com/ziclix/python/sql/handler/
+excluding directory src/com/ziclix/python/sql/pipe/
+excluding directory src/com/ziclix/python/sql/pipe/csv/
+excluding directory src/com/ziclix/python/sql/pipe/db/
+excluding directory src/com/ziclix/python/sql/procedure/
+excluding directory src/com/ziclix/python/sql/resource/
+excluding directory src/com/ziclix/python/sql/util/
+excluding directory src/org/
+excluding directory src/org/python/
+excluding directory src/org/python/antlr/
+excluding directory src/org/python/antlr/adapter/
+excluding directory src/org/python/antlr/ast/
+excluding directory src/org/python/antlr/base/
+excluding directory src/org/python/antlr/op/
+excluding directory src/org/python/compiler/
+excluding directory src/org/python/core/
+excluding directory src/org/python/core/adapter/
+excluding directory src/org/python/core/buffer/
+excluding directory src/org/python/core/finalization/
+excluding directory src/org/python/core/io/
+excluding directory src/org/python/core/packagecache/
+excluding directory src/org/python/core/stringlib/
+excluding directory src/org/python/core/util/
+excluding directory src/org/python/expose/
+excluding directory src/org/python/expose/generate/
+excluding directory src/org/python/indexer/
+excluding directory src/org/python/indexer/ast/
+excluding directory src/org/python/indexer/demos/
+excluding directory src/org/python/indexer/types/
+excluding directory src/org/python/jsr223/
+excluding directory src/org/python/modules/
+excluding directory src/org/python/modules/_collections/
+excluding directory src/org/python/modules/_csv/
+excluding directory src/org/python/modules/_functools/
+excluding directory src/org/python/modules/_io/
+excluding directory src/org/python/modules/_json/
+excluding directory src/org/python/modules/_jythonlib/
+excluding directory src/org/python/modules/_locale/
+excluding directory src/org/python/modules/_threading/
+excluding directory src/org/python/modules/_weakref/
+excluding directory src/org/python/modules/bz2/
+excluding directory src/org/python/modules/itertools/
+excluding directory src/org/python/modules/jffi/
+excluding directory src/org/python/modules/posix/
+excluding directory src/org/python/modules/random/
+excluding directory src/org/python/modules/sre/
+excluding directory src/org/python/modules/thread/
+excluding directory src/org/python/modules/time/
+excluding directory src/org/python/modules/zipimport/
+excluding directory src/org/python/util/
+excluding directory src/shell/
+excluding directory src/templates/
+ 10 %
+ 20 %
+ 30 %
+ 40 %
+ 50 %
+ 60 %
+ 70 %
+ 80 %
+ 90 %
+ 100 %
+ 110 %
+ 120 %
+ 130 %
+ 140 %
+ 150 %
+Generating start scripts ...
+ 100 %
+Congratulations! You successfully installed Jython 2.7.2 to directory /opt/jython-2.7.2.
+
+14:41:30 08/21/20 Running: /bin/ln -sf /opt/jython-2.7.2 /opt/jython
+14:41:30 08/21/20 Running: /bin/chown -R root:root /opt/jython-2.7.2
+14:41:30 08/21/20 Running: /bin/chown -h root:root /opt/jython
+14:41:30 08/21/20 Installing node %s...
+14:41:30 08/21/20 Extracting /opt/dist/app/node-v12.6.0-linux-x64.tar.xz into /opt
+14:41:30 08/21/20 Running: tar -xJf /opt/dist/app/node-v12.6.0-linux-x64.tar.xz -C /opt/ --no-xattrs --no-same-owner --no-same-permissions
+14:41:32 08/21/20 Running: /bin/ln -sf /opt/node-v12.6.0-linux-x64 /opt/node
+14:41:32 08/21/20 Running: /bin/chmod -R 755 /opt/node-v12.6.0-linux-x64/bin/
+14:41:32 08/21/20 Running: /bin/mkdir -p /opt/node/temp
+14:41:32 08/21/20 Copying file /install/community-edition-setup/static/system/initd/node to /opt/gluu/system
+14:41:32 08/21/20 Copied /install/community-edition-setup/static/system/initd/node to /opt/gluu/system
+14:41:32 08/21/20 Copying file /install/community-edition-setup/static/system/initd/passport to /opt/gluu/system
+14:41:32 08/21/20 Copied /install/community-edition-setup/static/system/initd/passport to /opt/gluu/system
+14:41:32 08/21/20 Running: /bin/chmod -R 755 /opt/gluu/system/node
+14:41:32 08/21/20 Running: /bin/chmod -R 755 /opt/gluu/system/passport
+14:41:32 08/21/20 Running: /bin/chown -R node:node /opt/node-v12.6.0-linux-x64
+14:41:32 08/21/20 Running: /bin/chown -h node:node /opt/node
+14:41:32 08/21/20 Running: /bin/mkdir -p /opt/gluu/node
+14:41:32 08/21/20 Running: /bin/chown -R node:node /opt/gluu/node
+14:41:32 08/21/20 Copying script files
+14:41:32 08/21/20 Copying file /install/community-edition-setup/static/scripts/logmanager.sh to /opt/gluu/bin
+14:41:32 08/21/20 Copied /install/community-edition-setup/static/scripts/logmanager.sh to /opt/gluu/bin
+14:41:32 08/21/20 Copying file /install/community-edition-setup/static/scripts/testBind.py to /opt/gluu/bin
+14:41:32 08/21/20 Copied /install/community-edition-setup/static/scripts/testBind.py to /opt/gluu/bin
+14:41:32 08/21/20 Rendering encode.py
+14:41:32 08/21/20 Running: /bin/chmod -R 700 /opt/gluu/bin
+14:41:32 08/21/20 Encoding passwords
+14:41:33 08/21/20 Encoding test passwords
+14:41:33 08/21/20 Rendering template /install/community-edition-setup/templates/passport_oxtrust_config.son
+14:41:33 08/21/20 Writing file /install/community-edition-setup/output/passport_oxtrust_config.son
+14:41:33 08/21/20 Installing Gluu base...
+14:41:33 08/21/20 Generating oxAuth OpenID Connect keys
+14:41:33 08/21/20 Creating empty JKS keystore
+14:41:33 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/api-rs.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+14:41:34 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/api-rs.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+14:41:34 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rs.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:34 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rs.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:39 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "c4918c7c-319a-4416-a735-4d0d35176590_sig_rs256",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAJedphxwHP91tPhiCMkno7DTOp7D2cZ79yMNSEk74ohTMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTI2WhcNMjEwODIxMTQ0MTM1WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq00sWa1B4Ja7wvRCanbUnrENbXJ/P3i+ZFngbAczsUiMDx/e5IMikpo0LSsklHlZB3m2MmtY81A5dqe1503aUAn1I7n32nvJrF9GIDHj9SsHe78jyaKMAjTX3cYtdkF+mTEssuDAHx7f8Y47I18kOzL6lXVUmwZp/1ewtVYImWJdlBXOehARibr5D4dADeFgvrF8NlcEHYQWKXVHWf48Pib0Tz7pTyGWfZ9Wq5CwgL0s6RUwTn8sHItLPe5hbKXiQ2zrvzUg7jNzmgVUp3DWCCV10PFZH7bpsWHV4ikxFUAQR8w+mbadUVGh0bU+bjjRQ6J/r+n50J65UN/B+Xn99QIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQELBQADggEBAFdAo/MuGTCbfjne5fUfqJ01ZoIUO/4kYf60sabexDDU5ezofq6j8CpSHSvKS3j3kG5RFOwcayCKdwXwUu6+bdQQHgzZlQD0DXmNTfVIgcNUI/4Ax9Z18jcFaLRbX+5DMczHu0Z0ejzy1ccflKoBMfXLmw/Ozr2kSt2XxA0zJr4fODKFhtibwUMVB3FeFhyC3MhlZugkwpZMgzbT2XZhSs6aItppucvh/s4TBNjita2QImjAwFWbTiWhXOdVRx0jM33Ul4dSGkOkh7uTC49lUiwg2vaFmmUrvqL2EPGvrvghlFaSwdO0FEYVzHnOt/GW9nn7GvcwK/Rmk/SjAJCOEFs=" ],
+    "exp" : 1629556895922,
+    "alg" : "RS256",
+    "n" : "q00sWa1B4Ja7wvRCanbUnrENbXJ_P3i-ZFngbAczsUiMDx_e5IMikpo0LSsklHlZB3m2MmtY81A5dqe1503aUAn1I7n32nvJrF9GIDHj9SsHe78jyaKMAjTX3cYtdkF-mTEssuDAHx7f8Y47I18kOzL6lXVUmwZp_1ewtVYImWJdlBXOehARibr5D4dADeFgvrF8NlcEHYQWKXVHWf48Pib0Tz7pTyGWfZ9Wq5CwgL0s6RUwTn8sHItLPe5hbKXiQ2zrvzUg7jNzmgVUp3DWCCV10PFZH7bpsWHV4ikxFUAQR8w-mbadUVGh0bU-bjjRQ6J_r-n50J65UN_B-Xn99Q"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "fcbb5926-feb1-4afe-95b3-ce31df04bfe3_sig_rs384",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAIHboRgeFdhf2KE4ZvxsMOAa83NFfv/yTSjv2dkfrRvCMA0GCSqGSIb3DQEBDAUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTI3WhcNMjEwODIxMTQ0MTM1WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArGFzeQL23FhGgwJmz5oJxKZtptg5I+UTXw9A7bFdzTlpuPmE9s2kykmCv/9Ys09RtxsN8i1kn1UKG9XuzGGfzwkdZDHS57KpH2RUo24da3e9/NITnu/rX7ssCQyVsEbjPk8s8BcvehUwL8ypjHECLS4W3DJ2Us7keWWaQc8sLWKfnRbhnJpIqWQ0Uy0EZC5EdNxW9Taln/ovymuESnL/Lm3fRkeZLkTKHzg5iQYkjQNpm6Uz+DfbLKU8nq+LtP/5H5+pKfKFFMvnO2G6gvOvX9dyp8jnCQnwncVxGpBZoRpuiYHZRaBrCCua5WKAvzxQF5h7rUKt5FFibbsNg+9YIQIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQEMBQADggEBAJyHqu8vQEdttSIQmlac6t8I3jgSbQx88Ik4HCnx0PuwFH/VTosuHrfqBc9mXQ8L9c5/jdp2TjI+srR56iYDxO5muk9sR3JAx3hGaUN81oDwnIwxWDS35OFhvVkfU1JiLaY8FsEdyrKbvbBYIh9b9gzL1T6SPcz6Bwra1UHswY7Ua9FzFomal7bTo4SVku7Ln8AZKE7vnwxxWvc/n80ll58HHUJPPMg71RoqxR2KwmffTsGcAgThYsT/Jf6HBg4pMFhohc7tLMwabzA1gy6HCTrwbTuAa5jbFvwfcqbK5HUL4+QPuCB8dkL14JqCAMljoBBZJmLNQ1Na1nh13P03zLI=" ],
+    "exp" : 1629556895922,
+    "alg" : "RS384",
+    "n" : "rGFzeQL23FhGgwJmz5oJxKZtptg5I-UTXw9A7bFdzTlpuPmE9s2kykmCv_9Ys09RtxsN8i1kn1UKG9XuzGGfzwkdZDHS57KpH2RUo24da3e9_NITnu_rX7ssCQyVsEbjPk8s8BcvehUwL8ypjHECLS4W3DJ2Us7keWWaQc8sLWKfnRbhnJpIqWQ0Uy0EZC5EdNxW9Taln_ovymuESnL_Lm3fRkeZLkTKHzg5iQYkjQNpm6Uz-DfbLKU8nq-LtP_5H5-pKfKFFMvnO2G6gvOvX9dyp8jnCQnwncVxGpBZoRpuiYHZRaBrCCua5WKAvzxQF5h7rUKt5FFibbsNg-9YIQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "8c3caeee-c424-4462-95a5-0ea1fd4e3945_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgBb6cGIS0l+0RdrQeEyCrj1/XQfCdAhsTZqTZxVH0tjowDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxMjdaFw0yMTA4MjExNDQxMzVaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC0T8xtZt3H6j6fxBvsO7nUG6npselvin9CX95myKKv7AyxDOYgToDqN+3dQ6/qGvllB6CSBTj3NV8EeEUc39bb6z4SpzVr0a+nDEXTNP4qXrOCdygo/OQ6Z92S+JTzNkJcY/FvveQ/RlVC+BJsDgF4UwCIZ2T+toSIfEjHWRW7azSAguupUWR0oVGvm7QZh2LM9jMLRh2GAn83pTJ6pOpCG0hr6Sia4qEFCgggpNB3wL1nn2vor3QuwhLlEJd6gAIOwOakSO5YUBQp17J0g9c6UkzeiYoGo1HzseDVqTEbZzkbXaJaD/N2GdikF5UclAFl4n+plg5vMfUJDbbss1CjAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEAGF8WsrctSnzZKwS1ctIqv9w6DXLtjBIG7yvMHcwsj5iGSLSclgRlKsieuC5+R9HfIGBw2yvkLupo12z62+tWNpaTV2RsW6idHZGqeDqUUxMIfqS1u9SS6shJCiC3GlP5DfszrI/xbvvYXoiVhvOudSEaxDBTTlnUX0jSBm/CH3Cpi2mSGTvAiX8fg8PLf9jinYl2EY6bL4dsOqkSKdpD9o2+5sNJMqyfPlqLM1xei8O0ry3o5S/t9tuYWfFV26NED2qO5oSXlmobXnXWcsv0QqAHhnn39AlU10Lpt2akT3jWXqUjMULpUL5hsNrPaTjPvNHP5IFg7GrV16yrvhq9sA==" ],
+    "exp" : 1629556895922,
+    "alg" : "RS512",
+    "n" : "tE_MbWbdx-o-n8Qb7Du51Bup6bHpb4p_Ql_eZsiir-wMsQzmIE6A6jft3UOv6hr5ZQegkgU49zVfBHhFHN_W2-s-Eqc1a9GvpwxF0zT-Kl6zgncoKPzkOmfdkviU8zZCXGPxb73kP0ZVQvgSbA4BeFMAiGdk_raEiHxIx1kVu2s0gILrqVFkdKFRr5u0GYdizPYzC0YdhgJ_N6UyeqTqQhtIa-komuKhBQoIIKTQd8C9Z59r6K90LsIS5RCXeoACDsDmpEjuWFAUKdeydIPXOlJM3omKBqNR87Hg1akxG2c5G12iWg_zdhnYpBeVHJQBZeJ_qZYObzH1CQ227LNQow"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "06c4e8c8-e697-4f11-9bc3-6133d64314bf_sig_es256",
+    "x5c" : [ "MIIBdzCCAR6gAwIBAgIhAOidHv0Ya0USyOxmIwyFkA8c0TQRHKhj2+py82tqFMUsMAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTI4WhcNMjEwODIxMTQ0MTM1WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEn0a8YQ8CY1IfDNiN6wMU6xvOxVJaY4tfCvdydChQ/SLW5+wmBQQabhOjPUc63V+kDB614ZJcARGCQ9NqnJjXf6MnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0cAMEQCIDfj9+3FV1sMmf/kGqvsqLNxipYgfeH9fXAN8g6kqqFgAiBPROIVjwernrWUWc9V4ZKs/yWJnkTrU5EVumoeVEOJUA==" ],
+    "x" : "n0a8YQ8CY1IfDNiN6wMU6xvOxVJaY4tfCvdydChQ_SI",
+    "y" : "1ufsJgUEGm4Toz1HOt1fpAweteGSXAERgkPTapyY138",
+    "exp" : 1629556895922,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "73041ad0-f95d-4036-8c33-98926b663451_sig_es384",
+    "x5c" : [ "MIIBtTCCATugAwIBAgIhALfQevlwTZAAcq/U/eUgrjeC26mgavC6IZRH50gDE8TIMAoGCCqGSM49BAMDMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTI4WhcNMjEwODIxMTQ0MTM1WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEzetoVrO8k3YVjtCeNDosMZJ9jk5RbXH0O2avot+KCSlpg3ERT4gOS7zdUM5Cu6HxTjCb3TxuHpkJNPwsnGbK0aRO7Y4vzdxJ6cMwslfWCQVKvyUE/fiGxcBPsZ0psdt/oycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwCgYIKoZIzj0EAwMDaAAwZQIwaKFcxY2lF79u6G5uIBO6SOLy238FXq4IzDr3e9DOpVr9Vjz4068ylEBXg6II/vQ0AjEAh8/RduPNyqBsroS6uEnYHI8uOiahqP/6Q3kByFpmioAmaBM5oy4aoC7O0ghoaMXO" ],
+    "x" : "zetoVrO8k3YVjtCeNDosMZJ9jk5RbXH0O2avot-KCSlpg3ERT4gOS7zdUM5Cu6Hx",
+    "y" : "TjCb3TxuHpkJNPwsnGbK0aRO7Y4vzdxJ6cMwslfWCQVKvyUE_fiGxcBPsZ0psdt_",
+    "exp" : 1629556895922,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "c4060963-3ed8-4177-90ae-b7f5dc88b914_sig_es512",
+    "x5c" : [ "MIICADCCAWGgAwIBAgIhAJglchJXN9sNOttbqc9luTrnYxE99/+fq3S9PyJegbAZMAoGCCqGSM49BAMEMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTI4WhcNMjEwODIxMTQ0MTM1WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQB/EMKt+bR6uEw9/5SvN092VeUrwil3I/FIg0VZJ3O7aiAkWu5wvokdqK+eQxl/YzulLK1XBUS50eUoC1BjMZmwFcBAfStJnKu5g75x9E5Gb7PBqRbsGH6KJoGDzH86x5pzp8q2+UiFXpLOUK3jz0/cbnCqOBNXJMb4df/gWCN8NQnRY6jJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDBAOBjAAwgYgCQgEaRNpkn0hxa2gspPo68IFRiJo1qIIApQQMZ3HMY3S7MbwXMY6grROIwgn/41GElfaW62ibLlAGKcvi+nMXecUeswJCAR6gJCMZKZgH/r9TrTBiSDwFa2duiyOZeyDyTAoK8W0pJt3PnqXviF4kyzR+lW4mZEhn2bh5JHuBjnwoZQmGPaG1" ],
+    "x" : "AfxDCrfm0erhMPf-UrzdPdlXlK8IpdyPxSINFWSdzu2ogJFrucL6JHaivnkMZf2M7pSytVwVEudHlKAtQYzGZsBX",
+    "y" : "AQH0rSZyruYO-cfRORm-zwakW7Bh-iiaBg8x_Oseac6fKtvlIhV6SzlCt489P3G5wqjgTVyTG-HX_4FgjfDUJ0WO",
+    "exp" : 1629556895922,
+    "alg" : "ES512"
+  } ]
+}
+
+14:41:39 08/21/20 Generating oxAuth OpenID Connect keys
+14:41:39 08/21/20 Creating empty JKS keystore
+14:41:39 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/api-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+14:41:39 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/api-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+14:41:40 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:40 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:44 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "b8902074-6b4a-40e8-9eca-9c7c055e0d36_sig_rs256",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgFF8Tqk7cQOC+CxpsdgKCZRbhfv6eLwnmz556wWqoDDMwDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxMzJaFw0yMTA4MjExNDQxNDFaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDzkUrNgWEGVQgzJPZTPqRULxN3nenLYbpPnjQR+DMTRs+y68xzQWildGHrwKR08hGMfXMxJBOMG05m4bgAhSfEongkxasD/FV7F2FUl7+p3NiN7VRrM/AhuGMmZzWLvtm5YMhaTHd5mYJ/n9Np7+xkMs2Twk6bQn0QygM6lxIW4fXcMB7CTbBAIe5ohEN5L64lO/Ue4g+Y1mhrfkxMjnzfvcKcoIYZnzC0r3r+fot0YzcqbAcK9VSkjweydxQbMvkrtJsPkkrSkRUv+auEYcVeH65Kj2QQAiB9t7DcitDbTFJcmyekXK9E27ayrGjt2PCD/Nr0KjfL5Icj9lyTpfGHAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAuQNvhs40rY0z3cSLVrX9iQwfVx3EicF+hh5ntkUKYOBYKTsb3eygROFAI7p8lN2R70ECCyNEcHEfmLek21SH/etnRC2uFzFmYT2Cre5GgMNwCDS4RLoisQ6m4cBSP0hfSkeIEwU3229uW8Md3lAXpvCPQzhn8Aj8p8wOkTpZdLmo9I0PRcIth+Mv+VcKtbncXRJL3iZDlRKKzB2JmaEnQkIUIV6zzToaV/MsDC3xAj4Y/BaiAtzct9FzPMJPcZTHHleOfM0BiIPVFxFnXAtkVoN9A+2+olCZ3me0/fQln2er9f4oT6RXF4rRCWrYIYB0cyKjULcViVbazT5fWnYlDg==" ],
+    "exp" : 1629556901521,
+    "alg" : "RS256",
+    "n" : "85FKzYFhBlUIMyT2Uz6kVC8Td53py2G6T540EfgzE0bPsuvMc0FopXRh68CkdPIRjH1zMSQTjBtOZuG4AIUnxKJ4JMWrA_xVexdhVJe_qdzYje1UazPwIbhjJmc1i77ZuWDIWkx3eZmCf5_Tae_sZDLNk8JOm0J9EMoDOpcSFuH13DAewk2wQCHuaIRDeS-uJTv1HuIPmNZoa35MTI58373CnKCGGZ8wtK96_n6LdGM3KmwHCvVUpI8HsncUGzL5K7SbD5JK0pEVL_mrhGHFXh-uSo9kEAIgfbew3IrQ20xSXJsnpFyvRNu2sqxo7djwg_za9Co3y-SHI_Zck6Xxhw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "35feec52-71f1-4b03-8364-be97fbde0c97_sig_rs384",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhALaHKL+RnYfSyYTp03XOw87LMMwVmnTcPoB10ZoLJaN5MA0GCSqGSIb3DQEBDAUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTMyWhcNMjEwODIxMTQ0MTQxWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApuW1oLYnZHmF/ctX5JCSzqOqhihc3CTkwhgqwtErq5wGy5KHceuFGCAIFFGkbyLMWThQnjGp1zTiZFzSehZkOsIGlOiZ32btDcHSM/R2mtCoDptzh5ml7oib0pr1so2v6khxKqK9pSih5/41f2pnqxZsyzhOm72C1iVgflokEoOolDBeBwmg97VekoYdCrqQ8uIYFTPMx6489e/Mq/knnLPX1CIowBMwUx2DM+H4RuX3m9mcV3mtMyUyagrGBnEGR46rHEHs0vMpfhz99354uUHDxSh1g3UamUQ4f/49/vVqBHNRug/aC8w/D6TzRwCIBsGKu5MnZU/lyFjRnnov2QIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQEMBQADggEBAHOBpCwCPxVNIbxGjUq1zXwNcYEPNDsmlxIX5mesRcLI5bU76pg2pdux2bTjqjk++Bvs1RMMcjv93AQ9PtusVbsym2icYP+G5Y7FoTeg38eqsRTYegOB0yCB8Ses0Zc5Ab0A0/I5OmcnQ3Q+nl9JMX8ky0vHg8bibxpAo9n6e73sYhaoJwhCVcWEJVnWg3jJWPWejZ3Xx4KgEYdOSU97/K3b2lamsUsSCj9jEb//Bnd0r12b6vTOuOS4zgVVkzjyQA5XIwz1ChmB+I5bMHc3lUWfnbXBt0H7UoPzGujA+WDrIVMK1rY8z1FzIWAiDYmj6y7Xv61r7pBy/8OOEoOgjtg=" ],
+    "exp" : 1629556901521,
+    "alg" : "RS384",
+    "n" : "puW1oLYnZHmF_ctX5JCSzqOqhihc3CTkwhgqwtErq5wGy5KHceuFGCAIFFGkbyLMWThQnjGp1zTiZFzSehZkOsIGlOiZ32btDcHSM_R2mtCoDptzh5ml7oib0pr1so2v6khxKqK9pSih5_41f2pnqxZsyzhOm72C1iVgflokEoOolDBeBwmg97VekoYdCrqQ8uIYFTPMx6489e_Mq_knnLPX1CIowBMwUx2DM-H4RuX3m9mcV3mtMyUyagrGBnEGR46rHEHs0vMpfhz99354uUHDxSh1g3UamUQ4f_49_vVqBHNRug_aC8w_D6TzRwCIBsGKu5MnZU_lyFjRnnov2Q"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "15a67631-8ffe-405b-a283-b4fda442afca_sig_rs512",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAO11jcdZwrKmcRseswq421maraxOfNCD4/kSXWgpe7t0MA0GCSqGSIb3DQEBDQUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTMzWhcNMjEwODIxMTQ0MTQxWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bi+Bf04UG+DQ2TdCukzv/Q8GurwoC6lIpC7OClL768Q0r2PxZ9I19tI42m4hxNr3gMRxeG5XDGGnZwyVHQeX5YHIodysTGqXmNiiMTizcxcy2u37KtSP8vIQlG0n9gDIw4J939W7bN6eNCDS4FugSLFnC0RyVktB1en7juUwvjoJ1unk2GeUNwPsjCQYsiYdNKKDSxxfyz+irEOH5R9P6bIVXpiv3k25ptK9tvPnLq7ljEnbRPsDrtCvhF4mvZInCv446AI4PAicqTC30MM3PnhkT8bgk0RQoJ3Hv7ZHTyZJlJjQPcw0wap9Sn8IzhMK/nyb8XbHAWCZrko9H3KdQIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQENBQADggEBAIlZgXoU2dl+oIuvii3WdKk+4pPTc0R41FH2pAqSEBtmz7BCGbTlboPZO2hmcOo1NnV2e188F54K/D6CqUQoXlBZp+w55w2PtyJK5NakFoyYA3ChfwI0hNu4c8cVedaL4eMuWD+LyOtPQ4JJneZQ01NAoEcyHH52Zf42vXyYo1wPcwXWntvlk/dN7C4sNvQEo3WnGoGhrDq4T5gg1i/iaK5/GbkvnRdst4s8TGRU3L77Qe+ss4v51LdczIcAfcG/5/+9XH2Kc5cOuPV0qI9yyCynCfAaMuBIcWhOe+658Af9XNWBct8FARN7sxvcPO1cvViUT2/7A5gnc8t1KZPawRc=" ],
+    "exp" : 1629556901521,
+    "alg" : "RS512",
+    "n" : "1bi-Bf04UG-DQ2TdCukzv_Q8GurwoC6lIpC7OClL768Q0r2PxZ9I19tI42m4hxNr3gMRxeG5XDGGnZwyVHQeX5YHIodysTGqXmNiiMTizcxcy2u37KtSP8vIQlG0n9gDIw4J939W7bN6eNCDS4FugSLFnC0RyVktB1en7juUwvjoJ1unk2GeUNwPsjCQYsiYdNKKDSxxfyz-irEOH5R9P6bIVXpiv3k25ptK9tvPnLq7ljEnbRPsDrtCvhF4mvZInCv446AI4PAicqTC30MM3PnhkT8bgk0RQoJ3Hv7ZHTyZJlJjQPcw0wap9Sn8IzhMK_nyb8XbHAWCZrko9H3KdQ"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "121ccbfa-fa80-4fef-83d7-528a3bbab693_sig_es256",
+    "x5c" : [ "MIIBeDCCAR6gAwIBAgIhAP0pSoBYtYPp42JIDmG0lDe2FJnS477MCJyMjxOTLk4KMAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTMzWhcNMjEwODIxMTQ0MTQxWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEmjCH/7JgzTLPdPtc4l9ToiTUSm37BpsCz47Yvg465TiIfpAJLZWsd8aXXI/0T4xZtePZKOzPP37WXsz0F/KMA6MnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0gAMEUCIQCCkRPzkMOHiLoi6fzhKRa4AvTwxPc9yxv025zFGgK8gAIgHIUntpQm5ciiOKZdB4sTOtgkCvoSyrR94qb+zv4zuHI=" ],
+    "x" : "mjCH_7JgzTLPdPtc4l9ToiTUSm37BpsCz47Yvg465Tg",
+    "y" : "iH6QCS2VrHfGl1yP9E-MWbXj2Sjszz9-1l7M9BfyjAM",
+    "exp" : 1629556901521,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "20a73c21-44ca-4013-961d-44f89ad55e2f_sig_es384",
+    "x5c" : [ "MIIBtDCCATqgAwIBAgIgY/QlvpDsEVPk3nUvsProMWlvL9TmcUCynAegxAq7fv8wCgYIKoZIzj0EAwMwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxMzNaFw0yMTA4MjExNDQxNDFaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAATBpHyqxgRdrLRHylWODIAhcFY6Nzvl56KNG/Jzxj1lKEmOKEhzu1WXdEcZbNjm543Ped6aJtOn/3yTLF412CRl7vNh47whTtJOYP2fY/mV39Qo/bs/h7D2s3iuO68Oi/2jJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDAwNoADBlAjEA7q2ff6A2OTB5U9Vt540phb+XgX9EBEdXB4V4HN311Xnk6ZiLztbAu+GUcvrHDyrHAjBTVGuXqS1pK7gYz6AibMmcvG8wBKyCm677JLR5I0lLAT0awvPIBHfzakx2jRv8low=" ],
+    "x" : "waR8qsYEXay0R8pVjgyAIXBWOjc75eeijRvyc8Y9ZShJjihIc7tVl3RHGWzY5ueN",
+    "y" : "z3nemibTp_98kyxeNdgkZe7zYeO8IU7STmD9n2P5ld_UKP27P4ew9rN4rjuvDov9",
+    "exp" : 1629556901521,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "fa190403-b729-4a1b-a28b-6fcc308cac21_sig_es512",
+    "x5c" : [ "MIICADCCAWGgAwIBAgIhAJVEzai0AcR9FeVoi4FGxap4iKyD3uJh7ZPBW07xwFIuMAoGCCqGSM49BAMEMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTMzWhcNMjEwODIxMTQ0MTQxWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQAQHWxl0MWM5HADLZCNXxPEF4L3jBCdczGYcXvcbPXqeE8GxgIcEdJR11VjEtixMew1jC9q8pV7OXy6srymr9mmDkAxKPzHzU5BCQeq7vdjdxkHnPfm9e3ms8s2qIQQV8RjwHVnpfSTUoTqB4KYy0SLeQAigWxh8IFyCXxKoET2bnX2CyjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDBAOBjAAwgYgCQgCoBPs0nGif0a1VLwkLPBmzo+XVzwCV1HcSupJPutvLLpw3DASH/Lp+CTmM67w+oGfprTwlP928bwvKyBwhUy/yZgJCAU4xLMl6DCJy8OEIOsa1DAGcVJ+DE1B7+yAIvzpYP9ceDGXuSZgLQ2uKvMPLm3YdInkacEz3fvuguyKLvrfORrbU" ],
+    "x" : "QHWxl0MWM5HADLZCNXxPEF4L3jBCdczGYcXvcbPXqeE8GxgIcEdJR11VjEtixMew1jC9q8pV7OXy6srymr9mmDk",
+    "y" : "xKPzHzU5BCQeq7vdjdxkHnPfm9e3ms8s2qIQQV8RjwHVnpfSTUoTqB4KYy0SLeQAigWxh8IFyCXxKoET2bnX2Cw",
+    "exp" : 1629556901521,
+    "alg" : "ES512"
+  } ]
+}
+
+14:41:44 08/21/20 Generating oxAuth OpenID Connect keys
+14:41:44 08/21/20 Creating empty JKS keystore
+14:41:44 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/scim-rs.jks -storepass BWebaZzLmGjT -keypass BWebaZzLmGjT -dname "CN=oxAuth CA Certificates"
+14:41:45 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/scim-rs.jks -storepass BWebaZzLmGjT -keypass BWebaZzLmGjT -dname "CN=oxAuth CA Certificates"
+14:41:45 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/scim-rs.jks -keypasswd BWebaZzLmGjT -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:45 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/scim-rs.jks -keypasswd BWebaZzLmGjT -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:49 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "731ed9bd-2b7e-492b-91b4-d1369b4233ab_sig_rs256",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgGlcO2n4cTC0xj4bcnIps8YOSdW0YHRaTXaCVGQQSJn8wDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxMzdaFw0yMTA4MjExNDQxNDZaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDdZWu1WjOjchU3qvbO6gHB3dYM8dPdsKkJsouufrdoBLc6MsHguzLiArrD5fzwheWM6u4/Lh6v4l7l9BIERb3Ccf2PH0lJv4bOA/hU7NmDgNwQnPn+piiHdBHvGKTHNaM/rQH7RM9TLgM8zop7nEH85+5UwdcBAVS/6gkGC7+YrzCbf25uhAy7aySAQnOcc2LqXPd0HRFzcxrZ8Tq4xeuKQjSNgNsLocti40C7d2KfsBg0DNpcvSukEdtVY8Qs3CZW6nLwyomATZ0utexh5jdF8G1ZlBQQ/7nlsLTkOpSYOpQsiuk8d8c2BmJiu6CJgjwCF8xirdpq3G00kTdHLhnjAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAncGF3m7YdWD/8xPz4pIhlvSeZeuLybP7ADUGB4Fpn0sdeUTeS8fqdh0ANQfG73z24FpjoXX2zc+4qaKZeeBB6z+sd9F75IGCN8qAEaXHhYlqZLdv4cD251PVgB4zedW6SbD9mdygxTiz4daregbAtRCuXm74HeEgfDN9s3NVTP+sOzjyaQ5M92OrfRhgmAys3M7aLolR0NSJZjwo8jItZ+vXg0ej0272forXscCnDx+Xj5S9AB+o2DBCD5pE3dv93VGYGF6qokcCizfsUhf9s2w2xAhtRU4L5iYAHXeZwI/D35tGNyt5m60d1gPM+a+BYZX2HYiJbuKLJtDyYvs7ig==" ],
+    "exp" : 1629556906746,
+    "alg" : "RS256",
+    "n" : "3WVrtVozo3IVN6r2zuoBwd3WDPHT3bCpCbKLrn63aAS3OjLB4Lsy4gK6w-X88IXljOruPy4er-Je5fQSBEW9wnH9jx9JSb-GzgP4VOzZg4DcEJz5_qYoh3QR7xikxzWjP60B-0TPUy4DPM6Ke5xB_OfuVMHXAQFUv-oJBgu_mK8wm39uboQMu2skgEJznHNi6lz3dB0Rc3Ma2fE6uMXrikI0jYDbC6HLYuNAu3din7AYNAzaXL0rpBHbVWPELNwmVupy8MqJgE2dLrXsYeY3RfBtWZQUEP-55bC05DqUmDqULIrpPHfHNgZiYrugiYI8AhfMYq3aatxtNJE3Ry4Z4w"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "f8cc859a-8254-44f0-8ba7-6763ef23a5fe_sig_rs384",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgIS7s9ElbcXU6uHS/MzOxVicWNl+B12ZLQLGbPOttDkswDQYJKoZIhvcNAQEMBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxMzdaFw0yMTA4MjExNDQxNDZaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDI+uMhSfdLaFq46ANntsPoZGvaAA67EADPjORHYufA4i1z8oapr9gKJJfD5lRLSbwwXjq2CE8YGsRfEyeCN7B4CRnPEglVlF5KYO9IdfILxk2mCqD9qjwPCYi6HraKs/UvsVUevLWAF0qnkbwG9H7D+DVh5tW8yL6oztdvA50u2Nq/Vkdfw9HhzBHsy+ODOxVTk9DUcBZIAeXdPbPFLCrSt9UbvqznkHp/EtML+bwjIkI+P/34ce3X1KgZ2wPuA4r7FMA9dvNCbgGe00o9BYnxhAWz0sloBKTCKoZDq8aw75qWnMDKb9cwTzvgZndXYSOhPaEUGbO8yFkXg1sbu61lAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQwFAAOCAQEApNl0Dh+EPdwLMN21r0Lr9H6yBUrxXU+1FF+u50nclTQ+3b4IY5zNCffglh3RDET2yt2RDgk6oThxGjmU1j1zTWzLp5sYFytCyYI4v9k25yvOZSRtaG87kWLI0cVdytiVFGa6vxxQ7ysdI7CniMtm4AXNHhMwBgSJHw1IzprH7WF3OTmyjcRmOvvM1EywybcOqCvTzPIqZQx6ElXANMhDw1LSyXnHmRgRv9tYszxhfKXiUlIFj+yT34eeMKbg7IXyV2LdFQfHjPj+lXvxXY9qAYxPH5zK+06f+GUA512hcudJl0JIk6rsLySnqjcLcFlbegiZAix1CSOX7J9Xk1m89w==" ],
+    "exp" : 1629556906746,
+    "alg" : "RS384",
+    "n" : "yPrjIUn3S2hauOgDZ7bD6GRr2gAOuxAAz4zkR2LnwOItc_KGqa_YCiSXw-ZUS0m8MF46tghPGBrEXxMngjeweAkZzxIJVZReSmDvSHXyC8ZNpgqg_ao8DwmIuh62irP1L7FVHry1gBdKp5G8BvR-w_g1YebVvMi-qM7XbwOdLtjav1ZHX8PR4cwR7MvjgzsVU5PQ1HAWSAHl3T2zxSwq0rfVG76s55B6fxLTC_m8IyJCPj_9-HHt19SoGdsD7gOK-xTAPXbzQm4BntNKPQWJ8YQFs9LJaASkwiqGQ6vGsO-alpzAym_XME874GZ3V2EjoT2hFBmzvMhZF4NbG7utZQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "6f8dbaec-8bc8-48b0-9168-bddd9592d246_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgWUOnWUbnUTfb0Xi0IsxWWQyOjCMvqp5ct186Mb22YREwDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxMzhaFw0yMTA4MjExNDQxNDZaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFZKq8L3zcJ4A0XcYIhAiAVo656CS/W6cudAb/az/DS05HXyyQGFH80VMWgJ7/a8Vy9mWJ0kX3W5ZuW5HUwgXB+hhM5G6YIEBY1bnSTCrf2choQDxjjXlyE6LjO5atDw8giVc4X1tjmgeOAoaWqdO4gkYlO6jo6sPuUdGCqFIqDRVU5sK9cJS63c+W2LxPA67BHgVPa04lJ1DC3RfnV0/qCYdSiobw7ZoC8K5Mkp5tR4L9oouSaACuBdouhagt4JFAiNcepyQuMRQVxkYGc+W2VuPDN1CsfKety67GTl1OZEgx5mISt2W06DBSfB7MoaswsAA5h38EFhPzgQJ3bSchAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEASHBFGLHhvRwW0DAsU//W8tvsnanheajTvq5rHDmca8eXaJKRWKvp5q63Os7aLuMj6V6N4QhwvMDsmJQCS8eQEeeYe1SOXhlJx8n4yUIMO7Dq69x+EX7NskWVTfX75ncRh9Je23XrjLrgM6TneC+Gg17X7nAvBxUM5D+j/Fw4TiOt5yFBAkoPfFcqEiEIKHS2GV/iym/bPEzSGgIgQg9CahBIu7JwwnjurU2ocA+BL2XRUnyBhEYWd/ZVoqb6wj+KPqww8y13OEJ4/GEmuGyfANlYpobe3HRHOSIXc1DGIa7l5+8nv0f7DqSkW4mZg2zaGzItsNGfcqim79GKf7d7rg==" ],
+    "exp" : 1629556906746,
+    "alg" : "RS512",
+    "n" : "hWSqvC983CeANF3GCIQIgFaOuegkv1unLnQG_2s_w0tOR18skBhR_NFTFoCe_2vFcvZlidJF91uWbluR1MIFwfoYTORumCBAWNW50kwq39nIaEA8Y415chOi4zuWrQ8PIIlXOF9bY5oHjgKGlqnTuIJGJTuo6OrD7lHRgqhSKg0VVObCvXCUut3Plti8TwOuwR4FT2tOJSdQwt0X51dP6gmHUoqG8O2aAvCuTJKebUeC_aKLkmgArgXaLoWoLeCRQIjXHqckLjEUFcZGBnPltlbjwzdQrHynrcuuxk5dTmRIMeZiErdltOgwUnwezKGrMLAAOYd_BBYT84ECd20nIQ"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "dfa1292c-4505-4677-bb88-d88c29f798bc_sig_es256",
+    "x5c" : [ "MIIBdzCCAR6gAwIBAgIhANX4TVNqw0fKIrEozShPUW8VxcRMUVhNbcJuAIN1Sh+jMAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTM4WhcNMjEwODIxMTQ0MTQ2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEuwI2DVkp3mpHpnzZ0YuoTc6uHBpBxpYX+m9YZ5eZnTN6vXmdu/jWmxtGtgrdQntXOuvYspA/T9sEH8BSUNB76aMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0cAMEQCIGEqoA8/pPFFYXc85X3Pdm3kjx9h01QDpRUoON1S/+RkAiB7EIRW00G8PeCDnBTJC1F0SlJwbGNaSztgsmK2yVHtfw==" ],
+    "x" : "uwI2DVkp3mpHpnzZ0YuoTc6uHBpBxpYX-m9YZ5eZnTM",
+    "y" : "er15nbv41psbRrYK3UJ7Vzrr2LKQP0_bBB_AUlDQe-k",
+    "exp" : 1629556906746,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "994ea4eb-8859-472d-a410-1d1be18f2f09_sig_es384",
+    "x5c" : [ "MIIBtjCCATugAwIBAgIhALs7D/1+ieRL0qTTemlpiZvnmzxh08x42yxPTAN18dGgMAoGCCqGSM49BAMDMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTM4WhcNMjEwODIxMTQ0MTQ2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEcohzz9ShkSErXpUVzHR0/hbYgaGHfI4V4TJp7A9sEUpt4U4ciy1dozgW1/52nXoqEiEc4Dy+wd0iyb9j82XqtG1u1+fnTT0oBH4C+et5u2q2OOojTKeSdy4Xs11MbbFEoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwCgYIKoZIzj0EAwMDaQAwZgIxAIn6rsGOnTFAxg9GPWurkj6Hi2LvJPz1UiZhN5QX0eXXoEg/fTIFLkn+yJrLoYquxwIxAJzvU3czc7/EOkqnW7OovndTnm+M2CSAHzed2zmF+qi6SyxRzUHHOnlMlbdxAgNoHA==" ],
+    "x" : "cohzz9ShkSErXpUVzHR0_hbYgaGHfI4V4TJp7A9sEUpt4U4ciy1dozgW1_52nXoq",
+    "y" : "EiEc4Dy-wd0iyb9j82XqtG1u1-fnTT0oBH4C-et5u2q2OOojTKeSdy4Xs11MbbFE",
+    "exp" : 1629556906746,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "5e0f6f4c-a731-44e4-ab4e-0a1a267b5d8a_sig_es512",
+    "x5c" : [ "MIICADCCAWGgAwIBAgIhAOisYN+nppYFXgskcwRnvAE/AcaGXO1nyZ9rggpcrMIVMAoGCCqGSM49BAMEMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTM5WhcNMjEwODIxMTQ0MTQ2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQAOkwfcnrf2yhRTo0Coj59BtwOcIC1y6Qxn8RGqqGE8OiiXXLKtH+cVpXJTpQQRWJXm1t6rmbUEiHIkdmIZhL+xJ8AjqerQ1sXXLMKCjXGlx6d3TfaHfRD7ptnjHsL2B2m+tFb/Yj/pEZsioQjKSBB5LTiKmwL9TvmL2JGyJCeeOsDa4yjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDBAOBjAAwgYgCQgCjJ89J3vlNcxZ2EirIlrDnchVK1CVrFb3mrGjD+IlQKvkAGrN06T0KgzBM3/6T66PVTkyY8I9qmoBQdzTfOlu0dwJCANZ94unz0zEVD9132eWjUU9z/XiGyXmJaiVZmbPex+fy2hyWBC0RAhKvq5qthFl/eJFU8JBONW/zG/bpg2hudVrH" ],
+    "x" : "Okwfcnrf2yhRTo0Coj59BtwOcIC1y6Qxn8RGqqGE8OiiXXLKtH-cVpXJTpQQRWJXm1t6rmbUEiHIkdmIZhL-xJ8",
+    "y" : "jqerQ1sXXLMKCjXGlx6d3TfaHfRD7ptnjHsL2B2m-tFb_Yj_pEZsioQjKSBB5LTiKmwL9TvmL2JGyJCeeOsDa4w",
+    "exp" : 1629556906746,
+    "alg" : "ES512"
+  } ]
+}
+
+14:41:49 08/21/20 Generating oxAuth OpenID Connect keys
+14:41:49 08/21/20 Creating empty JKS keystore
+14:41:49 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /install/community-edition-setup/output/scim-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+14:41:50 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /install/community-edition-setup/output/scim-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+14:41:50 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /install/community-edition-setup/output/scim-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:50 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /install/community-edition-setup/output/scim-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+14:41:56 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "0ae51551-ba44-41f6-8c8e-c999e753bdf3_sig_rs256",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgYzsaW10C4loOxFK5jt376fUwAAz2sHY0x0UvmxTpinUwDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNDNaFw0yMTA4MjExNDQxNTJaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC0AvCXysjyw8K0MIaS75Q3YVKMKMAHhK/n/FIn4SJY1WzeGHfP5OtC2OH2KFoBfMZNrHyAeq5yYnOnsROCHCoBUAzDwX29ZGFpxI4HslN2849Xh0+/fonsFKnisjHQ7AmPefiAQL715XS8R1H00ynVXOClBUIEG45Q6DsiA+qWwlYq2c1TJZqPOobjwq6WoX9fKeeDUAhVfiyihRrLTe0093ikv1pKW8Af2D6PTMDfIxv0ed10zSn1X47vb96ZvWDmxr9+Tg0c+EvkWw3OmEWTYL97JX0Ed3EAz3JXfHpxy28euYX0Mqnb+qTaWqPeb3jvQjYBfEBHrgbf2Y+lQLVVAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAC6A9Q+0qplOm2wHOGXeN2EeIICu392Zp0NqaVIU756h4+a1feKLYRtlzRqIAq4HSWh2bKmkgLx3ycbSRKxuYdbn30Loxx7xsfvs21bjhUEujubyEtrZmcYlD+Ee57MJPfkIHLSUlbwLgQmkckm7pTTNahldsgBVPCgNMowq6sQdLHxHW0Yx4YvncJkwuCei8iqkLEJt3TbyqKN27Hrrnpcy2SjLM3bPGNIh9Pp6EaxPiNjvKUtvbzenuWPobC4XlLIMOvnlA27BOoSRLGxwmtCXnYWAtBMOuZyp+C1UbBEGvGR1jdy+Yd6KHjXHJ58K9UUpWf/XweBmhKxJW+mABSQ==" ],
+    "exp" : 1629556912150,
+    "alg" : "RS256",
+    "n" : "tALwl8rI8sPCtDCGku-UN2FSjCjAB4Sv5_xSJ-EiWNVs3hh3z-TrQtjh9ihaAXzGTax8gHqucmJzp7ETghwqAVAMw8F9vWRhacSOB7JTdvOPV4dPv36J7BSp4rIx0OwJj3n4gEC-9eV0vEdR9NMp1VzgpQVCBBuOUOg7IgPqlsJWKtnNUyWajzqG48KulqF_Xynng1AIVX4sooUay03tNPd4pL9aSlvAH9g-j0zA3yMb9HnddM0p9V-O72_emb1g5sa_fk4NHPhL5FsNzphFk2C_eyV9BHdxAM9yV3x6cctvHrmF9DKp2_qk2lqj3m9470I2AXxAR64G39mPpUC1VQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "acc7af4a-a43b-4f95-9f36-dc8f622b87a1_sig_rs384",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgWIVTWsmRf3ho/85ux4XAJlOVukDbsYhD2jQA7SLZi2wwDQYJKoZIhvcNAQEMBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNDNaFw0yMTA4MjExNDQxNTJaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCws/eR8GKy2l61o3Z/0WwRrCLtyaCmBGEmy89nzClcM4qf1W8SrEE+SvS9ULCO+2kfwDUs6IPePBpL8bpgxSQ8CGFdRQaQUhpN2uCSL3jA3qPeu2+2zAAFdh/l+Jf29LY15l8xqlRNa4kssGZBv/8ba33Tv1T08wrwyvM1hrfO1R9jSB3fGPHQusSrEfz97j6q+RBtPmU+ZXDbfAjPntSvKwsqNPjyu4n+ZE7U0Zhq8n8FBj57ddtPJdqupRkSgL85fM0tj+g0Q5Dj2ICkniO0cScQp5gNFoS8tgoHA1ZwTXqpMmJwxQ0JAfO1XUYDHyMWWj7QW3Uo2NQy4L7/6D/5AgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQwFAAOCAQEAp9e5yR+2b5KxMNq49qRYy4lp1gsC1VAlWm/Z8WmGYv228B/5OnzTIl2o59oK7pRITAgEXYkEjJVnJbAz37WykgNo5PS78Fxpg4YPGTBkXXLIFRaQQXZ2ihlylhLF0pU0lbqYpaiCnH/VV7CSkCMvX0M3Sqmi6LbY8zoRx/P98cVvhMllkd4uweewWhBjFk8S81VtMOc3+aXsddq2Z30N8XcSxzlgnVFlLYvyN+C3kTjprEpSCtlfOKSNB1erPzn8HXO/p4e2loKDGXvX+n1UaHuKkqxwkC81TmrITjgpfKJ+gkpJ7woehl9KgeyCdQecLgLYri7kIQ1eKIJRw5z9yQ==" ],
+    "exp" : 1629556912150,
+    "alg" : "RS384",
+    "n" : "sLP3kfBistpetaN2f9FsEawi7cmgpgRhJsvPZ8wpXDOKn9VvEqxBPkr0vVCwjvtpH8A1LOiD3jwaS_G6YMUkPAhhXUUGkFIaTdrgki94wN6j3rtvtswABXYf5fiX9vS2NeZfMapUTWuJLLBmQb__G2t9079U9PMK8MrzNYa3ztUfY0gd3xjx0LrEqxH8_e4-qvkQbT5lPmVw23wIz57UrysLKjT48ruJ_mRO1NGYavJ_BQY-e3XbTyXarqUZEoC_OXzNLY_oNEOQ49iApJ4jtHEnEKeYDRaEvLYKBwNWcE16qTJicMUNCQHztV1GAx8jFlo-0Ft1KNjUMuC-_-g_-Q"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "c8023dd1-7a23-4355-a637-bb614e10f670_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgGdJsm9k3lH67E2sNnRnE49mYpJVCFLBYdBDjQLB/jeUwDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNDVaFw0yMTA4MjExNDQxNTJaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZMDudO+Io5mQ2kA0lM/BCVA12e8fpjp5PVfrgqEZiv1jVZWSMZwE/iQKXUdM9H4eSWr2tVlJQ692omOlG0sQsVFIQWl5v+GglqfHpF4e1KxA0k1VRxx/jUZcwNFxnYVdYYhAaBeqg7jnfo3OWy1i5aWauJLZH3Exn93fSBg0gdh8EzYUTuoglbTKponSvx0z/oLRF54mSEF60VH9E4qVkHlCTSWIKifVWhEROgPGItV+q/6QXhbZH+fLyK89URbI4N9jHluF0PHNZffySeCBZP+t6Zw/bo8nfeB7j8QAQ/xdIiuA2mY+tQSQnly/Cshj4ZvLvF2K+bfXpcT6KD0ZjAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEAbfPD0APUq1m/p22F9a6V/eJTSY5ZxL4KgTonHTSPzspxXKrkW2xTYW7YkC8yP+KtoGzDdAVCZKfHZk1sAI+U5rrITKbrzwrTWhjpncmS56mL/JRBt1cD2COafiuuXYf9VIa+GUO94ZSwxJj0O+iwEyAjQ9F2L3siu89BSRs3zcVhe4c0v1JMU8KgpeWwhAjG7/a7AIAqzoVFUYZecnZGq3fkNgFIDhsbfC//chVtUXkUTNW8i54hCcIDvLrXmsexnwdQUaly8uirsdW9ZZaI4zQW3Igxd4aWGydw+oUC9Dwf4fkdZuAjUrLgaYgZd98MkI6DC1OlsKu6ziS7h1mVqQ==" ],
+    "exp" : 1629556912150,
+    "alg" : "RS512",
+    "n" : "mTA7nTviKOZkNpANJTPwQlQNdnvH6Y6eT1X64KhGYr9Y1WVkjGcBP4kCl1HTPR-Hklq9rVZSUOvdqJjpRtLELFRSEFpeb_hoJanx6ReHtSsQNJNVUccf41GXMDRcZ2FXWGIQGgXqoO4536NzlstYuWlmriS2R9xMZ_d30gYNIHYfBM2FE7qIJW0yqaJ0r8dM_6C0ReeJkhBetFR_ROKlZB5Qk0liCon1VoREToDxiLVfqv-kF4W2R_ny8ivPVEWyODfYx5bhdDxzWX38knggWT_remcP26PJ33ge4_EAEP8XSIrgNpmPrUEkJ5cvwrIY-Gby7xdivm316XE-ig9GYw"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "ce57137c-fbdc-4c93-9edf-c2b8a203d347_sig_es256",
+    "x5c" : [ "MIIBeDCCAR6gAwIBAgIhAMXPweo492mp1vHGMk+8v6EUaYEULdhtViNfcwF7ASuNMAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTQ1WhcNMjEwODIxMTQ0MTUyWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEI1zjyw036/ft8NEyoUC9nmV2s/w1I2yJC5SvGcB5sMOApb++03dHxrwvY23zHUxk7Hg0lM6redW+u478hXHR6MnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0gAMEUCIQDSVmILcSI9mX1ZGWeP0hLR6PsFZDVFULbvdrg3GTV6WwIgIZ4+RI/q/fFfhdprK6qAMi+EG5sEIMaOItkutAjIqpM=" ],
+    "x" : "EI1zjyw036_ft8NEyoUC9nmV2s_w1I2yJC5SvGcB5sM",
+    "y" : "DgKW_vtN3R8a8L2Nt8x1MZOx4NJTOq3nVvruO_IVx0c",
+    "exp" : 1629556912150,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "5a659bb5-3d9d-4abd-b653-c7202cae72e7_sig_es384",
+    "x5c" : [ "MIIBtTCCATugAwIBAgIhAOqu7Og8XZk4S7sCfFKq6dxdgJ2fs1DEz9UtT1tse5KPMAoGCCqGSM49BAMDMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTQ1WhcNMjEwODIxMTQ0MTUyWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEjA4TwBLcTbwJnbYAPrKJMOMavg4Buvfm49w7SRLW8zTUYEjFJ7j+OTW4h5FNhM+rKSntqdJT7qP0Kn5yuK62myPZjXu1GBK22koDxY1dJGNnIr7nquQHCGr/fISUoE7koycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwCgYIKoZIzj0EAwMDaAAwZQIxAIboF0RjjvZSeW6ooBA26MokCQd2v+VoWI3zDRZeOraVTZWkX5yEdP7JloFwkMe86QIwYo6Xgs/qizz+mq/aARvjSe+9FCbo2oXhUedO+CYzYwLEwYhqzwgY614JcjzUJgEE" ],
+    "x" : "jA4TwBLcTbwJnbYAPrKJMOMavg4Buvfm49w7SRLW8zTUYEjFJ7j-OTW4h5FNhM-r",
+    "y" : "KSntqdJT7qP0Kn5yuK62myPZjXu1GBK22koDxY1dJGNnIr7nquQHCGr_fISUoE7k",
+    "exp" : 1629556912150,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "2fd4dad4-c9d8-467c-9070-60ccd57baa38_sig_es512",
+    "x5c" : [ "MIICADCCAWGgAwIBAgIhAOdRSo5HcanNVRIe0MbQYBjGO6y8LybHmc+e9duYDN8hMAoGCCqGSM49BAMEMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTQ1WhcNMjEwODIxMTQ0MTUyWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQBAJ9JmOWPBcS3eZgWBI18wPrmP3+zlJ5pHMqDNqcDS8GQWlcTye+1nla23hSxapTClif8sUAx6UuywekYwNAFKMwAxZZ0WzT10p+IAkTTIx5nuLBILwyzrRy1a3ezBIh0o0xVbsr5yNOcN7af+rzB5Qqr4+uSzyzmNZJlye+Wc5PiD2WjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDBAOBjAAwgYgCQgGotiIxOGZjj7klnZqrpaAw6X205Q83PfvOkUqroR20ww2FTYSZmZ3+5wqF73cZlY3I2cITa6FGm2V7dU/jAbRXGAJCAbHU3JVq2owKDHWeSWiWwg39rovEmS+EeGT5aMCqpf6PqPViVrIjbtvdeG9ZjxSeaAh7cND/fo9dsCDLFO9I4v05" ],
+    "x" : "AQCfSZjljwXEt3mYFgSNfMD65j9_s5SeaRzKgzanA0vBkFpXE8nvtZ5Wtt4UsWqUwpYn_LFAMelLssHpGMDQBSjM",
+    "y" : "xZZ0WzT10p-IAkTTIx5nuLBILwyzrRy1a3ezBIh0o0xVbsr5yNOcN7af-rzB5Qqr4-uSzyzmNZJlye-Wc5PiD2U",
+    "exp" : 1629556912150,
+    "alg" : "ES512"
+  } ]
+}
+
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/consent_gathering/ConsentGatheringSample.py
+14:41:56 08/21/20 Loaded script ConsentGatheringSample.py with type consent_gathering into consent_gathering_consentgatheringsample
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_rpt_policy/UmaClientAuthzRptPolicy.py
+14:41:56 08/21/20 Loaded script UmaClientAuthzRptPolicy.py with type uma_rpt_policy into uma_rpt_policy_umaclientauthzrptpolicy
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_rpt_policy/uma_rpt_policy.py
+14:41:56 08/21/20 Loaded script uma_rpt_policy.py with type uma_rpt_policy into uma_rpt_policy_uma_rpt_policy
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/client_registration/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type client_registration into client_registration_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/client_registration/Casa.py
+14:41:56 08/21/20 Loaded script Casa.py with type client_registration into client_registration_casa
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/end_session/end_session.py
+14:41:56 08/21/20 Loaded script end_session.py with type end_session into end_session_end_session
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/idp/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type idp into idp_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/scim/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type scim into scim_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/post_authn/post_authn.py
+14:41:56 08/21/20 Loaded script post_authn.py with type post_authn into post_authn_post_authn
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/persistence_extension/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type persistence_extension into persistence_extension_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/ThumbSignInExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script ThumbSignInExternalAuthenticator.py with type person_authentication into person_authentication_thumbsigninexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/YubicloudExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script YubicloudExternalAuthenticator.py with type person_authentication into person_authentication_yubicloudexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/DuoExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script DuoExternalAuthenticator.py with type person_authentication into person_authentication_duoexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/SuperGluuExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script SuperGluuExternalAuthenticator.py with type person_authentication into person_authentication_supergluuexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/BasicLockAccountExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script BasicLockAccountExternalAuthenticator.py with type person_authentication into person_authentication_basiclockaccountexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/Fido2ExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script Fido2ExternalAuthenticator.py with type person_authentication into person_authentication_fido2externalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/U2fExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script U2fExternalAuthenticator.py with type person_authentication into person_authentication_u2fexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/twilio2FA.py
+14:41:56 08/21/20 Loaded script twilio2FA.py with type person_authentication into person_authentication_twilio2fa
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/UafExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script UafExternalAuthenticator.py with type person_authentication into person_authentication_uafexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/UserCertExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script UserCertExternalAuthenticator.py with type person_authentication into person_authentication_usercertexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/BasicExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script BasicExternalAuthenticator.py with type person_authentication into person_authentication_basicexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/smpp2FA.py
+14:41:56 08/21/20 Loaded script smpp2FA.py with type person_authentication into person_authentication_smpp2fa
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/Casa.py
+14:41:56 08/21/20 Loaded script Casa.py with type person_authentication into person_authentication_casa
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/SamlPassportAuthenticator.py
+14:41:56 08/21/20 Loaded script SamlPassportAuthenticator.py with type person_authentication into person_authentication_samlpassportauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/OtpExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script OtpExternalAuthenticator.py with type person_authentication into person_authentication_otpexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/PassportExternalAuthenticator.py
+14:41:56 08/21/20 Loaded script PassportExternalAuthenticator.py with type person_authentication into person_authentication_passportexternalauthenticator
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/application_session/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type application_session into application_session_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/id_generator/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type id_generator into id_generator_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_claims_gathering/uma_claims_gathering.py
+14:41:56 08/21/20 Loaded script uma_claims_gathering.py with type uma_claims_gathering into uma_claims_gathering_uma_claims_gathering
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/spontaneous_scope/spontaneous_scope.py
+14:41:56 08/21/20 Loaded script spontaneous_scope.py with type spontaneous_scope into spontaneous_scope_spontaneous_scope
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/user_registration/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type user_registration into user_registration_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/user_registration/ConfirmRegistrationSampleScript.py
+14:41:56 08/21/20 Loaded script ConfirmRegistrationSampleScript.py with type user_registration into user_registration_confirmregistrationsamplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/introspection/introspection.py
+14:41:56 08/21/20 Loaded script introspection.py with type introspection into introspection_introspection
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/introspection/introspection_custom_params.py
+14:41:56 08/21/20 Loaded script introspection_custom_params.py with type introspection into introspection_introspection_custom_params
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/resource_owner_password_credentials/resource_owner_password_credentials.py
+14:41:56 08/21/20 Loaded script resource_owner_password_credentials.py with type resource_owner_password_credentials into resource_owner_password_credentials_resource_owner_password_credentials
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/resource_owner_password_credentials/resource_owner_password_credentials_custom_params.py
+14:41:56 08/21/20 Loaded script resource_owner_password_credentials_custom_params.py with type resource_owner_password_credentials into resource_owner_password_credentials_resource_owner_password_credentials_custom_params
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/cache_refresh/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type cache_refresh into cache_refresh_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_rpt_claims/uma_rpt_claims.py
+14:41:56 08/21/20 Loaded script uma_rpt_claims.py with type uma_rpt_claims into uma_rpt_claims_uma_rpt_claims
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/update_user/SampleScript.py
+14:41:56 08/21/20 Loaded script SampleScript.py with type update_user into update_user_samplescript
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/memberof_attribute.py
+14:41:56 08/21/20 Loaded script memberof_attribute.py with type dynamic_scope into dynamic_scope_memberof_attribute
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/org_name.py
+14:41:56 08/21/20 Loaded script org_name.py with type dynamic_scope into dynamic_scope_org_name
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/session_parameter.py
+14:41:56 08/21/20 Loaded script session_parameter.py with type dynamic_scope into dynamic_scope_session_parameter
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/work_phone.py
+14:41:56 08/21/20 Loaded script work_phone.py with type dynamic_scope into dynamic_scope_work_phone
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/dynamic_permission.py
+14:41:56 08/21/20 Loaded script dynamic_permission.py with type dynamic_scope into dynamic_scope_dynamic_permission
+14:41:56 08/21/20 Loading file /install/community-edition-setup/static/extension/ciba/end_user_notification.py
+14:41:56 08/21/20 Loaded script end_user_notification.py with type ciba into ciba_end_user_notification
+14:41:56 08/21/20 Rendering templates
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxidp-config.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxidp-config.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust_api_clients.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxtrust_api_clients.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/python.txt
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/python.txt
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust-import-person.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxtrust-import-person.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxTrustLogRotationConfiguration.xml
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxTrustLogRotationConfiguration.xml
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/people.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/people.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/groups.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/groups.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxauth-config.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxauth-config.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/https_gluu.conf
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/https_gluu.conf
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxidp.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxidp.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/scripts.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/scripts.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/opendj-setup.properties
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/opendj-setup.properties
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/network
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/network
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/hostname
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/hostname
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/datasource.properties
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/datasource.properties
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxauth-static-conf.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxauth-static-conf.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/gluu-ldap.properties
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/gluu-ldap.properties
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust-cache-refresh.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxtrust-cache-refresh.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust-config.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxtrust-config.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/clients.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/clients.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/scripts_casa.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/scripts_casa.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/fido2-static-conf.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/fido2-static-conf.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/base.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/base.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/httpd_2.4.conf
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/httpd_2.4.conf
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust_api.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/oxtrust_api.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/fido2-dynamic-conf.json
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/fido2-dynamic-conf.json
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/casa.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/casa.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/scim.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/scim.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/gluu.properties
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/gluu.properties
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/attributes.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/attributes.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/scopes.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/scopes.ldif
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/httpd.conf
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/httpd.conf
+14:41:56 08/21/20 Rendering template /install/community-edition-setup/templates/scim_clients.ldif
+14:41:56 08/21/20 Writing file /install/community-edition-setup/output/scim_clients.ldif
+14:41:56 08/21/20 Generating certificates and keystores
+14:41:56 08/21/20 Generating Certificate for httpd
+14:41:56 08/21/20 Running: /usr/bin/openssl genrsa -des3 -out /etc/certs/httpd.key.orig -passout pass:M7E2DTWD4oRR 2048
+14:41:56 08/21/20 Generating RSA private key, 2048 bit long modulus
+.........................+++++
+............................................................................................................+++++
+e is 65537 (0x010001)
+
+14:41:56 08/21/20 Running: /usr/bin/openssl rsa -in /etc/certs/httpd.key.orig -passin pass:M7E2DTWD4oRR -out /etc/certs/httpd.key
+14:41:56 08/21/20 writing RSA key
+
+14:41:56 08/21/20 Running: /usr/bin/openssl req -new -key /etc/certs/httpd.key -out /etc/certs/httpd.csr -subj /C=ttt/ST=ttt/L=ttt/O=ttt/CN=instance-3/emailAddress=ttt@mail.ru
+14:41:56 08/21/20 problems making Certificate Request
+140123772756032:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:56 08/21/20 Running: /usr/bin/openssl x509 -req -days 365 -in /etc/certs/httpd.csr -signkey /etc/certs/httpd.key -out /etc/certs/httpd.crt
+14:41:57 08/21/20 x509: Cannot open input file /etc/certs/httpd.csr, No such file or directory
+x509: Use -help for summary.
+
+14:41:57 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/httpd.key.orig
+14:41:57 08/21/20 Running: /bin/chmod 700 /etc/certs/httpd.key.orig
+14:41:57 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/httpd.key
+14:41:57 08/21/20 Running: /bin/chmod 700 /etc/certs/httpd.key
+14:41:57 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-3_httpd -file /etc/certs/httpd.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+14:41:57 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/httpd.crt (No such file or directory)
+
+14:41:57 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:41:57 08/21/20 Generating Certificate for shibIDP
+14:41:57 08/21/20 Running: /usr/bin/openssl genrsa -des3 -out /etc/certs/shibIDP.key.orig -passout pass:W7vPWfL2rTP3 2048
+14:41:57 08/21/20 Generating RSA private key, 2048 bit long modulus
+..........................................+++++
+...................................................+++++
+e is 65537 (0x010001)
+
+14:41:57 08/21/20 Running: /usr/bin/openssl rsa -in /etc/certs/shibIDP.key.orig -passin pass:W7vPWfL2rTP3 -out /etc/certs/shibIDP.key
+14:41:57 08/21/20 writing RSA key
+
+14:41:57 08/21/20 Running: /usr/bin/openssl req -new -key /etc/certs/shibIDP.key -out /etc/certs/shibIDP.csr -subj /C=ttt/ST=ttt/L=ttt/O=ttt/CN=instance-3/emailAddress=ttt@mail.ru
+14:41:57 08/21/20 problems making Certificate Request
+140314348609600:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:57 08/21/20 Running: /usr/bin/openssl x509 -req -days 365 -in /etc/certs/shibIDP.csr -signkey /etc/certs/shibIDP.key -out /etc/certs/shibIDP.crt
+14:41:57 08/21/20 x509: Cannot open input file /etc/certs/shibIDP.csr, No such file or directory
+x509: Use -help for summary.
+
+14:41:57 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.key.orig
+14:41:57 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.key.orig
+14:41:57 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.key
+14:41:57 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.key
+14:41:57 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-3_shibIDP -file /etc/certs/shibIDP.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+14:41:58 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/shibIDP.crt (No such file or directory)
+
+14:41:58 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:41:58 08/21/20 Generating Certificate for idp-encryption
+14:41:58 08/21/20 Running: /usr/bin/openssl genrsa -des3 -out /etc/certs/idp-encryption.key.orig -passout pass:W7vPWfL2rTP3 2048
+14:41:58 08/21/20 Generating RSA private key, 2048 bit long modulus
+.................................................+++++
+.......................................................+++++
+e is 65537 (0x010001)
+
+14:41:58 08/21/20 Running: /usr/bin/openssl rsa -in /etc/certs/idp-encryption.key.orig -passin pass:W7vPWfL2rTP3 -out /etc/certs/idp-encryption.key
+14:41:58 08/21/20 writing RSA key
+
+14:41:58 08/21/20 Running: /usr/bin/openssl req -new -key /etc/certs/idp-encryption.key -out /etc/certs/idp-encryption.csr -subj /C=ttt/ST=ttt/L=ttt/O=ttt/CN=instance-3/emailAddress=ttt@mail.ru
+14:41:58 08/21/20 problems making Certificate Request
+140434842501184:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:58 08/21/20 Running: /usr/bin/openssl x509 -req -days 365 -in /etc/certs/idp-encryption.csr -signkey /etc/certs/idp-encryption.key -out /etc/certs/idp-encryption.crt
+14:41:58 08/21/20 x509: Cannot open input file /etc/certs/idp-encryption.csr, No such file or directory
+x509: Use -help for summary.
+
+14:41:58 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-encryption.key.orig
+14:41:58 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-encryption.key.orig
+14:41:58 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-encryption.key
+14:41:58 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-encryption.key
+14:41:58 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-3_idp-encryption -file /etc/certs/idp-encryption.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+14:41:59 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/idp-encryption.crt (No such file or directory)
+
+14:41:59 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:41:59 08/21/20 Generating Certificate for idp-signing
+14:41:59 08/21/20 Running: /usr/bin/openssl genrsa -des3 -out /etc/certs/idp-signing.key.orig -passout pass:W7vPWfL2rTP3 2048
+14:41:59 08/21/20 Generating RSA private key, 2048 bit long modulus
+...+++++
+..........................................................................................................+++++
+e is 65537 (0x010001)
+
+14:41:59 08/21/20 Running: /usr/bin/openssl rsa -in /etc/certs/idp-signing.key.orig -passin pass:W7vPWfL2rTP3 -out /etc/certs/idp-signing.key
+14:41:59 08/21/20 writing RSA key
+
+14:41:59 08/21/20 Running: /usr/bin/openssl req -new -key /etc/certs/idp-signing.key -out /etc/certs/idp-signing.csr -subj /C=ttt/ST=ttt/L=ttt/O=ttt/CN=instance-3/emailAddress=ttt@mail.ru
+14:41:59 08/21/20 problems making Certificate Request
+140154310807616:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:59 08/21/20 Running: /usr/bin/openssl x509 -req -days 365 -in /etc/certs/idp-signing.csr -signkey /etc/certs/idp-signing.key -out /etc/certs/idp-signing.crt
+14:41:59 08/21/20 x509: Cannot open input file /etc/certs/idp-signing.csr, No such file or directory
+x509: Use -help for summary.
+
+14:41:59 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-signing.key.orig
+14:41:59 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-signing.key.orig
+14:41:59 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-signing.key
+14:41:59 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-signing.key
+14:41:59 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-3_idp-signing -file /etc/certs/idp-signing.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+14:42:00 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/idp-signing.crt (No such file or directory)
+
+14:42:00 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:42:00 08/21/20 Generating Certificate for passport-sp
+14:42:00 08/21/20 Running: /usr/bin/openssl genrsa -des3 -out /etc/certs/passport-sp.key.orig -passout pass:PcuxtsXnQ2vT 2048
+14:42:00 08/21/20 Generating RSA private key, 2048 bit long modulus
+...............+++++
+..........................................................+++++
+e is 65537 (0x010001)
+
+14:42:00 08/21/20 Running: /usr/bin/openssl rsa -in /etc/certs/passport-sp.key.orig -passin pass:PcuxtsXnQ2vT -out /etc/certs/passport-sp.key
+14:42:00 08/21/20 writing RSA key
+
+14:42:00 08/21/20 Running: /usr/bin/openssl req -new -key /etc/certs/passport-sp.key -out /etc/certs/passport-sp.csr -subj /C=ttt/ST=ttt/L=ttt/O=ttt/CN=localhost/emailAddress=ttt@mail.ru
+14:42:00 08/21/20 problems making Certificate Request
+140210008322112:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:42:00 08/21/20 Running: /usr/bin/openssl x509 -req -days 365 -in /etc/certs/passport-sp.csr -signkey /etc/certs/passport-sp.key -out /etc/certs/passport-sp.crt
+14:42:00 08/21/20 x509: Cannot open input file /etc/certs/passport-sp.csr, No such file or directory
+x509: Use -help for summary.
+
+14:42:00 08/21/20 Running: /bin/chown ldap:ldap /etc/certs/passport-sp.key.orig
+14:42:00 08/21/20 Running: /bin/chmod 700 /etc/certs/passport-sp.key.orig
+14:42:00 08/21/20 Running: /bin/chown ldap:ldap /etc/certs/passport-sp.key
+14:42:00 08/21/20 Running: /bin/chmod 700 /etc/certs/passport-sp.key
+14:42:00 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-3_passport-sp -file /etc/certs/passport-sp.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+14:42:00 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/passport-sp.crt (No such file or directory)
+
+14:42:00 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:42:00 08/21/20 Creating keystore shibIDP
+14:42:00 08/21/20 Running: /usr/bin/openssl pkcs12 -export -inkey /etc/certs/shibIDP.key -in /etc/certs/shibIDP.crt -out /etc/certs/shibIDP.pkcs12 -name instance-3 -passout pass:W7vPWfL2rTP3
+14:42:00 08/21/20 pkcs12: Cannot open input file /etc/certs/shibIDP.crt, No such file or directory
+pkcs12: Use -help for summary.
+
+14:42:00 08/21/20 Running: /opt/jre/bin/keytool -importkeystore -srckeystore /etc/certs/shibIDP.pkcs12 -srcstorepass W7vPWfL2rTP3 -srcstoretype PKCS12 -destkeystore /etc/certs/shibIDP.jks -deststorepass W7vPWfL2rTP3 -deststoretype JKS -keyalg RSA -noprompt
+14:42:00 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/shibIDP.pkcs12 (No such file or directory)
+
+14:42:00 08/21/20 Importing keystore /etc/certs/shibIDP.pkcs12 to /etc/certs/shibIDP.jks...
+
+14:42:00 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.pkcs12
+14:42:00 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+14:42:00 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.pkcs12
+14:42:00 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+14:42:00 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.jks
+14:42:00 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+14:42:00 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.jks
+14:42:00 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+14:42:00 08/21/20 Running: /bin/chown -R jetty:jetty /etc/certs
+14:42:00 08/21/20 Running: /bin/chmod -R 500 /etc/certs
+14:42:01 08/21/20 Generating oxAuth OpenID Connect keys
+14:42:01 08/21/20 Creating empty JKS keystore
+14:42:01 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/oxauth-keys.jks -storepass UKbU6jsvlNLw -keypass UKbU6jsvlNLw -dname "CN=oxAuth CA Certificates"
+14:42:01 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/oxauth-keys.jks -storepass UKbU6jsvlNLw -keypass UKbU6jsvlNLw -dname "CN=oxAuth CA Certificates"
+14:42:02 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/oxauth-keys.jks -keypasswd UKbU6jsvlNLw -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 PS256 PS384 PS512 -enc_keys RSA1_5 RSA-OAEP -dnname "CN=oxAuth CA Certificates" -expiration 2
+14:42:02 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/oxauth-keys.jks -keypasswd UKbU6jsvlNLw -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 PS256 PS384 PS512 -enc_keys RSA1_5 RSA-OAEP -dnname "CN=oxAuth CA Certificates" -expiration 2
+14:42:08 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "1b686904-0c6b-4282-a10b-ada1fada1385_sig_rs256",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgDW0ikzay81eHogpKXxtMLovo/DAV/orTTkCWsL9IV9kwDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNTRaFw0yMDA4MjMxNDQyMDNaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCh6ff9pUvu6J604970aj0VgtxUP/YneXPHAOg6QRlMGqi6SJZrnIYzgxkGD9LfFWaOFhadzrKi+YV9dJ1fplnT44pSoEudGtscqtbvHrcelsBvFD8xD3cW8M1PB/GRp8vHfkn8zUFuwY5ICKdzzKW2t/XR/Zy9KlHmhg9laWkBpsex2m7mTQkxkgs+kLEcc2Jc1ZJy9ZRuccu5sn9sGsv0lrI2LS+Uye/Ogy6GnkWmplMKRDsljKPP0RIv8SxN4FPoWgRS7E1BUQUBfINyhcPvAeboyAa7j8J2dtqFUn6gBD7OtdP8WQl+/DisaIHCNxiOJV3Acd43Dl3ANKAVfDdjAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEARjcQkWIM8FMgUUjlT4JWwO47qBlkl8RPtaIOCuJIap7DXOgUX+9dx5RNEeRWq56lVqxSpmZfOnUS1yFWK/uVztXHQDLNkrgNF6tVJIjxKKA9cfXB3D3IOpndfdemNTUHkrO7GqkVjrlQW4tRm5cU++sh8O87CA2R0UBGdASY2U08wESj7BZhb1gIeYDeudEqZ+denDlru3aE74f4ie3OEUO49ZJ+gpjtFdpFQbwRvIrSfl8yzrxh5Srq93QL52wJEc2+Sr08DwE2FGp2KSDi9rchNQ90tFP+hmH6II2aVi1T3E1Ffkl2//HSKjgnODtLk8eoKbIiN7BF9cBuyy2vng==" ],
+    "exp" : 1598193723671,
+    "alg" : "RS256",
+    "n" : "oen3_aVL7uietOPe9Go9FYLcVD_2J3lzxwDoOkEZTBqoukiWa5yGM4MZBg_S3xVmjhYWnc6yovmFfXSdX6ZZ0-OKUqBLnRrbHKrW7x63HpbAbxQ_MQ93FvDNTwfxkafLx35J_M1BbsGOSAinc8yltrf10f2cvSpR5oYPZWlpAabHsdpu5k0JMZILPpCxHHNiXNWScvWUbnHLubJ_bBrL9JayNi0vlMnvzoMuhp5FpqZTCkQ7JYyjz9ESL_EsTeBT6FoEUuxNQVEFAXyDcoXD7wHm6MgGu4_CdnbahVJ-oAQ-zrXT_FkJfvw4rGiBwjcYjiVdwHHeNw5dwDSgFXw3Yw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "e1392451-50a0-4f23-ad10-4babadfd4d7d_sig_rs384",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgK/CnAa+jCBY33yJoxIp9i7ZyC8mz6RMl9kNBB1aDTVIwDQYJKoZIhvcNAQEMBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNTRaFw0yMDA4MjMxNDQyMDNaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCfQE0B2os0vrmaDawpIGIVUT3ILFAmBksJWoS/LP4o9pk4Gs+Vd/+QGNKZR9ge3D+bxIR3Ocl2ifPvdQ4jpjebHmiKteI8jeUPaqcfh8fd0ZgZZrnWapCvH/GUEx18APU2ixyCTmRIMXEbfP02uP8ULctsaXRpn4sCDXJgCvYNNIQuJOzMcJh8XQTbksJ7tlVqeRZ3DeunL0114bpIHsqS5UCIcBr1GrBHx/xZOut639/Nbr6xGXw03aYH6FNkSgbfhjW/aBkHRe2YOSWprcNSJaDjmHm6X35Y12ZsjYfX4CHqG1CgW77T6jOz14FQU3J5HSnsDwmUbNRwsRZ6aozpAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQwFAAOCAQEAYZLGvNH4AqUyrtoVsLkXP9nYVUIIU/UOf7TWrxEe58jitdwUJf/VagxOlLm3bJ3jXIGmVoSdrkzcaROcv7pf2mC+fH6Fsp9DtO+G3sUL5GdbJky8MJ7c3bXVA72Dh2PA8Ji3T8q1TQH3cNnLs1F41p8VnCxC2LDXw67Qi7rL68jISE3pMf995ntVakEpYhQgWaxYzWfJ4gXvdbXBA/202cSE8RXa3NCafe3phCTwApW3LHdPa/Y8D4wTkYUIAwz1h5RLM5CDUe1JCb8VnuqqiDe+mSrCeTucT1RR96RQIolTGaYj7g3zkPpk4q2CVvDJ3zSOG+CGSehRyqhxmRquPg==" ],
+    "exp" : 1598193723671,
+    "alg" : "RS384",
+    "n" : "n0BNAdqLNL65mg2sKSBiFVE9yCxQJgZLCVqEvyz-KPaZOBrPlXf_kBjSmUfYHtw_m8SEdznJdonz73UOI6Y3mx5oirXiPI3lD2qnH4fH3dGYGWa51mqQrx_xlBMdfAD1Noscgk5kSDFxG3z9Nrj_FC3LbGl0aZ-LAg1yYAr2DTSELiTszHCYfF0E25LCe7ZVankWdw3rpy9NdeG6SB7KkuVAiHAa9RqwR8f8WTrret_fzW6-sRl8NN2mB-hTZEoG34Y1v2gZB0XtmDklqa3DUiWg45h5ul9-WNdmbI2H1-Ah6htQoFu-0-ozs9eBUFNyeR0p7A8JlGzUcLEWemqM6Q"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "57bef845-84da-428d-b9af-c86a40f3c7da_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgf8Srfq8qk8SgUIfbf1ZfSW4DYYwiZkGlJYs2R1s5yMIwDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNTVaFw0yMDA4MjMxNDQyMDNaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDL53ZfC2f8X8koEpK93zsGp/dUa0pkI0OCICIWd+YX0sLmQYT187AAJVH8LOnbQlQMc+G8f+Yhr2RRngrR2iN1SndjXNpWzP5RCRIb1mxIvN3rdSq2wEM89trxKYsqnmLz7PntGraBqSOUQhiuEGIPQbcC1TqdnKH+Fhar33q9z//G77hJpetCDYTmSxRWPqbaiJEeXuM7nsSoVb1qMHOyfn+l+wX1D1Hdr0sokaj4noC6L1GnkEIpaJDU/1u9sQcYk6amWEBGjNix0GduFOqsjpjW8IfzpWS6ib35rb4tHOsqS/Xhu0VQyBj3mrCXtZAkPDCHQ03sWrsKnLhqkmbZAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEAIvuY3UhEZlFYBVs5/kNMsnQNL1yl6Da7dhxxqp7QLiR7T7nh4VTmL6uajSW4EzaI7ieL27ZboCw8/LEfOPcfprf8orOhYTguthzXERWOV37GLEUW3bVYmPhuWH/psUtZ1Ce2LG6ikgi7nZxLnSStYZallp11AjzFgh/OiTBM9bq+X+GUCZr3dsX4avMEr1KstEBjRs4L7a2f25SZqP8h2hRmyOAbcUjhp1gwJnD204BtDrh/pnfd5VgFXcyIapA2vzwCELOdsT2F7sbMO+Z8MxKMTmwlhb3DOjKO1N6ZqB9nRx9DbnGMBD5mbRGSkvU9iXnjQo85fIA2qrFzuQ/+QA==" ],
+    "exp" : 1598193723671,
+    "alg" : "RS512",
+    "n" : "y-d2Xwtn_F_JKBKSvd87Bqf3VGtKZCNDgiAiFnfmF9LC5kGE9fOwACVR_Czp20JUDHPhvH_mIa9kUZ4K0dojdUp3Y1zaVsz-UQkSG9ZsSLzd63UqtsBDPPba8SmLKp5i8-z57Rq2gakjlEIYrhBiD0G3AtU6nZyh_hYWq996vc__xu-4SaXrQg2E5ksUVj6m2oiRHl7jO57EqFW9ajBzsn5_pfsF9Q9R3a9LKJGo-J6Aui9Rp5BCKWiQ1P9bvbEHGJOmplhARozYsdBnbhTqrI6Y1vCH86Vkuom9-a2-LRzrKkv14btFUMgY95qwl7WQJDwwh0NN7Fq7Cpy4apJm2Q"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "e1fe620a-f8b6-40e2-b300-012af5ece579_sig_es256",
+    "x5c" : [ "MIIBeDCCAR6gAwIBAgIhAO8c/UEup2I66WKk80k8Ef6eeE+kUOIeJ3vQkl3rnl5KMAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTU1WhcNMjAwODIzMTQ0MjAzWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwoVAFCecAE92oTP70DCZ+kF6Tu+rygJ1/mD+uigDzclrm+HyYzrjSkJy4kG0VoJA2eegemk4FUMGXsM0JCI3a6MnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0gAMEUCIF7joDoyczDo4dsfVQd4qx9NbT5EwR3DcFfcwl0vGAEqAiEAvVtIV8qVh2IiRf5bVCLZHbm9ZSkGDvxmiWr2HlHpJ20=" ],
+    "x" : "woVAFCecAE92oTP70DCZ-kF6Tu-rygJ1_mD-uigDzck",
+    "y" : "a5vh8mM640pCcuJBtFaCQNnnoHppOBVDBl7DNCQiN2s",
+    "exp" : 1598193723671,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "f5bfb868-7591-474c-8a78-e077d7deb1b4_sig_es384",
+    "x5c" : [ "MIIBtDCCATqgAwIBAgIgbUAQRuoPHC0WsOrM/9nfXf+kYpWgrenmbf1aHvS1BX8wCgYIKoZIzj0EAwMwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNTZaFw0yMDA4MjMxNDQyMDNaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAAQ8KuwfRVDezWbiOuTxKFb8XPOx4EhOfgWde5fDljNpwW/cgeEX0IMLESQ5f6VKsRMkW4LCQs0pHF9hcgiNrisFqBpnjc6ZTqpxYbBWGqp/rOS1IKcn2c2eqpF1baXeukOjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDAwNoADBlAjBnCDPFwMzzycf1OvqfSnYFx7jG/ZLaIt8rnX5OJPwcRQ8HZOwCQga1LHOvZGOuUHECMQCLErgIDLjx4RHkGnARKPTe79JRJjn8T64Qlcch+J/5JZyU4axP57wKb7RgSPkHyug=" ],
+    "x" : "PCrsH0VQ3s1m4jrk8ShW_FzzseBITn4FnXuXw5YzacFv3IHhF9CDCxEkOX-lSrET",
+    "y" : "JFuCwkLNKRxfYXIIja4rBagaZ43OmU6qcWGwVhqqf6zktSCnJ9nNnqqRdW2l3rpD",
+    "exp" : 1598193723671,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "137e3219-08fb-42c4-bd12-6c112729ae51_sig_es512",
+    "x5c" : [ "MIIB/zCCAWCgAwIBAgIgd/F0aY2v2yaKD9WufzidiPlIEzXvzu3dIKA/+T5boMgwCgYIKoZIzj0EAwQwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNTZaFw0yMDA4MjMxNDQyMDNaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwgZswEAYHKoZIzj0CAQYFK4EEACMDgYYABAFteoBOuazdcpDMkMy/KJe/PvMfd/oZNWFFzqOnl0wo/GT9VHq930p+L/AewGowHpk9Y46R99A4wysK/GF9IFprjgB/7av0K1OusHB9RgkVXuoMoVXoVT7YtvBBoOhXWJTx2VWdtTN8rjj0x72XUN3V39PG12ou7mxHMBMZXjOZ9+hENKMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMEA4GMADCBiAJCAf7xmsXoM8F0cnMhbvRjjnO8eGJphaweyyFkWmDJHhTLy2y003bNYY/9kJe9A0tjB5y70E4HchNo/MG9wF7JRVb/AkIBjat0sx34ycEo26LcRXQtOA6kOhkh+iSY//lxUvFit6Jth0YEES1AYBwr3kB+uKUEQsYk+bqRLMRLzyKr9SrZcJQ=" ],
+    "x" : "AW16gE65rN1ykMyQzL8ol78-8x93-hk1YUXOo6eXTCj8ZP1Uer3fSn4v8B7AajAemT1jjpH30DjDKwr8YX0gWmuO",
+    "y" : "f-2r9CtTrrBwfUYJFV7qDKFV6FU-2LbwQaDoV1iU8dlVnbUzfK449Me9l1Dd1d_TxtdqLu5sRzATGV4zmffoRDQ",
+    "exp" : 1598193723671,
+    "alg" : "ES512"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "aea5fc4f-614a-45ea-99c3-106b97bc4b77_sig_ps256",
+    "x5c" : [ "MIIDbDCCAiCgAwIBAgIhAMneWgzNRxkKkJycr+cc4uw+kQ6s5wlvx8kBn+v8mK0+MEEGCSqGSIb3DQEBCjA0oA8wDQYJYIZIAWUDBAIBBQChHDAaBgkqhkiG9w0BAQgwDQYJYIZIAWUDBAIBBQCiAwIBIDAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMB4XDTIwMDgyMTE0NDE1NloXDTIwMDgyMzE0NDIwM1owITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKjYNW0S1qYivAIZ1FEMCakEdaCCqkKDYcig5hHeN1cVDO2iJJofRtHBDhadOBUFRLQeWC/FWAUX1SRlLs69cOh97K/pvYTlKCcSEA/KR/r2oibV65M557cVjTqlOe/c5RlX3M1gp0PPOVDzefqIlHx3iYB3fneAURBzUwfmZNwiFhKddYM/h73tnk1HPP+XIiPTo9+dQb94r7ScPhnnSxVZFxsspxPmJ2HGqgVUktQHt7xOUBAUZrV+9NCKmVdeMboN4e+NVziJ6sOc5zXhw9nb0tIGwrCehxGxr8ryblHf00iByTSP2WCTzBKPnKuhdKKWtunWwLVjwmKgEEjEtDECAwEAAaMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMEEGCSqGSIb3DQEBCjA0oA8wDQYJYIZIAWUDBAIBBQChHDAaBgkqhkiG9w0BAQgwDQYJYIZIAWUDBAIBBQCiAwIBIAOCAQEAB++Cqbyj0pZ+yf3KFlO0gZTYue/JEk0MupyR8CmML507yE+qtNUwzZxfoNHxqgbeB0kOqv+eM1NxEJg7jv8DjjmL1gKgRVU765EGiz66iARf8tDd36u9zf4Db3cR8ZF9mZNVvLYJl6kmW3/fQb3LgYTxU6H4urwWtdJ4oj5QFVC9p/V4cjsy9OUx9LjEmhSoC0JtgJdwdZ635VMqb6XegW7I/LHFYomrTsRleQTqRTKkB+5R8P48U9Eg4WNy1QNtMEEkVP37+kB0GO3kjZX+HShmsxXPNjjfqPK+Q0HAg5KVkEbLholPdIChkCkqxyRGqXPviBHUngtm8+ydevlN6w==" ],
+    "exp" : 1598193723671,
+    "alg" : "PS256",
+    "n" : "qNg1bRLWpiK8AhnUUQwJqQR1oIKqQoNhyKDmEd43VxUM7aIkmh9G0cEOFp04FQVEtB5YL8VYBRfVJGUuzr1w6H3sr-m9hOUoJxIQD8pH-vaiJtXrkznntxWNOqU579zlGVfczWCnQ885UPN5-oiUfHeJgHd-d4BREHNTB-Zk3CIWEp11gz-Hve2eTUc8_5ciI9Oj351Bv3ivtJw-GedLFVkXGyynE-YnYcaqBVSS1Ae3vE5QEBRmtX700IqZV14xug3h741XOInqw5znNeHD2dvS0gbCsJ6HEbGvyvJuUd_TSIHJNI_ZYJPMEo-cq6F0opa26dbAtWPCYqAQSMS0MQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "0648f0f1-5e10-41ab-bc79-2eb48b157293_sig_ps384",
+    "x5c" : [ "MIIDazCCAh+gAwIBAgIgddFwoFF+LsIKJtIXl5SvFBjpf9V5mN9ZtYixbqcQX1UwQQYJKoZIhvcNAQEKMDSgDzANBglghkgBZQMEAgIFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgIFAKIDAgEwMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTU3WhcNMjAwODIzMTQ0MjAzWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlqUSYSaZ0mpqPx1VDOd7tK/AUjNo4VgiJSVQX22e/HaQoik2fNXsd9Ofh3z2BNs+TpZvOknprZaeJ/QOBCNmIzXKmvjXPyiUphdrou/cVgKsKCmg0LlUiUJmSJ31Gmxd1C/U8pWAwbTdPIndrYtw1aOz8XxKyyVEmgeHpOixh3bCbri86bWzLIC71OZ8Go4LrN7CqwAjyJz0qQnxuWPWie9ZB47DL3A6V7rYAf1YjDcRgJyfKKII0sgOc7fe6enzDquBmE/Czt1E19mCD6NWFlu1B1q+pzGBWKFj9Dy+mf5Zjk6JJCJV7PJ00ismsnuTUHSGqwAe54CtFFqpZN+c3wIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwQQYJKoZIhvcNAQEKMDSgDzANBglghkgBZQMEAgIFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgIFAKIDAgEwA4IBAQAjyzW5LDhC7Ggo8EYhhRmDG+rOCunQVM3Wrsak1lmZJt5A3/DFburg6396uPK5RdXDR+lr+O9uJ3vK/DZJ24i2JGiTXB0n2ZymtO4vrNrR+lnCeF9txeGf4R/m9Xi2cNufGSd4f37i6cdhD1hy0MOT/Dlx7O67puBq4SuiyvGbyQW5bItrfRph/wrC8PBLcXBNCLYWzwlchhsh8UJC+OU0wKoxmQpmXbCqVTKwTF5D+bdAYbOjIDrNJGf08ewmvcPTs/O7x2lqSZSX2wz1VA7JGndIRfLOIjYiZhPuySq96aQYkk01BI/IDHtztZdqYIkyre7WktkU2HDGIOAvGlWQ" ],
+    "exp" : 1598193723671,
+    "alg" : "PS384",
+    "n" : "lqUSYSaZ0mpqPx1VDOd7tK_AUjNo4VgiJSVQX22e_HaQoik2fNXsd9Ofh3z2BNs-TpZvOknprZaeJ_QOBCNmIzXKmvjXPyiUphdrou_cVgKsKCmg0LlUiUJmSJ31Gmxd1C_U8pWAwbTdPIndrYtw1aOz8XxKyyVEmgeHpOixh3bCbri86bWzLIC71OZ8Go4LrN7CqwAjyJz0qQnxuWPWie9ZB47DL3A6V7rYAf1YjDcRgJyfKKII0sgOc7fe6enzDquBmE_Czt1E19mCD6NWFlu1B1q-pzGBWKFj9Dy-mf5Zjk6JJCJV7PJ00ismsnuTUHSGqwAe54CtFFqpZN-c3w"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "a7d9c690-48cb-4430-960f-85c840620a8e_sig_ps512",
+    "x5c" : [ "MIIDazCCAh+gAwIBAgIgDVCA/fOY1zi9b4+3zUJudtzCJAHlwm+NQUg+xCJTmVcwQQYJKoZIhvcNAQEKMDSgDzANBglghkgBZQMEAgMFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgMFAKIDAgFAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTU3WhcNMjAwODIzMTQ0MjAzWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqCW7/SaUCcblVH54RdD9qJCS06GKSwBUOgBaB5FpOwOCQcrePZSiVjpRowja+PvT9KEPrcUrPn0RWEAGAerFx4BdE1uBX1LvAYYew2Adcw4Rb2uGPh/GDBwrvzpcHfADPoYUh9sZGpBnrIWnKQ5EgeDALRIvyMwxKEWJBryf0mcTzcnVCk9AKJNHJtmlr3oCwvlUdunP+TVoX3cWcVQSbdPKIUGhRmO2JCMDfessaf2GecNDN/P/43ouAsN9TMbN0kvPG6nIzrzW9hXdU8vh+HtOAxN8jifqbaJzX2CiKsc5AXfHznXlVGI05IRvBBHIhKq/LmtFDJHbBF0QoDHAmwIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwQQYJKoZIhvcNAQEKMDSgDzANBglghkgBZQMEAgMFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgMFAKIDAgFAA4IBAQAXxevYgTM1mUycKlVPpXyURMOvdop5S27st+N+VwX8yy86HpgCrjTT5eY+Bst2DyR4TCj+QRFyBLBGvaCKjCV3VYesAl+zmLzglEaD7hc3o5yw8HEDZRrTaRS3rTlGrOMQdBApxrQge76zoWbRYesNzl0ptx1vg+LS/csP0anQBBEMy5J6hkRDOD4MrOBofBOVhrdcrpkR3N1RkOBNv3BD3uhlvR2ocYce6Pqx1frbqZ1ax+79cV3iK9njlXAtuOfejmd6/4v6VPdajTyM1GSE6EKAhjpbEVqAp0Zu5fOhvy9Jnnyh7wE7Id35xBrvjyoyMvCP/cEm+E/f8cAlNMsZ" ],
+    "exp" : 1598193723671,
+    "alg" : "PS512",
+    "n" : "qCW7_SaUCcblVH54RdD9qJCS06GKSwBUOgBaB5FpOwOCQcrePZSiVjpRowja-PvT9KEPrcUrPn0RWEAGAerFx4BdE1uBX1LvAYYew2Adcw4Rb2uGPh_GDBwrvzpcHfADPoYUh9sZGpBnrIWnKQ5EgeDALRIvyMwxKEWJBryf0mcTzcnVCk9AKJNHJtmlr3oCwvlUdunP-TVoX3cWcVQSbdPKIUGhRmO2JCMDfessaf2GecNDN_P_43ouAsN9TMbN0kvPG6nIzrzW9hXdU8vh-HtOAxN8jifqbaJzX2CiKsc5AXfHznXlVGI05IRvBBHIhKq_LmtFDJHbBF0QoDHAmw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "enc",
+    "crv" : "",
+    "kid" : "6c012825-7a03-4532-be6d-357c22bc188e_enc_rsa1_5",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgaLg1oIZQ/zA3OelkJ+vJlPeblmjq5Kn8wFhWIxsfwV0wDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExNDQxNTdaFw0yMDA4MjMxNDQyMDNaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQClKqfLAIUrOePxi5+krBMkqpMlJyr7jiDPp7+6q4+gqnObjC0SVw1hVckmszkfT3JNWBIRL7wMPl6nvZ/9E1RLr9+h3F3Pr9RLqbicRNFo6NrpTeORkmGKof6PdNq4BZRj4H+0yijxeD900V1kYkNL1YxHPP85FxflOnm17Sngq1PA/Jr7pvQIV+6Vg0m0HwfK0ZZ7SVpMgWG3rhVsLYzcld11J4n8dANS+EH4859UkZkSOHH4U6cFLsuH53PPj9NRWTEf/b5gJj7R4avo4GwdTSeFvFITzNTEdTfAU1N1X8bYTOJxb0j74Zx/HlTsz+XTS6rMGU3Xkrur5vcMiHMLAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAAlGbUvIyCNkf83il660uROM2R6V2ZGH2E7CMShBMk0uE9VMMXGf9PpYLhTMp3QGNYix7hdaWaFIByOy+nZerUs0hNwm1ki10vz6Up70VGsT4/LwRqKOmbSYIRZfAraXrbiReMo2kSDo0kztezho3oF5LYH95B3KfBpqWH6kLkwKxJDHIKwJ1zmRljoRQVsiHHtHYt27w8h1iEsYh2YB+Zp8l0SSvXiPkHIdi0vIXu5Z+M2wXfxreClpDu+Ml1rU1FD+Qj3aT2371UxtTEYnElqvkE+2YL10ck2P0YBrO4UAJiZAicUEvXuBSU3hisx4vxJqsMxQLJxJZ6FJTDUFK0A==" ],
+    "exp" : 1598193723671,
+    "alg" : "RSA1_5",
+    "n" : "pSqnywCFKznj8YufpKwTJKqTJScq-44gz6e_uquPoKpzm4wtElcNYVXJJrM5H09yTVgSES-8DD5ep72f_RNUS6_fodxdz6_US6m4nETRaOja6U3jkZJhiqH-j3TauAWUY-B_tMoo8Xg_dNFdZGJDS9WMRzz_ORcX5Tp5te0p4KtTwPya-6b0CFfulYNJtB8HytGWe0laTIFht64VbC2M3JXddSeJ_HQDUvhB-POfVJGZEjhx-FOnBS7Lh-dzz4_TUVkxH_2-YCY-0eGr6OBsHU0nhbxSE8zUxHU3wFNTdV_G2EzicW9I--Gcfx5U7M_l00uqzBlN15K7q-b3DIhzCw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "enc",
+    "crv" : "",
+    "kid" : "294e322c-3162-4699-9e52-c368b77ed7ff_enc_rsa-oaep",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAIzr4ErMPNlG4jatGDzKlpLE3kiofcEnb0tWggoywpcKMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTQ0MTU4WhcNMjAwODIzMTQ0MjAzWjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArYtIkfHI+hvUPhsluPR4EzlK6V4+8C9jxJrCNLLj27jlPjIfDm1ycOrUQkVnbdF+3ShL5dCzTDdDhSdBcKPUKlOTgl5wYOR3xNqTdE+8TgmKzcQT26/Ieb1esF5VSVXF7xEDZSPQGWCzXhQkVc7A4dZjuW4FmksGgz1gyDPb8QO8K4mP7NuUgxG9cfiDbzCKQgTridt59r6eaK/gcfbKxKsNMnTqQe9z3S5IU028XcEvkiBwGmjdaEhZm5U+mRvyP4A2gzZlAKF2pECPz9JdVNDdxTS7kpChotcz9L/t7NxQ7hEoiMv6hwU/XAphioDZtAyaNluc884UP7gVhhgNRQIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQELBQADggEBAGLLLltMNdYSWfKg6zcQAqgKaJr4nslafRM1JYXuEwQvTzh1DGoG7qlgfWhBTbriFwotvgJJlKyz670Z0NPFi23UJagrhJHG5eRETZf9oRU5oHbu/jUh9am2HBfMkoPOGryXnSJE8iGD/Fll7w1hC6dzYyoOXDcP4zG8v6YAA6INBJ+7WaCffZgH9VFfYAKPEi7TXyyP0ptYuzrXYaJjV/spsphg8U+v2m3ZuyJTqUvsF9WqYoJkvRWXcURLHOiGE3K4/Oud1jhXE8EifdtT4/XwLt6s9mb8TWlAIH9MqRwigWvXz9enkJBGY2/RMA/+fc6LKnZyV0MjhXrBSmsqXSg=" ],
+    "exp" : 1598193723671,
+    "alg" : "RSA-OAEP",
+    "n" : "rYtIkfHI-hvUPhsluPR4EzlK6V4-8C9jxJrCNLLj27jlPjIfDm1ycOrUQkVnbdF-3ShL5dCzTDdDhSdBcKPUKlOTgl5wYOR3xNqTdE-8TgmKzcQT26_Ieb1esF5VSVXF7xEDZSPQGWCzXhQkVc7A4dZjuW4FmksGgz1gyDPb8QO8K4mP7NuUgxG9cfiDbzCKQgTridt59r6eaK_gcfbKxKsNMnTqQe9z3S5IU028XcEvkiBwGmjdaEhZm5U-mRvyP4A2gzZlAKF2pECPz9JdVNDdxTS7kpChotcz9L_t7NxQ7hEoiMv6hwU_XAphioDZtAyaNluc884UP7gVhhgNRQ"
+  } ]
+}
+
+14:42:08 08/21/20 Writing oxAuth OpenID Connect keys
+14:42:08 08/21/20 Running: /bin/chown jetty:jetty /install/community-edition-setup/output/oxauth-keys.json
+14:42:08 08/21/20 Running: /bin/chmod 600 /install/community-edition-setup/output/oxauth-keys.json
+14:42:08 08/21/20 Wrote oxAuth OpenID Connect key to /install/community-edition-setup/output/oxauth-keys.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/oxauth-config.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/oxauth-static-conf.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/static/oxauth/oxauth-errors.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/oxauth-keys.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/fido2-dynamic-conf.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/fido2-static-conf.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/oxtrust-config.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/oxtrust-cache-refresh.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/oxtrust-import-person.json
+14:42:08 08/21/20 Loading file /install/community-edition-setup/output/oxidp-config.json
+14:42:08 08/21/20 Rendering configuration templates
+14:42:08 08/21/20 Rendering template /install/community-edition-setup/templates/configuration.ldif
+14:42:08 08/21/20 Writing file /install/community-edition-setup/output/configuration.ldif
+14:42:08 08/21/20 Rendering template /install/community-edition-setup/templates/fido2.ldif
+14:42:08 08/21/20 Writing file /install/community-edition-setup/output/fido2.ldif
+14:42:09 08/21/20 Copying hosts and hostname to final destination
+14:42:09 08/21/20 Running: cp -f /etc/hostname /etc/hostname.gluu-4.2.0-1~
+14:42:09 08/21/20 Copying file /install/community-edition-setup/output/hostname to /etc/hostname
+14:42:09 08/21/20 Copied /install/community-edition-setup/output/hostname to /etc/hostname
+14:42:09 08/21/20 Running: /bin/chmod -f 644 /etc/hostname
+14:42:09 08/21/20 Running: /bin/hostname instance-3
+14:42:09 08/21/20 Running: /bin/chmod -R 644 /etc/hosts
+14:42:09 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-1~
+14:42:09 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-2~
+14:42:09 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-3~
+14:42:09 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-4~
+14:42:09 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-5~
+14:42:09 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-6~
+14:42:09 08/21/20 Copying rendered templates to final destination
+14:42:09 08/21/20 Copying /install/community-edition-setup/output/python.txt to /opt/gluu/python/libs/python.txt
+14:42:09 08/21/20 Created destination folder /opt/gluu/python/libs
+14:42:09 08/21/20 Copying /install/community-edition-setup/output/oxTrustLogRotationConfiguration.xml to /etc/gluu/conf/oxTrustLogRotationConfiguration.xml
+14:42:09 08/21/20 Copying /install/community-edition-setup/output/gluu-ldap.properties to /etc/gluu/conf/gluu-ldap.properties
+14:42:09 08/21/20 Copying /install/community-edition-setup/output/gluu.properties to /etc/gluu/conf/gluu.properties
+14:42:09 08/21/20 Running: /usr/sbin/update-rc.d apache2 defaults
+14:42:09 08/21/20 Running: /usr/sbin/update-rc.d apache2 enable
+14:42:09 08/21/20 Running: /usr/sbin/update-rc.d rsyslog defaults
+14:42:09 08/21/20 Running: /usr/sbin/update-rc.d rsyslog enable
+14:42:10 08/21/20 Rendering node templates
+14:42:10 08/21/20 Rendering templates folder: /install/community-edition-setup/templates/node/
+14:42:10 08/21/20 Rendering test template /install/community-edition-setup/templates/node//passport
+14:42:10 08/21/20 Running WrenDS Setup
+14:42:10 08/21/20 Unzipping /opt/dist/app/opendj-server-legacy-4.0.0-M3.zip in /opt/
+14:42:10 08/21/20 Running: unzip -n -q /opt/dist/app/opendj-server-legacy-4.0.0-M3.zip -d /opt/
+14:42:11 08/21/20 Running: /bin/chown -R ldap:ldap /opt/opendj
+14:42:11 08/21/20 Running: /bin/chown ldap:ldap /home/ldap/.pw
+14:42:11 08/21/20 Running WrenDS Setup
+14:42:11 08/21/20 Changing ownership
+14:42:11 08/21/20 Running: /bin/chown -R root:gluu /etc/certs
+14:42:11 08/21/20 Running: /bin/chown -R root:gluu /etc/gluu/conf
+14:42:11 08/21/20 Running: /bin/chown -R root:gluu /opt/gluu/python
+14:42:11 08/21/20 Running: /bin/chown -R root:gluu /var/gluu
+14:42:11 08/21/20 Running: /bin/chmod -R 440 /etc/certs
+14:42:11 08/21/20 Running: /bin/chmod a+X /etc/certs
+14:42:11 08/21/20 Running: /bin/chown -R jetty:jetty /etc/certs/oxauth-keys.jks
+14:42:11 08/21/20 Running: /bin/chmod 660 /etc/certs/oxauth-keys.jks
+14:42:11 08/21/20 Running: /bin/chown -R jetty:jetty /opt/shibboleth-idp
+14:42:11 08/21/20 Running: chown ldap:ldap /opt/opendj/opendj-setup.properties
+14:42:11 08/21/20 Running: /bin/su ldap -c /opt/opendj/setup --no-prompt --cli --propertiesFilePath /opt/opendj/opendj-setup.properties --acceptLicense
+14:49:11 08/21/20 
+Configuring Directory Server ..... Done.
+Configuring Certificates ..... Done.
+Starting Directory Server .......................................................................................................................................... Done.
+
+To see basic server configuration status and configuration, you can launch /opt/opendj/bin/status
+
+
+14:49:11 08/21/20 WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.opends.server.util.Platform$PlatformIMPL (file:/opt/opendj/lib/wrends.jar) to constructor sun.security.tools.keytool.CertAndKeyGen(java.lang.String,java.lang.String)
+WARNING: Please consider reporting this to the maintainers of org.opends.server.util.Platform$PlatformIMPL
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+14:49:11 08/21/20 append self.jre_home to WrenDS /opt/opendj/config/java.properties
+14:49:11 08/21/20 Stopping opendj server
+14:49:11 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/stop-ds
+14:49:13 08/21/20 Stopping Server...
+[21/Aug/2020:14:49:13 +0000] category=PROTOCOL severity=NOTICE msgID=277 msg=Stopped listening for new connections on LDAPS Connection Handler 0.0.0.0 port 1636
+[21/Aug/2020:14:49:13 +0000] category=PROTOCOL severity=NOTICE msgID=277 msg=Stopped listening for new connections on LDAP Connection Handler 0.0.0.0 port 1389
+[21/Aug/2020:14:49:13 +0000] category=PROTOCOL severity=NOTICE msgID=277 msg=Stopped listening for new connections on Administration Connector 0.0.0.0 port 4444
+[21/Aug/2020:14:49:13 +0000] category=BACKEND severity=NOTICE msgID=370 msg=The backend userRoot is now taken offline
+[21/Aug/2020:14:49:13 +0000] category=CORE severity=NOTICE msgID=203 msg=The Directory Server is now stopped
+
+14:49:13 08/21/20 Copying WrenDS schema
+14:49:13 08/21/20 Copying file /install/community-edition-setup/static/opendj/96-eduperson.ldif to /opt/opendj/config/schema
+14:49:13 08/21/20 Copied /install/community-edition-setup/static/opendj/96-eduperson.ldif to /opt/opendj/config/schema
+14:49:13 08/21/20 Copying file /install/community-edition-setup/static/opendj/101-ox.ldif to /opt/opendj/config/schema
+14:49:13 08/21/20 Copied /install/community-edition-setup/static/opendj/101-ox.ldif to /opt/opendj/config/schema
+14:49:13 08/21/20 Copying file /install/community-edition-setup/static/opendj/77-customAttributes.ldif to /opt/opendj/config/schema
+14:49:13 08/21/20 Copied /install/community-edition-setup/static/opendj/77-customAttributes.ldif to /opt/opendj/config/schema
+14:49:13 08/21/20 Running: /bin/chmod -R a+rX /opt/opendj
+14:49:13 08/21/20 Running: /bin/chown -R ldap:ldap /opt/opendj
+14:49:13 08/21/20 Copying file /install/community-edition-setup/static/opendj/systemd/opendj.service to /etc/systemd/system
+14:49:13 08/21/20 Copied /install/community-edition-setup/static/opendj/systemd/opendj.service to /etc/systemd/system
+14:49:13 08/21/20 Running: /bin/systemctl daemon-reload
+14:49:13 08/21/20 Running: /bin/systemctl enable opendj.service
+14:49:13 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/opendj.service -> /etc/systemd/system/opendj.service.
+
+14:49:13 08/21/20 Running: /bin/systemctl start opendj.service
+14:50:44 08/21/20 Job for opendj.service failed because a timeout was exceeded.
+See "systemctl status opendj.service" and "journalctl -xe" for details.
+
+14:50:44 08/21/20 Configuring WrenDS
+14:50:44 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-backend-prop --backend-name userRoot --set db-cache-percent:70
+14:50:47 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:47 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-global-configuration-prop --set single-structural-objectclass-behavior:accept
+14:50:49 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:49 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-password-policy-prop --policy-name "Default Password Policy" --set allow-pre-encoded-passwords:true
+14:50:52 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:52 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-log-publisher-prop --publisher-name "File-Based Audit Logger" --set enabled:true
+14:50:54 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:54 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-backend --backend-name metric --set base-dn:o=metric --type je --set enabled:true --set db-cache-percent:20
+14:50:57 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:57 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-backend --backend-name site --set base-dn:o=site --type je --set enabled:true --set db-cache-percent:20
+14:50:59 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:59 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-connection-handler-prop --handler-name "LDAP Connection Handler" --set enabled:false
+14:51:02 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:02 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-connection-handler-prop --handler-name "JMX Connection Handler" --set enabled:false
+14:51:04 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:04 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-access-control-handler-prop --remove global-aci:'(targetattr!="userPassword||authPassword||debugsearchindex||changes||changeNumber||changeType||changeTime||targetDN||newRDN||newSuperior||deleteOldRDN")(version 3.0; acl "Anonymous read access"; allow (read,search,compare) userdn="ldap:///anyone";)'
+14:51:07 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:07 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-global-configuration-prop --set reject-unauthenticated-requests:true
+14:51:10 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:10 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-password-policy-prop --policy-name "Default Password Policy" --set default-password-storage-scheme:"Salted SHA-512"
+14:51:12 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:12 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-plugin --plugin-name "Unique mail address" --type unique-attribute --set enabled:true --set base-dn:o=gluu --set type:mail
+14:51:15 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:15 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-plugin --plugin-name "Unique uid entry" --type unique-attribute --set enabled:true --set base-dn:o=gluu --set type:uid
+14:51:17 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:17 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-password-policy-prop --policy-name "Default Password Policy" --set default-password-storage-scheme:"Salted SHA-512"
+14:51:20 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:20 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-connection-handler-prop --handler-name "LDAPS Connection Handler" --set enabled:true --set listen-address:127.0.0.1
+14:51:22 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:22 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-administration-connector-prop --set listen-address:127.0.0.1
+14:51:25 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:25 08/21/20 Getting WrenDS certificate
+14:51:25 08/21/20 Traceback (most recent call last):
+  File "./setup.py", line 4235, in install_ldap_server
+    self.export_opendj_public_cert()
+  File "./setup.py", line 3816, in export_opendj_public_cert
+    opendj_cert = ssl.get_server_certificate((self.ldap_hostname, self.ldaps_port))
+  File "/usr/lib/python3.5/ssl.py", line 1150, in get_server_certificate
+    with  create_connection(addr) as sock:
+  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+14:51:25 08/21/20 Running: /bin/systemctl stop apache2
+14:51:26 08/21/20 Run: /bin/systemctl stop apache2 with result code: 0
+14:51:26 08/21/20 Copying file /install/community-edition-setup/output/https_gluu.conf to /etc/apache2/sites-available/https_gluu.conf
+14:51:26 08/21/20 Copied /install/community-edition-setup/output/https_gluu.conf to /etc/apache2/sites-available/https_gluu.conf
+14:51:26 08/21/20 Running: /bin/ln -s /etc/apache2/sites-available/https_gluu.conf /etc/apache2/sites-enabled/https_gluu.conf
+14:51:26 08/21/20 Writing file /var/www/html/index.html
+14:51:26 08/21/20 Running: cp -f /var/www/html/index.html /var/www/html/index.html.gluu-4.2.0-1~
+14:51:26 08/21/20 Writing file /etc/apache2/mods-available/alias.conf
+14:51:26 08/21/20 Running: cp -f /etc/apache2/mods-available/alias.conf /etc/apache2/mods-available/alias.conf.gluu-4.2.0-1~
+14:51:26 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_500.html to /var/www/html
+14:51:26 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_500.html to /var/www/html
+14:51:26 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_404.html to /var/www/html
+14:51:26 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_404.html to /var/www/html
+14:51:26 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_502.html to /var/www/html
+14:51:26 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_502.html to /var/www/html
+14:51:26 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_503.html to /var/www/html
+14:51:26 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_503.html to /var/www/html
+14:51:26 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_504.html to /var/www/html
+14:51:26 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_504.html to /var/www/html
+14:51:26 08/21/20 Running: /bin/systemctl start apache2
+14:51:26 08/21/20 Run: /bin/systemctl start apache2 with result code: 1
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/negotiation.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/filter.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/authn_file.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/evasive.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/deflate.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/authz_user.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/status.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/auth_basic.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/autoindex.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/bw.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/autoindex.conf
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/negotiation.conf
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/dir.load
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/status.conf
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/dir.conf
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/evasive.conf
+14:51:26 08/21/20 Running: unlink /etc/apache2/mods-enabled/deflate.conf
+14:51:26 08/21/20 Running: /bin/systemctl enable apache2
+14:51:26 08/21/20 Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+
+14:51:26 08/21/20 Copying oxauth.war into jetty webapps folder...
+14:51:26 08/21/20 Installing jetty service oxauth...
+14:51:26 08/21/20 Preparing oxauth service base folders
+14:51:26 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth
+14:51:26 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom
+14:51:26 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/pages
+14:51:26 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/i18n
+14:51:26 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/static
+14:51:26 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/libs
+14:51:26 08/21/20 Preparing oxauth service base configuration
+14:51:26 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/oxauth --add-to-start=server,deploy,annotations,resources,http,http-forwarded,threadpool,console-capture,jsp,websocket
+14:51:27 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:27 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/oxauth
+14:51:27 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/oxauth
+14:51:27 08/21/20 Writing file /install/community-edition-setup/output/jetty/oxauth
+14:51:27 08/21/20 Copying file /install/community-edition-setup/output/jetty/oxauth to /etc/default
+14:51:27 08/21/20 Copied /install/community-edition-setup/output/jetty/oxauth to /etc/default
+14:51:27 08/21/20 Running: /bin/chown root:root /etc/default/oxauth
+14:51:27 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/oxauth_web_resources.xml
+14:51:27 08/21/20 Writing file /install/community-edition-setup/output/jetty/oxauth_web_resources.xml
+14:51:27 08/21/20 Copying file /install/community-edition-setup/output/jetty/oxauth_web_resources.xml to /opt/gluu/jetty/oxauth/webapps
+14:51:27 08/21/20 Copied /install/community-edition-setup/output/jetty/oxauth_web_resources.xml to /opt/gluu/jetty/oxauth/webapps
+14:51:27 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/oxauth.xml
+14:51:27 08/21/20 Writing file /install/community-edition-setup/output/jetty/oxauth.xml
+14:51:27 08/21/20 Copying file /install/community-edition-setup/output/jetty/oxauth.xml to /opt/gluu/jetty/oxauth/webapps
+14:51:27 08/21/20 Copied /install/community-edition-setup/output/jetty/oxauth.xml to /opt/gluu/jetty/oxauth/webapps
+14:51:27 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/oxauth
+14:51:27 08/21/20 Running: /bin/systemctl enable oxauth
+14:51:27 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/oxauth.service -> /lib/systemd/system/oxauth.service.
+
+14:51:27 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+14:51:27 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:27 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:27 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+14:51:27 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+14:51:27 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service oxauth
+14:51:27 08/21/20 Writing file /opt/gluu/jetty/oxauth/start.ini
+14:51:27 08/21/20 Running: cp -f /opt/gluu/jetty/oxauth/start.ini /opt/gluu/jetty/oxauth/start.ini.gluu-4.2.0-1~
+14:51:27 08/21/20 Copying file /opt/dist/gluu/oxauth.war to /opt/gluu/jetty/oxauth/webapps
+14:51:27 08/21/20 Copied /opt/dist/gluu/oxauth.war to /opt/gluu/jetty/oxauth/webapps
+14:51:27 08/21/20 Copying fido.war into jetty webapps folder...
+14:51:27 08/21/20 Installing jetty service fido2...
+14:51:27 08/21/20 Preparing fido2 service base folders
+14:51:27 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2
+14:51:27 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom
+14:51:27 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/pages
+14:51:27 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/i18n
+14:51:27 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/static
+14:51:27 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/libs
+14:51:27 08/21/20 Preparing fido2 service base configuration
+14:51:27 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/fido2 --add-to-start=server,deploy,resources,http,http-forwarded,threadpool,console-capture,jsp
+14:51:27 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:27 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/fido2
+14:51:27 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/fido2
+14:51:27 08/21/20 Writing file /install/community-edition-setup/output/jetty/fido2
+14:51:27 08/21/20 Copying file /install/community-edition-setup/output/jetty/fido2 to /etc/default
+14:51:27 08/21/20 Copied /install/community-edition-setup/output/jetty/fido2 to /etc/default
+14:51:27 08/21/20 Running: /bin/chown root:root /etc/default/fido2
+14:51:27 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/fido2
+14:51:27 08/21/20 Running: /bin/systemctl enable fido2
+14:51:28 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/fido2.service -> /lib/systemd/system/fido2.service.
+
+14:51:28 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+14:51:28 08/21/20 Running: cp -f /usr/lib/tmpfiles.d/jetty.conf /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-1~
+14:51:28 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service fido2
+14:51:28 08/21/20 Writing file /opt/gluu/jetty/fido2/start.ini
+14:51:28 08/21/20 Running: cp -f /opt/gluu/jetty/fido2/start.ini /opt/gluu/jetty/fido2/start.ini.gluu-4.2.0-1~
+14:51:28 08/21/20 Copying file /opt/dist/gluu/fido2.war to /opt/gluu/jetty/fido2/webapps
+14:51:28 08/21/20 Copied /opt/dist/gluu/fido2.war to /opt/gluu/jetty/fido2/webapps
+14:51:28 08/21/20 Copying identity.war into jetty webapps folder...
+14:51:28 08/21/20 Installing jetty service identity...
+14:51:28 08/21/20 Preparing identity service base folders
+14:51:28 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity
+14:51:28 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom
+14:51:28 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/pages
+14:51:28 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/i18n
+14:51:28 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/static
+14:51:28 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/libs
+14:51:28 08/21/20 Preparing identity service base configuration
+14:51:28 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/identity --add-to-start=server,deploy,annotations,resources,http,http-forwarded,threadpool,console-capture,jsp,websocket
+14:51:28 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:28 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/identity
+14:51:28 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/identity
+14:51:28 08/21/20 Writing file /install/community-edition-setup/output/jetty/identity
+14:51:28 08/21/20 Copying file /install/community-edition-setup/output/jetty/identity to /etc/default
+14:51:28 08/21/20 Copied /install/community-edition-setup/output/jetty/identity to /etc/default
+14:51:28 08/21/20 Running: /bin/chown root:root /etc/default/identity
+14:51:28 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/identity_web_resources.xml
+14:51:28 08/21/20 Writing file /install/community-edition-setup/output/jetty/identity_web_resources.xml
+14:51:28 08/21/20 Copying file /install/community-edition-setup/output/jetty/identity_web_resources.xml to /opt/gluu/jetty/identity/webapps
+14:51:28 08/21/20 Copied /install/community-edition-setup/output/jetty/identity_web_resources.xml to /opt/gluu/jetty/identity/webapps
+14:51:28 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/identity.xml
+14:51:28 08/21/20 Writing file /install/community-edition-setup/output/jetty/identity.xml
+14:51:28 08/21/20 Copying file /install/community-edition-setup/output/jetty/identity.xml to /opt/gluu/jetty/identity/webapps
+14:51:28 08/21/20 Copied /install/community-edition-setup/output/jetty/identity.xml to /opt/gluu/jetty/identity/webapps
+14:51:28 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/identity
+14:51:28 08/21/20 Running: /bin/systemctl enable identity
+14:51:28 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/identity.service -> /lib/systemd/system/identity.service.
+
+14:51:28 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+14:51:28 08/21/20 Running: cp -f /usr/lib/tmpfiles.d/jetty.conf /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-2~
+14:51:28 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+14:51:28 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service identity
+14:51:28 08/21/20 Writing file /opt/gluu/jetty/identity/start.ini
+14:51:28 08/21/20 Running: cp -f /opt/gluu/jetty/identity/start.ini /opt/gluu/jetty/identity/start.ini.gluu-4.2.0-1~
+14:51:28 08/21/20 Copying file /opt/dist/gluu/identity.war to /opt/gluu/jetty/identity/webapps
+14:51:29 08/21/20 Copied /opt/dist/gluu/identity.war to /opt/gluu/jetty/identity/webapps
+14:51:29 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service identity
+14:51:29 08/21/20 Writing file /opt/gluu/jetty/identity/start.ini
+14:51:29 08/21/20 Running: cp -f /opt/gluu/jetty/identity/start.ini /opt/gluu/jetty/identity/start.ini.gluu-4.2.0-2~
+14:51:29 08/21/20 Copying scim.war into jetty webapps folder...
+14:51:29 08/21/20 Installing jetty service scim...
+14:51:29 08/21/20 Preparing scim service base folders
+14:51:29 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim
+14:51:29 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom
+14:51:29 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/pages
+14:51:29 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/i18n
+14:51:29 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/static
+14:51:29 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/libs
+14:51:29 08/21/20 Preparing scim service base configuration
+14:51:29 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/scim --add-to-start=server,deploy,resources,http,http-forwarded,console-capture,jsp
+14:51:29 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      transitively enabled, ini template available with --add-to-start=threadpool
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:29 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/scim
+14:51:29 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/scim
+14:51:29 08/21/20 Writing file /install/community-edition-setup/output/jetty/scim
+14:51:29 08/21/20 Copying file /install/community-edition-setup/output/jetty/scim to /etc/default
+14:51:29 08/21/20 Copied /install/community-edition-setup/output/jetty/scim to /etc/default
+14:51:29 08/21/20 Running: /bin/chown root:root /etc/default/scim
+14:51:29 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/scim
+14:51:29 08/21/20 Running: /bin/systemctl enable scim
+14:51:29 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/scim.service -> /lib/systemd/system/scim.service.
+
+14:51:29 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+14:51:29 08/21/20 Running: cp -f /usr/lib/tmpfiles.d/jetty.conf /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-3~
+14:51:29 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:29 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+14:51:29 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+14:51:29 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+14:51:29 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service scim
+14:51:29 08/21/20 Writing file /opt/gluu/jetty/scim/start.ini
+14:51:29 08/21/20 Running: cp -f /opt/gluu/jetty/scim/start.ini /opt/gluu/jetty/scim/start.ini.gluu-4.2.0-1~
+14:51:29 08/21/20 Copying file /opt/dist/gluu/scim.war to /opt/gluu/jetty/scim/webapps
+14:51:30 08/21/20 Copied /opt/dist/gluu/scim.war to /opt/gluu/jetty/scim/webapps
+14:51:30 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service scim
+14:51:30 08/21/20 Writing file /opt/gluu/jetty/scim/start.ini
+14:51:30 08/21/20 Running: cp -f /opt/gluu/jetty/scim/start.ini /opt/gluu/jetty/scim/start.ini.gluu-4.2.0-2~
+14:51:30 08/21/20 Install SAML Shibboleth IDP v3...
+14:51:30 08/21/20 Created dir: /etc/gluu/conf/shibboleth3
+14:51:30 08/21/20 Created dir: /opt/gluu/jetty/identity/conf/shibboleth3/idp
+14:51:30 08/21/20 Created dir: /opt/gluu/jetty/identity/conf/shibboleth3/sp
+14:51:30 08/21/20 Running: /opt/jre/bin/jar xf /opt/dist/gluu/shibboleth-idp.jar
+14:51:30 08/21/20 Removed dir: /opt/META-INF
+14:51:30 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/idp.properties
+14:51:30 08/21/20 Writing file /opt/shibboleth-idp/conf/idp.properties
+14:51:30 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/idp.properties /opt/shibboleth-idp/conf/idp.properties.gluu-4.2.0-1~
+14:51:30 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/ldap.properties
+14:51:30 08/21/20 Writing file /opt/shibboleth-idp/conf/ldap.properties
+14:51:30 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/ldap.properties /opt/shibboleth-idp/conf/ldap.properties.gluu-4.2.0-1~
+14:51:30 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/saml-nameid.properties
+14:51:30 08/21/20 Writing file /opt/shibboleth-idp/conf/saml-nameid.properties
+14:51:30 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/saml-nameid.properties /opt/shibboleth-idp/conf/saml-nameid.properties.gluu-4.2.0-1~
+14:51:30 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/services.properties
+14:51:30 08/21/20 Writing file /opt/shibboleth-idp/conf/services.properties
+14:51:30 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/services.properties /opt/shibboleth-idp/conf/services.properties.gluu-4.2.0-1~
+14:51:30 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/authn/password-authn-config.xml
+14:51:30 08/21/20 Writing file /opt/shibboleth-idp/conf/authn/password-authn-config.xml
+14:51:30 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/authn/password-authn-config.xml /opt/shibboleth-idp/conf/authn/password-authn-config.xml.gluu-4.2.0-1~
+14:51:30 08/21/20 Load certificate /etc/certs/idp-encryption.crt

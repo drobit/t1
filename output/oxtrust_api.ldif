@@ -1,0 +1,33 @@
+# API Scope
+dn: inum=OO11-AABB,ou=scopes,o=gluu
+objectClass: oxAuthCustomScope
+objectClass: top
+displayName: API Read Access
+inum: OO11-AABB
+oxId: oxtrust-api-read
+oxUmaPolicyScriptDn: inum=OO11-BAFE,ou=scripts,o=gluu
+oxScopeType: uma
+
+# API Scope
+dn: inum=1122-BBCC,ou=scopes,o=gluu
+objectClass: oxAuthCustomScope
+objectClass: top
+displayName: API Write Access
+inum: 1122-BBCC
+oxId: oxtrust-api-write
+oxUmaPolicyScriptDn: inum=OO11-BAFE,ou=scripts,o=gluu
+oxScopeType: uma
+
+#API Resource
+dn: oxId=1403.0f812c80-5dde-469c-b5c7-c350d8bd6dae,ou=resources,ou=uma,o=gluu
+objectClass: oxUmaResource
+objectClass: top
+displayName: oxTrust api Resource
+owner: inum=d6e3c6e0-6a97-45c4-8043-7ea428512505,ou=people,o=gluu
+oxFaviconImage: http://www.gluu.org/img/api_logo.png
+oxAssociatedClient: inum=1401.98cde194-5c29-4c40-9fdb-5a27a9621ddb,ou=clients,o=gluu
+oxAuthUmaScope: inum=OO11-AABB,ou=scopes,o=gluu
+oxAuthUmaScope: inum=1122-BBCC,ou=scopes,o=gluu
+oxId: 1403.0f812c80-5dde-469c-b5c7-c350d8bd6dae
+oxResource: https://instance-3/identity/restv1/api/v1
+oxRevision: 1

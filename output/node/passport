@@ -1,0 +1,13 @@
+NODE_HOME=/opt/node
+NODE=$NODE_HOME/bin/node
+
+NODE_BASE=/opt/gluu/node/passport
+NODE_LOGS=${NODE_BASE}/logs
+NODE_CONFIG_DIR=${NODE_BASE}/config
+NODE_APP=server/app.js
+NODE_OPTIONS="PORT=8090 NODE_ENV=production HOSTNAME=localhost"
+NODE_ARGS="--max-old-space-size=975"
+APP_ARGS=""
+
+NODE_USER=node
+TMPDIR=/opt/node/temp

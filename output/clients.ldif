@@ -1,0 +1,54 @@
+#########################
+# OX Clients Definition
+#########################
+
+dn: inum=1001.2a5036c3-f02f-4d48-9dfe-5af80b0fe52d,ou=clients,o=gluu
+objectClass: oxAuthClient
+objectClass: top
+displayName: oxTrust Admin GUI
+inum: 1001.2a5036c3-f02f-4d48-9dfe-5af80b0fe52d
+oxAuthClientSecret: EMkMuV7I5bfFWy8EWrsqmw==
+oxAuthAppType: web
+oxAuthResponseType: code
+oxAuthGrantType: authorization_code
+oxAuthGrantType: implicit
+oxAuthGrantType: refresh_token
+oxAuthScope: inum=F0C4,ou=scopes,o=gluu
+oxAuthScope: inum=10B2,ou=scopes,o=gluu
+oxAuthScope: inum=764C,ou=scopes,o=gluu
+oxAuthLogoutURI: https://instance-3/identity/ssologout.htm
+oxAuthRedirectURI: https://instance-3/identity/scim/auth
+oxAuthRedirectURI: https://instance-3/identity/authcode.htm
+oxAuthRedirectURI: https://instance-3/oxauth/restv1/uma/gather_claims?authentication=true
+oxClaimRedirectURI: https://instance-3/oxauth/restv1/uma/gather_claims
+oxAuthPostLogoutRedirectURI: https://instance-3/identity/finishlogout.htm
+oxAuthTokenEndpointAuthMethod: client_secret_basic
+oxAuthIdTokenSignedResponseAlg: HS256
+oxAuthTrustedClient: true
+oxAuthSubjectType: public
+oxPersistClientAuthorizations: false
+oxAuthLogoutSessionRequired: true
+
+
+dn: inum=1101.4099f03a-3358-48b1-9460-edb1ce92c2d5,ou=clients,o=gluu
+objectClass: oxAuthClient
+objectClass: top
+displayName: IDP client
+inum: 1101.4099f03a-3358-48b1-9460-edb1ce92c2d5
+oxAuthClientSecret: xvlxLUMeAV3IVBb3wQ6Trw==
+oxAuthAppType: web
+oxAuthResponseType: code
+oxAuthGrantType: authorization_code
+oxAuthGrantType: refresh_token
+oxAuthScope: inum=F0C4,ou=scopes,o=gluu
+oxAuthScope: inum=10B2,ou=scopes,o=gluu
+oxAuthScope: inum=764C,ou=scopes,o=gluu
+oxAuthLogoutURI: https://instance-3/idp/Authn/oxAuth/ssologout
+oxAuthRedirectURI: https://instance-3/idp/Authn/oxAuth
+oxAuthPostLogoutRedirectURI: https://instance-3/idp/profile/Logout
+oxAuthTokenEndpointAuthMethod: client_secret_basic
+oxAuthIdTokenSignedResponseAlg: HS256
+oxAuthTrustedClient: true
+oxAuthSubjectType: public
+oxPersistClientAuthorizations: false
+oxAuthLogoutSessionRequired: true

@@ -1,0 +1,15 @@
+{
+    "applicationName":"Saml",
+
+    "openIdProviderUrl":"https://instance-3/.well-known/openid-configuration",
+    "openIdClientId":"1101.4099f03a-3358-48b1-9460-edb1ce92c2d5",
+    "openIdClientPassword":"xvlxLUMeAV3IVBb3wQ6Trw==",
+    "openIdScopes":[
+        "openid",
+        "email",
+        "user_name"
+    ],
+    "openIdRedirectUrl": "https://instance-3/idp/Authn/oxAuth",
+    "openIdPostLogoutRedirectUri": "https://instance-3/idp/profile/Logout",
+    "scriptDn": "ou=scripts,o=gluu"
+}

@@ -1,0 +1,8 @@
+{
+    "passportUmaClientId":"1501.27cf064f-7849-439a-96dc-9fab8264f849",
+    "passportUmaClientKeyId":"",
+    "passportUmaResourceId":"1504.40aac962-8c4e-4636-b2e3-db24ed170c4f",
+    "passportUmaScope":"https://instance-3/oxauth/restv1/uma/scopes/passport_access",
+    "passportUmaClientKeyStoreFile":"/etc/certs/passport-rs.jks",
+    "passportUmaClientKeyStorePassword":"Stir1VM0P404AP8GjJeJzg=="
+}

@@ -1,0 +1,22 @@
+# SCIM Scope
+dn: inum=8CAD-B06D,ou=scopes,o=gluu
+objectClass: oxAuthCustomScope
+objectClass: top
+displayName: SCIM Access
+inum: 8CAD-B06D
+oxId: https://instance-3/oxauth/restv1/uma/scopes/scim_access
+oxUmaPolicyScriptDn: inum=2DAF-F9A5,ou=scripts,o=gluu
+oxScopeType: uma
+
+# SCIM Resource
+dn: oxId=1203.dd417fb7-35a7-41f7-bce4-2c1ca5da20ca,ou=resources,ou=uma,o=gluu
+objectClass: oxUmaResource
+objectClass: top
+displayName: SCIM Resource
+owner: inum=d6e3c6e0-6a97-45c4-8043-7ea428512505,ou=people,o=gluu
+oxFaviconImage: http://www.gluu.org/img/scim_logo.png
+oxAssociatedClient: inum=1201.28bfe981-078a-43c5-8aea-fb7d6cd17bd7,ou=clients,o=gluu
+oxAuthUmaScope: inum=8CAD-B06D,ou=scopes,o=gluu
+oxId: 1203.dd417fb7-35a7-41f7-bce4-2c1ca5da20ca
+oxResource: https://instance-3/identity/restv1/scim/v2
+oxRevision: 1

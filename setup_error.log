@@ -1,0 +1,286 @@
+14:39:52 08/21/20 Installing Gluu Server
+14:41:23 08/21/20 2020-08-21 14:41:23 URL:https://ox.gluu.org/maven/org/gluu/oxauth-rp/4.2.0.Final/oxauth-rp-4.2.0.Final.war [35858131/35858131] -> "/opt/dist/gluu/oxauth-rp.war" [1]
+
+14:41:56 08/21/20 Generating RSA private key, 2048 bit long modulus
+.........................+++++
+............................................................................................................+++++
+e is 65537 (0x010001)
+
+14:41:56 08/21/20 writing RSA key
+
+14:41:56 08/21/20 problems making Certificate Request
+140123772756032:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:57 08/21/20 x509: Cannot open input file /etc/certs/httpd.csr, No such file or directory
+x509: Use -help for summary.
+
+14:41:57 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:41:57 08/21/20 Generating RSA private key, 2048 bit long modulus
+..........................................+++++
+...................................................+++++
+e is 65537 (0x010001)
+
+14:41:57 08/21/20 writing RSA key
+
+14:41:57 08/21/20 problems making Certificate Request
+140314348609600:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:57 08/21/20 x509: Cannot open input file /etc/certs/shibIDP.csr, No such file or directory
+x509: Use -help for summary.
+
+14:41:58 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:41:58 08/21/20 Generating RSA private key, 2048 bit long modulus
+.................................................+++++
+.......................................................+++++
+e is 65537 (0x010001)
+
+14:41:58 08/21/20 writing RSA key
+
+14:41:58 08/21/20 problems making Certificate Request
+140434842501184:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:58 08/21/20 x509: Cannot open input file /etc/certs/idp-encryption.csr, No such file or directory
+x509: Use -help for summary.
+
+14:41:59 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:41:59 08/21/20 Generating RSA private key, 2048 bit long modulus
+...+++++
+..........................................................................................................+++++
+e is 65537 (0x010001)
+
+14:41:59 08/21/20 writing RSA key
+
+14:41:59 08/21/20 problems making Certificate Request
+140154310807616:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:41:59 08/21/20 x509: Cannot open input file /etc/certs/idp-signing.csr, No such file or directory
+x509: Use -help for summary.
+
+14:42:00 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:42:00 08/21/20 Generating RSA private key, 2048 bit long modulus
+...............+++++
+..........................................................+++++
+e is 65537 (0x010001)
+
+14:42:00 08/21/20 writing RSA key
+
+14:42:00 08/21/20 problems making Certificate Request
+140210008322112:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:../crypto/asn1/a_mbstr.c:109:maxsize=2
+
+14:42:00 08/21/20 x509: Cannot open input file /etc/certs/passport-sp.csr, No such file or directory
+x509: Use -help for summary.
+
+14:42:00 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+14:42:00 08/21/20 pkcs12: Cannot open input file /etc/certs/shibIDP.crt, No such file or directory
+pkcs12: Use -help for summary.
+
+14:42:00 08/21/20 Importing keystore /etc/certs/shibIDP.pkcs12 to /etc/certs/shibIDP.jks...
+
+14:42:00 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+14:42:00 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+14:42:00 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+14:42:00 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+14:49:11 08/21/20 WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.opends.server.util.Platform$PlatformIMPL (file:/opt/opendj/lib/wrends.jar) to constructor sun.security.tools.keytool.CertAndKeyGen(java.lang.String,java.lang.String)
+WARNING: Please consider reporting this to the maintainers of org.opends.server.util.Platform$PlatformIMPL
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+14:49:13 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/opendj.service -> /etc/systemd/system/opendj.service.
+
+14:50:44 08/21/20 Job for opendj.service failed because a timeout was exceeded.
+See "systemctl status opendj.service" and "journalctl -xe" for details.
+
+14:50:47 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:49 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:52 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:54 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:57 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:50:59 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:02 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:04 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:07 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:10 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:12 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:15 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:17 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:20 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:22 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:25 08/21/20 
+Unable to connect to the server at "localhost" on port 4444
+
+
+14:51:25 08/21/20 Traceback (most recent call last):
+  File "./setup.py", line 4235, in install_ldap_server
+    self.export_opendj_public_cert()
+  File "./setup.py", line 3816, in export_opendj_public_cert
+    opendj_cert = ssl.get_server_certificate((self.ldap_hostname, self.ldaps_port))
+  File "/usr/lib/python3.5/ssl.py", line 1150, in get_server_certificate
+    with  create_connection(addr) as sock:
+  File "/usr/lib/python3.5/socket.py", line 712, in create_connection
+    raise err
+  File "/usr/lib/python3.5/socket.py", line 703, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+14:51:26 08/21/20 Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+
+14:51:27 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:27 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/oxauth.service -> /lib/systemd/system/oxauth.service.
+
+14:51:27 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:28 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/fido2.service -> /lib/systemd/system/fido2.service.
+
+14:51:28 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:28 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/identity.service -> /lib/systemd/system/identity.service.
+
+14:51:29 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      transitively enabled, ini template available with --add-to-start=threadpool
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+14:51:29 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/scim.service -> /lib/systemd/system/scim.service.
+
