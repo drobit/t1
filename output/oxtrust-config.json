@@ -1,0 +1,143 @@
+{
+    "orgIname":"",
+    "orgSupportEmail":"ss@gmail.com",
+
+    "baseDN":"o=gluu",
+
+    "baseEndpoint":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/restv1",
+
+    "idpUrl":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal",
+    "applicationUrl":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal",
+
+    "keystorePath":"/etc/certs/shibIDP.jks",
+    "keystorePassword":"IcM1NOipwAc9",
+
+    "personObjectClassTypes":[
+        "gluuCustomPerson",
+        "gluuPerson",
+        "eduPerson"
+    ],
+    "personObjectClassDisplayNames":[
+        "gluuCustomPerson",
+        "gluuPerson",
+        "eduPerson"
+    ],
+
+    "svnConfigurationStoreRoot":"unused",
+    "svnConfigurationStorePassword":"unused",
+    "persistSVN":false,
+
+    "allowPersonModification":true,
+    "updateStatus":true,
+
+    "clientAssociationAttribute":"inum",
+
+    "personCustomObjectClass":"gluuCustomPerson",
+
+    "contactObjectClassTypes":[
+
+    ],
+    "contactObjectClassDisplayNames":[
+
+    ],
+
+    "photoRepositoryRootDir":"/var/gluu/photos",
+    "photoRepositoryThumbWidth":300,
+    "photoRepositoryThumbHeight":300,
+    "photoRepositoryCountLeveles":3,
+    "photoRepositoryCountFoldersPerLevel":20,
+
+    "shibboleth3FederationRootDir":"/opt/shibboleth-federation",
+
+    "spMetadataPath":"",
+
+    "logoLocation":"/var/gluu/photos",
+
+    "gluuSpAttributes":[
+
+    ],
+
+    "configGeneration":true,
+    "ignoreValidation":false,
+
+    "idpSecurityCert":"/etc/certs/shibIDP.crt",
+    "idpSecurityKey":"/etc/certs/shibIDP.key",
+    "idpSecurityKeyPassword":"lw0XrvBeS1UvtfCZ+ot8iQ==",
+    "gluuSpCert":"/etc/certs/shibIDP.crt",
+
+    "idpBindDn":"cn=Directory Manager",
+    "idpBindPassword":"ijOmsZa5u5oZerNO8ANX7A==",
+    "idpLdapProtocol":"ldaps",
+    "idpLdapServer":"localhost:1636",
+    "idpUserFields":"",
+
+    "ldifStore":"/var/gluu/identity/removed",
+
+    "caCertsLocation":"/usr/java/latest/jre/lib/security/cacerts",
+    "caCertsPassphrase":"",
+
+    "certDir":"/etc/certs/",
+    "tempCertDir":"/etc/certs/temp",
+
+    "clusteredInums":[
+
+    ],
+
+    "servicesRestartTrigger":"/opt/gluu/essential_files/trigger_restart_of_services_delete_me_to_do_so",
+
+    "oxAuthIssuer":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal",
+    "oxAuthSectorIdentifierUrl":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/oxauth/sectoridentifier",
+
+    "oxAuthClientId":"1001.1248a56f-5ca7-4817-b6c8-01edbd03da2f",
+    "oxAuthClientPassword":"f80wsywroF/SxC92Opop7Q==",
+    "oxAuthClientScope":"openid+profile+email+user_name",
+
+    "loginRedirectUrl":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/authcode.htm",
+    "logoutRedirectUrl":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/finishlogout.htm",
+
+    "umaIssuer":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal",
+
+    "scimUmaClientId":"1201.e0430cb8-4548-4b8f-900b-5b000b841302",
+    "scimUmaClientKeyId":"",
+    "scimUmaResourceId":"1203.9891c38f-9c63-4ff7-b5dc-dd376d48d602",
+    "scimUmaScope":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/oxauth/restv1/uma/scopes/scim_access",
+    "scimUmaClientKeyStoreFile":"/etc/certs/scim-rs.jks",
+    "scimUmaClientKeyStorePassword":"CmSe8f2IXHYnvjpJJMwDhQ==",
+
+    "apiUmaClientId":"1401.d826cf51-6884-4525-a35d-9adda2ba70ee",
+    "apiUmaClientKeyId":"",
+    "apiUmaResourceId":"1403.80b924dc-3d9e-4114-8d6a-20d4471ee39c",
+    "apiUmaScope":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/oxauth/restv1/uma/scopes/oxtrust-api-read",
+    "apiUmaClientKeyStoreFile":"/etc/certs/api-rs.jks",
+    "apiUmaClientKeyStorePassword":"xoUr2Fy02Ng=",
+
+    "cssLocation":"",
+    "jsLocation":"",
+
+    "rptConnectionPoolUseConnectionPooling":true,
+    "rptConnectionPoolMaxTotal":200,
+    "rptConnectionPoolDefaultMaxPerRoute":20,
+    "rptConnectionPoolValidateAfterInactivity":10,
+    "rptConnectionPoolCustomKeepAliveTimeout":5,
+
+    "shibbolethVersion":"v3",
+    "shibboleth3IdpRootDir":"/opt/shibboleth-idp",
+    "shibboleth3SpConfDir":"/opt/shibboleth-idp/sp",
+    "organizationName":"ss",
+    "idp3SigningCert":"/etc/certs/idp-signing.crt",
+    "idp3EncryptionCert":"/etc/certs/idp-encryption.crt",
+
+    "clientWhiteList": ["*"],
+    "clientBlackList": ["*.attacker.com/*"],
+
+    "scimTestMode": false,
+    "oxTrustApiTestMode": false,
+    "ScimProperties": {
+        "maxCount": 200
+    },
+    "cleanServiceInterval":300,
+    "loggingLevel": "INFO",
+    "loggingLayout": "text",
+    "passwordResetRequestExpirationTime":600,
+    "useLocalCache":true
+}

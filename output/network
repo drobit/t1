@@ -1,0 +1,4 @@
+NETWORKING=yes
+NOZEROCONF=yes
+NETWORKING_IPV6=no
+HOSTNAME=instance-1.us-central1-a.c.nifty-canyon-287111.internal

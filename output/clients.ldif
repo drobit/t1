@@ -1,0 +1,54 @@
+#########################
+# OX Clients Definition
+#########################
+
+dn: inum=1001.1248a56f-5ca7-4817-b6c8-01edbd03da2f,ou=clients,o=gluu
+objectClass: oxAuthClient
+objectClass: top
+displayName: oxTrust Admin GUI
+inum: 1001.1248a56f-5ca7-4817-b6c8-01edbd03da2f
+oxAuthClientSecret: f80wsywroF/SxC92Opop7Q==
+oxAuthAppType: web
+oxAuthResponseType: code
+oxAuthGrantType: authorization_code
+oxAuthGrantType: implicit
+oxAuthGrantType: refresh_token
+oxAuthScope: inum=F0C4,ou=scopes,o=gluu
+oxAuthScope: inum=10B2,ou=scopes,o=gluu
+oxAuthScope: inum=764C,ou=scopes,o=gluu
+oxAuthLogoutURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/ssologout.htm
+oxAuthRedirectURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/scim/auth
+oxAuthRedirectURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/authcode.htm
+oxAuthRedirectURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/oxauth/restv1/uma/gather_claims?authentication=true
+oxClaimRedirectURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/oxauth/restv1/uma/gather_claims
+oxAuthPostLogoutRedirectURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/finishlogout.htm
+oxAuthTokenEndpointAuthMethod: client_secret_basic
+oxAuthIdTokenSignedResponseAlg: HS256
+oxAuthTrustedClient: true
+oxAuthSubjectType: public
+oxPersistClientAuthorizations: false
+oxAuthLogoutSessionRequired: true
+
+
+dn: inum=1101.ea3666cf-2518-4bda-8f86-7af583dd148d,ou=clients,o=gluu
+objectClass: oxAuthClient
+objectClass: top
+displayName: IDP client
+inum: 1101.ea3666cf-2518-4bda-8f86-7af583dd148d
+oxAuthClientSecret: chAbKQ5OaMiUVN2GiN7/OA==
+oxAuthAppType: web
+oxAuthResponseType: code
+oxAuthGrantType: authorization_code
+oxAuthGrantType: refresh_token
+oxAuthScope: inum=F0C4,ou=scopes,o=gluu
+oxAuthScope: inum=10B2,ou=scopes,o=gluu
+oxAuthScope: inum=764C,ou=scopes,o=gluu
+oxAuthLogoutURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/idp/Authn/oxAuth/ssologout
+oxAuthRedirectURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/idp/Authn/oxAuth
+oxAuthPostLogoutRedirectURI: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/idp/profile/Logout
+oxAuthTokenEndpointAuthMethod: client_secret_basic
+oxAuthIdTokenSignedResponseAlg: HS256
+oxAuthTrustedClient: true
+oxAuthSubjectType: public
+oxPersistClientAuthorizations: false
+oxAuthLogoutSessionRequired: true
