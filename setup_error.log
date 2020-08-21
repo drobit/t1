@@ -1,0 +1,217 @@
+11:44:06 08/21/20 Installing Gluu Server
+12:04:03 08/21/20 2020-08-21 12:04:03 URL:https://ox.gluu.org/maven/org/gluu/oxauth-rp/4.2.0.Final/oxauth-rp-4.2.0.Final.war [35858131/35858131] -> "/opt/dist/gluu/oxauth-rp.war" [1]
+
+12:04:50 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+..........................................................+++++
+............................+++++
+e is 65537 (0x010001)
+
+12:04:50 08/21/20 writing RSA key
+
+12:04:50 08/21/20 problems making Certificate Request
+140387386397888:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:50 08/21/20 Can't open /etc/certs/httpd.csr for reading, No such file or directory
+140019045819584:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/httpd.csr','r')
+140019045819584:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:50 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:50 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+...........................+++++
+..................................................................+++++
+e is 65537 (0x010001)
+
+12:04:50 08/21/20 writing RSA key
+
+12:04:50 08/21/20 problems making Certificate Request
+140175619146944:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:50 08/21/20 Can't open /etc/certs/shibIDP.csr for reading, No such file or directory
+140197148701888:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/shibIDP.csr','r')
+140197148701888:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:51 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:51 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+.+++++
+...........................................................................+++++
+e is 65537 (0x010001)
+
+12:04:51 08/21/20 writing RSA key
+
+12:04:51 08/21/20 problems making Certificate Request
+140612707980480:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:51 08/21/20 Can't open /etc/certs/idp-encryption.csr for reading, No such file or directory
+140696119653568:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/idp-encryption.csr','r')
+140696119653568:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:52 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:52 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+.................+++++
+...............................+++++
+e is 65537 (0x010001)
+
+12:04:52 08/21/20 writing RSA key
+
+12:04:52 08/21/20 problems making Certificate Request
+140167010006208:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:52 08/21/20 Can't open /etc/certs/idp-signing.csr for reading, No such file or directory
+139634337957056:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/idp-signing.csr','r')
+139634337957056:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:52 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:53 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+.....................................................................................................................................................................+++++
+.....................................................+++++
+e is 65537 (0x010001)
+
+12:04:53 08/21/20 writing RSA key
+
+12:04:53 08/21/20 problems making Certificate Request
+139701052957888:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:53 08/21/20 Can't open /etc/certs/passport-sp.csr for reading, No such file or directory
+140250380764352:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/passport-sp.csr','r')
+140250380764352:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:53 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:53 08/21/20 Can't open /etc/certs/shibIDP.crt for reading, No such file or directory
+140379829892288:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/shibIDP.crt','r')
+140379829892288:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:54 08/21/20 Importing keystore /etc/certs/shibIDP.pkcs12 to /etc/certs/shibIDP.jks...
+
+12:04:54 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+12:04:54 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+12:04:54 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+12:04:54 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+12:05:32 08/21/20 WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.opends.server.util.Platform$PlatformIMPL (file:/opt/opendj/lib/wrends.jar) to constructor sun.security.tools.keytool.CertAndKeyGen(java.lang.String,java.lang.String)
+WARNING: Please consider reporting this to the maintainers of org.opends.server.util.Platform$PlatformIMPL
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+12:05:39 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/opendj.service → /etc/systemd/system/opendj.service.
+
+12:07:05 08/21/20 Certificate was added to keystore
+
+12:07:05 08/21/20 Warning: use -cacerts option to access cacerts keystore
+Certificate was added to keystore
+
+12:11:45 08/21/20 Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+
+12:11:46 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:47 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/oxauth.service → /lib/systemd/system/oxauth.service.
+
+12:11:48 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:48 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/fido2.service → /lib/systemd/system/fido2.service.
+
+12:11:50 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:50 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/identity.service → /lib/systemd/system/identity.service.
+
+12:11:53 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      transitively enabled, ini template available with --add-to-start=threadpool
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:53 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/scim.service → /lib/systemd/system/scim.service.
+

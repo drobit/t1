@@ -1,0 +1,33 @@
+# API Scope
+dn: inum=OO11-AABB,ou=scopes,o=gluu
+objectClass: oxAuthCustomScope
+objectClass: top
+displayName: API Read Access
+inum: OO11-AABB
+oxId: oxtrust-api-read
+oxUmaPolicyScriptDn: inum=OO11-BAFE,ou=scripts,o=gluu
+oxScopeType: uma
+
+# API Scope
+dn: inum=1122-BBCC,ou=scopes,o=gluu
+objectClass: oxAuthCustomScope
+objectClass: top
+displayName: API Write Access
+inum: 1122-BBCC
+oxId: oxtrust-api-write
+oxUmaPolicyScriptDn: inum=OO11-BAFE,ou=scripts,o=gluu
+oxScopeType: uma
+
+#API Resource
+dn: oxId=1403.8081959c-cbbe-4843-a35c-fc76002c6bf8,ou=resources,ou=uma,o=gluu
+objectClass: oxUmaResource
+objectClass: top
+displayName: oxTrust api Resource
+owner: inum=8c7336a8-4167-42b0-92d4-c53778277ee4,ou=people,o=gluu
+oxFaviconImage: http://www.gluu.org/img/api_logo.png
+oxAssociatedClient: inum=1401.09df89b8-1809-4a65-89b7-e7d83da550d5,ou=clients,o=gluu
+oxAuthUmaScope: inum=OO11-AABB,ou=scopes,o=gluu
+oxAuthUmaScope: inum=1122-BBCC,ou=scopes,o=gluu
+oxId: 1403.8081959c-cbbe-4843-a35c-fc76002c6bf8
+oxResource: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/restv1/api/v1
+oxRevision: 1

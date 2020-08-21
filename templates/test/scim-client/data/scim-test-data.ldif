@@ -1,0 +1,54 @@
+######################################
+# Custom attributes
+######################################
+dn: inum=ADA6,ou=attributes,o=gluu
+objectClass: top
+objectClass: gluuAttribute
+description: Scim First custom attribute
+displayName: Scim Custom First
+gluuAttributeEditType: admin
+gluuAttributeEditType: user
+gluuAttributeName: scimCustomFirst
+gluuAttributeOrigin: gluuCustomPerson
+gluuAttributeType: string
+gluuSAML1URI: urn:gluu:dir:attribute-def:scimCustomFirst
+gluuSAML2URI: urn:oid:scimCustomFirst
+gluuStatus: active
+inum: ADA6
+oxMultivaluedAttribute: false
+oxSCIMCustomAttribute: true
+
+dn: inum=70F0,ou=attributes,o=gluu
+objectClass: top
+objectClass: gluuAttribute
+description: Scim Second custom attribute
+displayName: Scim Custom Second
+gluuAttributeEditType: admin
+gluuAttributeEditType: user
+gluuAttributeName: scimCustomSecond
+gluuAttributeOrigin: gluuCustomPerson
+gluuAttributeType: generalizedTime
+gluuSAML1URI: urn:gluu:dir:attribute-def:scimCustomSecond
+gluuSAML2URI: urn:oid:scimCustomSecond
+gluuStatus: active
+inum: 70F0
+oxMultivaluedAttribute: true
+oxSCIMCustomAttribute: true
+
+dn: inum=653A,ou=attributes,o=gluu
+objectClass: top
+objectClass: gluuAttribute
+description: Scim Third custom attribute
+displayName: Scim Custom Third
+gluuAttributeEditType: admin
+gluuAttributeEditType: user
+gluuAttributeName: scimCustomThird
+gluuAttributeOrigin: gluuCustomPerson
+gluuAttributeType: numeric
+gluuSAML1URI: urn:gluu:dir:attribute-def:scimCustomThird
+gluuSAML2URI: urn:oid:scimCustomThird
+gluuStatus: active
+inum: 653A
+oxMultivaluedAttribute: false
+oxSCIMCustomAttribute: true
+

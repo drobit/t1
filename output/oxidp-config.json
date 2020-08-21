@@ -1,0 +1,15 @@
+{
+    "applicationName":"Saml",
+
+    "openIdProviderUrl":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/.well-known/openid-configuration",
+    "openIdClientId":"1101.b187e9ba-12aa-45e1-8998-83cc4931fe96",
+    "openIdClientPassword":"wx6Nh7JtO2XhlAgXhXPvbA==",
+    "openIdScopes":[
+        "openid",
+        "email",
+        "user_name"
+    ],
+    "openIdRedirectUrl": "https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/idp/Authn/oxAuth",
+    "openIdPostLogoutRedirectUri": "https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/idp/profile/Logout",
+    "scriptDn": "ou=scripts,o=gluu"
+}

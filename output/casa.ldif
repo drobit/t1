@@ -1,0 +1,5 @@
+dn: ou=casa,ou=configuration,o=gluu
+objectClass: top
+objectClass: oxApplicationConfiguration
+ou: casa
+oxConfApplication: {"enable_pass_reset" : true, "oxd_config" : {"host": "instance-1.us-central1-a.c.nifty-canyon-287111.internal", "port": 8443, "frontchannel_logout_uri" : "https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/casa/autologout", "post_logout_uri" : "https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/casa/bye.zul", "authz_redirect_uri" : "https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/casa"}, "log_level" : "INFO"}

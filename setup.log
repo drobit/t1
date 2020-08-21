@@ -1,0 +1,1881 @@
+11:44:06 08/21/20 Removed /install/community-edition-setup/setup.log
+11:44:06 08/21/20 Installing Gluu Server
+11:44:06 08/21/20 Determining key generator path
+12:01:49 08/21/20 Calculating memory setting for applications
+12:04:02 08/21/20 Checking properties
+12:04:02 08/21/20 Rendering template /install/community-edition-setup/templates/system_profile_systemd
+12:04:02 08/21/20 Writing file /install/community-edition-setup/output/system_profile_systemd
+12:04:02 08/21/20 Running: cp -f /etc/profile /etc/profile.gluu-4.2.0-1~
+12:04:02 08/21/20 Writing file /etc/profile
+12:04:02 08/21/20 Running: cp -f /etc/profile /etc/profile.gluu-4.2.0-2~
+12:04:02 08/21/20 Running: /bin/chmod 644 /etc/profile
+12:04:02 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/bash --create-home --home-dir /home/ldap ldap
+12:04:02 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/bash --create-home --home-dir /home/jetty jetty
+12:04:02 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/bash --create-home --home-dir /home/node node
+12:04:02 08/21/20 Running: /usr/sbin/useradd --system --user-group --shell /bin/false --create-home --home-dir /opt/gluu/radius radius
+12:04:02 08/21/20 Running: /usr/sbin/groupadd gluu
+12:04:02 08/21/20 Running: /usr/sbin/usermod -a -G gluu ldap
+12:04:02 08/21/20 Running: /usr/sbin/usermod -a -G gluu jetty
+12:04:02 08/21/20 Running: /usr/sbin/usermod -a -G gluu node
+12:04:02 08/21/20 Running: /usr/sbin/usermod -a -G gluu radius
+12:04:02 08/21/20 Running: /usr/sbin/usermod -a -G adm ldap
+12:04:02 08/21/20 Running: /bin/chmod ga+w /tmp
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/gluu
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/gluu/bin
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/gluu/system
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/gluu/python
+12:04:02 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf
+12:04:02 08/21/20 Running: /bin/mkdir -p /etc/certs
+12:04:02 08/21/20 Running: /bin/mkdir -p /install/community-edition-setup/output
+12:04:02 08/21/20 Running: /bin/mkdir -p /home/jetty/lib
+12:04:02 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2
+12:04:02 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//authenticator_cert
+12:04:02 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//mds/cert
+12:04:02 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//mds/toc
+12:04:02 08/21/20 Running: /bin/mkdir -p /etc/gluu/conf/fido2//server_metadata
+12:04:02 08/21/20 Running: /bin/mkdir -m 775 -p /var/gluu/photos
+12:04:02 08/21/20 Running: /bin/mkdir -m 775 -p /var/gluu/identity/removed
+12:04:02 08/21/20 Running: /bin/mkdir -m 775 -p /var/gluu/identity/cr-snapshots
+12:04:02 08/21/20 Running: /bin/chown -R root:gluu /var/gluu/photos
+12:04:02 08/21/20 Running: /bin/chown -R root:gluu /var/gluu/identity/removed
+12:04:02 08/21/20 Running: /bin/chown -R root:gluu /var/gluu/identity/cr-snapshots
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/metadata
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/metadata/credentials
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/logs
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/lib
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/conf
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/conf/authn
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/credentials
+12:04:02 08/21/20 Running: /bin/mkdir -p /opt/shibboleth-idp/webapp
+12:04:02 08/21/20 Running: /bin/chown -R jetty:jetty /opt/shibboleth-idp
+12:04:03 08/21/20 Running: /usr/bin/wget https://ox.gluu.org/maven/org/gluu/oxauth-rp/4.2.0.Final/oxauth-rp-4.2.0.Final.war --no-verbose --retry-connrefused --tries=10 -O /opt/dist/gluu/oxauth-rp.war
+12:04:03 08/21/20 2020-08-21 12:04:03 URL:https://ox.gluu.org/maven/org/gluu/oxauth-rp/4.2.0.Final/oxauth-rp-4.2.0.Final.war [35858131/35858131] -> "/opt/dist/gluu/oxauth-rp.war" [1]
+
+12:04:04 08/21/20 Calculating memory setting for applications
+12:04:04 08/21/20 Installing server JRE amazon-corretto-11-x64-linux-jdk.tar.gz ...
+12:04:04 08/21/20 Extracting amazon-corretto-11-x64-linux-jdk.tar.gz into /opt/
+12:04:04 08/21/20 Running: tar -xzf /opt/dist/app/amazon-corretto-11-x64-linux-jdk.tar.gz -C /opt/ --no-xattrs --no-same-owner --no-same-permissions
+12:04:07 08/21/20 Running: /bin/ln -sf /opt/amazon-corretto-11.0.7.10.1-linux-x64 /opt/jre
+12:04:07 08/21/20 Running: /bin/chmod -R 755 /opt/amazon-corretto-11.0.7.10.1-linux-x64/bin/
+12:04:07 08/21/20 Running: /bin/chown -R root:root /opt/amazon-corretto-11.0.7.10.1-linux-x64
+12:04:07 08/21/20 Running: /bin/chown -h root:root /opt/jre
+12:04:07 08/21/20 Running: /bin/mkdir -p /opt/jre/jre
+12:04:07 08/21/20 Running: /bin/ln -s /opt/jre/lib /opt/jre/jre/lib
+12:04:07 08/21/20 Running: sed -i /^#crypto.policy=unlimited/s/^#// /opt/jre/conf/security/java.security
+12:04:07 08/21/20 Installing jetty %s...
+12:04:07 08/21/20 Running: /bin/mkdir -p /opt/jetty-9.4/temp
+12:04:07 08/21/20 Running: /bin/chown -R jetty:jetty /opt/jetty-9.4/temp
+12:04:07 08/21/20 Extracting /opt/dist/app/jetty-distribution-9.4.26.v20200117.tar.gz into /opt/jetty
+12:04:07 08/21/20 Running: tar -xzf /opt/dist/app/jetty-distribution-9.4.26.v20200117.tar.gz -C /opt/jetty-9.4 --no-xattrs --no-same-owner --no-same-permissions
+12:04:08 08/21/20 Running: /bin/ln -sf /opt/jetty-9.4/jetty-distribution-9.4.26.v20200117 /opt/jetty
+12:04:08 08/21/20 Running: /bin/chmod -R 755 /opt/jetty-9.4/jetty-distribution-9.4.26.v20200117/bin/
+12:04:08 08/21/20 Applying changes to jetty files...
+12:04:08 08/21/20 Writing file /opt/jetty/etc/webdefault.xml.bak
+12:04:08 08/21/20 Created backup of jetty file /opt/jetty/etc/webdefault.xml.bak...
+12:04:08 08/21/20 Writing file /opt/jetty/etc/webdefault.xml
+12:04:08 08/21/20 Running: cp -f /opt/jetty/etc/webdefault.xml /opt/jetty/etc/webdefault.xml.gluu-4.2.0-1~
+12:04:08 08/21/20 Wrote updated jetty file /opt/jetty/etc/webdefault.xml...
+12:04:08 08/21/20 Writing file /opt/jetty/etc/jetty.xml.bak
+12:04:08 08/21/20 Created backup of jetty file /opt/jetty/etc/jetty.xml.bak...
+12:04:08 08/21/20 Writing file /opt/jetty/etc/jetty.xml
+12:04:08 08/21/20 Running: cp -f /opt/jetty/etc/jetty.xml /opt/jetty/etc/jetty.xml.gluu-4.2.0-1~
+12:04:08 08/21/20 Wrote updated jetty file /opt/jetty/etc/jetty.xml...
+12:04:08 08/21/20 Running: /bin/chown -R jetty:jetty /opt/jetty-9.4/jetty-distribution-9.4.26.v20200117
+12:04:08 08/21/20 Running: /bin/chown -h jetty:jetty /opt/jetty
+12:04:08 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty
+12:04:08 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty
+12:04:08 08/21/20 Running: /bin/mkdir -p /var/run/jetty
+12:04:08 08/21/20 Running: /bin/chmod -R 775 /var/run/jetty
+12:04:08 08/21/20 Running: /bin/chgrp -R jetty /var/run/jetty
+12:04:08 08/21/20 Running: rm -rf /opt/jetty/bin/jetty.sh
+12:04:08 08/21/20 Copying file /install/community-edition-setup/static/system/initd/jetty.sh to /opt/jetty/bin/jetty.sh
+12:04:08 08/21/20 Copied /install/community-edition-setup/static/system/initd/jetty.sh to /opt/jetty/bin/jetty.sh
+12:04:08 08/21/20 Running: /bin/chown -R jetty:jetty /opt/jetty/bin/jetty.sh
+12:04:08 08/21/20 Running: /bin/chmod -R 755 /opt/jetty/bin/jetty.sh
+12:04:08 08/21/20 Installing Jython
+12:04:08 08/21/20 Running: rm -rf /opt*-2.7.2
+12:04:08 08/21/20 Running: /opt/jre/bin/java -jar /opt/dist/app/jython-installer-2.7.2.jar -v -s -d /opt/jython-2.7.2 -t standard -e ensurepip
+12:04:12 08/21/20 system properties dumped to /tmp/System175192283620927473.properties
+reading jar info
+using the console installer
+Performing silent installation
+specification version: '11'
+excluding directory META-INF/
+excluding directory extlibs/
+excluding directory grammar/
+excluding directory org/
+excluding directory org/apache/
+excluding directory org/apache/commons/
+excluding directory org/apache/commons/cli/
+excluding directory org/python/
+excluding directory org/python/util/
+excluding directory org/python/util/install/
+excluding directory org/python/util/install/driver/
+excluding directory src/
+excluding directory src/com/
+excluding directory src/com/xhaus/
+excluding directory src/com/xhaus/modjy/
+excluding directory src/com/ziclix/
+excluding directory src/com/ziclix/python/
+excluding directory src/com/ziclix/python/sql/
+excluding directory src/com/ziclix/python/sql/connect/
+excluding directory src/com/ziclix/python/sql/handler/
+excluding directory src/com/ziclix/python/sql/pipe/
+excluding directory src/com/ziclix/python/sql/pipe/csv/
+excluding directory src/com/ziclix/python/sql/pipe/db/
+excluding directory src/com/ziclix/python/sql/procedure/
+excluding directory src/com/ziclix/python/sql/resource/
+excluding directory src/com/ziclix/python/sql/util/
+excluding directory src/org/
+excluding directory src/org/python/
+excluding directory src/org/python/antlr/
+excluding directory src/org/python/antlr/adapter/
+excluding directory src/org/python/antlr/ast/
+excluding directory src/org/python/antlr/base/
+excluding directory src/org/python/antlr/op/
+excluding directory src/org/python/compiler/
+excluding directory src/org/python/core/
+excluding directory src/org/python/core/adapter/
+excluding directory src/org/python/core/buffer/
+excluding directory src/org/python/core/finalization/
+excluding directory src/org/python/core/io/
+excluding directory src/org/python/core/packagecache/
+excluding directory src/org/python/core/stringlib/
+excluding directory src/org/python/core/util/
+excluding directory src/org/python/expose/
+excluding directory src/org/python/expose/generate/
+excluding directory src/org/python/indexer/
+excluding directory src/org/python/indexer/ast/
+excluding directory src/org/python/indexer/demos/
+excluding directory src/org/python/indexer/types/
+excluding directory src/org/python/jsr223/
+excluding directory src/org/python/modules/
+excluding directory src/org/python/modules/_collections/
+excluding directory src/org/python/modules/_csv/
+excluding directory src/org/python/modules/_functools/
+excluding directory src/org/python/modules/_io/
+excluding directory src/org/python/modules/_json/
+excluding directory src/org/python/modules/_jythonlib/
+excluding directory src/org/python/modules/_locale/
+excluding directory src/org/python/modules/_threading/
+excluding directory src/org/python/modules/_weakref/
+excluding directory src/org/python/modules/bz2/
+excluding directory src/org/python/modules/itertools/
+excluding directory src/org/python/modules/jffi/
+excluding directory src/org/python/modules/posix/
+excluding directory src/org/python/modules/random/
+excluding directory src/org/python/modules/sre/
+excluding directory src/org/python/modules/thread/
+excluding directory src/org/python/modules/time/
+excluding directory src/org/python/modules/zipimport/
+excluding directory src/org/python/util/
+excluding directory src/shell/
+excluding directory src/templates/
+ 10 %
+ 20 %
+ 30 %
+ 40 %
+ 50 %
+ 60 %
+ 70 %
+ 80 %
+ 90 %
+ 100 %
+ 110 %
+ 120 %
+ 130 %
+ 140 %
+ 150 %
+Generating start scripts ...
+ 100 %
+Congratulations! You successfully installed Jython 2.7.2 to directory /opt/jython-2.7.2.
+
+12:04:12 08/21/20 Running: /bin/ln -sf /opt/jython-2.7.2 /opt/jython
+12:04:12 08/21/20 Running: /bin/chown -R root:root /opt/jython-2.7.2
+12:04:12 08/21/20 Running: /bin/chown -h root:root /opt/jython
+12:04:12 08/21/20 Installing node %s...
+12:04:12 08/21/20 Extracting /opt/dist/app/node-v12.6.0-linux-x64.tar.xz into /opt
+12:04:12 08/21/20 Running: tar -xJf /opt/dist/app/node-v12.6.0-linux-x64.tar.xz -C /opt/ --no-xattrs --no-same-owner --no-same-permissions
+12:04:14 08/21/20 Running: /bin/ln -sf /opt/node-v12.6.0-linux-x64 /opt/node
+12:04:14 08/21/20 Running: /bin/chmod -R 755 /opt/node-v12.6.0-linux-x64/bin/
+12:04:14 08/21/20 Running: /bin/mkdir -p /opt/node/temp
+12:04:14 08/21/20 Copying file /install/community-edition-setup/static/system/initd/node to /opt/gluu/system
+12:04:14 08/21/20 Copied /install/community-edition-setup/static/system/initd/node to /opt/gluu/system
+12:04:14 08/21/20 Copying file /install/community-edition-setup/static/system/initd/passport to /opt/gluu/system
+12:04:14 08/21/20 Copied /install/community-edition-setup/static/system/initd/passport to /opt/gluu/system
+12:04:14 08/21/20 Running: /bin/chmod -R 755 /opt/gluu/system/node
+12:04:14 08/21/20 Running: /bin/chmod -R 755 /opt/gluu/system/passport
+12:04:14 08/21/20 Running: /bin/chown -R node:node /opt/node-v12.6.0-linux-x64
+12:04:14 08/21/20 Running: /bin/chown -h node:node /opt/node
+12:04:14 08/21/20 Running: /bin/mkdir -p /opt/gluu/node
+12:04:14 08/21/20 Running: /bin/chown -R node:node /opt/gluu/node
+12:04:15 08/21/20 Copying script files
+12:04:15 08/21/20 Copying file /install/community-edition-setup/static/scripts/logmanager.sh to /opt/gluu/bin
+12:04:15 08/21/20 Copied /install/community-edition-setup/static/scripts/logmanager.sh to /opt/gluu/bin
+12:04:15 08/21/20 Copying file /install/community-edition-setup/static/scripts/testBind.py to /opt/gluu/bin
+12:04:15 08/21/20 Copied /install/community-edition-setup/static/scripts/testBind.py to /opt/gluu/bin
+12:04:15 08/21/20 Rendering encode.py
+12:04:15 08/21/20 Running: /bin/chmod -R 700 /opt/gluu/bin
+12:04:15 08/21/20 Encoding passwords
+12:04:15 08/21/20 Encoding test passwords
+12:04:15 08/21/20 Rendering template /install/community-edition-setup/templates/passport_oxtrust_config.son
+12:04:15 08/21/20 Writing file /install/community-edition-setup/output/passport_oxtrust_config.son
+12:04:16 08/21/20 Installing Gluu base...
+12:04:16 08/21/20 Generating oxAuth OpenID Connect keys
+12:04:16 08/21/20 Creating empty JKS keystore
+12:04:16 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/api-rs.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+12:04:17 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/api-rs.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+12:04:18 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rs.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:18 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rs.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:23 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "8fb12030-21ce-4e8e-9ca0-f109b57bb9c1_sig_rs256",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAJAXf6D8r781MSoAXuTjA8DyDnV6nUZ2NikhRDfC6vvIMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDEwWhcNMjEwODIxMTIwNDE5WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnO0sw9kXkwPhpGcY8lxxy3RJB1AshiETSgsPTOS5UcQ2y8/QGhlsE0hkNlZxg7kLaQHh0xiCjJ8+QIKTjwsenumKNge61ca5g4cJFjgZX3HhW7VDJ5DgdvayGuXskLWB+SlTICoQ+OcKwp4FhlkgAsJedCvkcTl0O1PZh1yMpcLqZ4mCIzVA52+Y5uZ8w8jmbPhr4Qel3zSC8f7W38m8lNZLhAMH7Ed9wxW1xxu8UeCkwBqdnTwIWCYL6SNTUZrJr6nOUXDPfFr7K/w+6xDDWyky/w6mnEVDS+hfEqfDIMbB1MMaaRpqwa7I+KnvGWktMdqXLHmvAOoQYLUWS9xTxwIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQELBQADggEBAJFrue6Z5BTpxDGP1AbHR1GNW1sFGTypT3rT4Z+i3wxOOc54vzO1NA7Q4z0VnF1ni9tQL7GoSmcj2hrZaq2VycPLqSZGoWgJqH5araJelDuVHW+5fVfPlOEYZjG6Kbb2IN9bW+WvrhpW7UQLbWX3bEXNwdGayOcbrFOXEVz4GRaHfcxlwHvMpLwp312Y4utWnAGPMzxNNK54EsIJ9A5134l/OcHwpmOvImmvv6ge3o+28AhQQmkx/ArlMPayq2JYltc0wYSIlYKlNuOeL5YJHel48PIEHhzV6g3uMps7swkHZxeYKc5TdnjUIs8P6AYXeRhjCqqvpXW6MD9wBJ5J3aY=" ],
+    "exp" : 1629547459906,
+    "alg" : "RS256",
+    "n" : "nO0sw9kXkwPhpGcY8lxxy3RJB1AshiETSgsPTOS5UcQ2y8_QGhlsE0hkNlZxg7kLaQHh0xiCjJ8-QIKTjwsenumKNge61ca5g4cJFjgZX3HhW7VDJ5DgdvayGuXskLWB-SlTICoQ-OcKwp4FhlkgAsJedCvkcTl0O1PZh1yMpcLqZ4mCIzVA52-Y5uZ8w8jmbPhr4Qel3zSC8f7W38m8lNZLhAMH7Ed9wxW1xxu8UeCkwBqdnTwIWCYL6SNTUZrJr6nOUXDPfFr7K_w-6xDDWyky_w6mnEVDS-hfEqfDIMbB1MMaaRpqwa7I-KnvGWktMdqXLHmvAOoQYLUWS9xTxw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "e13ae47b-b855-4df0-b1b5-36b13862ab63_sig_rs384",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAJseXpJiJm55zEMQQZnYSoElWj/pyQ/aOO9mG9GCbc/+MA0GCSqGSIb3DQEBDAUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDExWhcNMjEwODIxMTIwNDE5WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5/9YdHai7gK+aNYuhpFcfSpjofMvCSJL71iwKXwWIcrOp/VIqrI/og1OLlhrTElN0L8r1qThoDLQzH4NP7pgXXawhzlKJBqTMECteVKXBLUo0my9tTlEqmQimaPhLu+ARFRgB5fNESXc7A2bZDzGrcWEqzkBheu40SWEw56oYYv3t6ikccgrvPtlt9kAjjWowM2I+dKBON+IGN5ZOjQJk90Tm1mOjSIAee69EMrHbFMLsJy1oTqFG0HfOvDNqhwNgCjwMjSFy+hOMGsuR4BEhSVflGsTp5VZhb34f1Uxk+yHFaOnVDcP+PRE/nwV0TluLoinxFq4WWTgXKDiJ94wvQIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQEMBQADggEBAFEYCnYT7AQXXcBoiubZjEUe0vCc/ruiknBWs8ptl5ScqdOQ1h4SEiX5FGSf5pCcBDqX+9WI1r/7mA+rpmoxMMkaAsFmWdJKyd8uhY4ySnWpeJrzOkN2diob+6VFdX45Nmn2riRsDbUs2+2JcJ8SQ8PCojZPsFZCAI7kZb9SgyGXwKswRoRdepts84LCuJVGp59JwNsm0fCBMGhEyVamRFQ3dcv+7H0vePwWiDLL+Rg70SeTXbhRH3lTSI25TutLsDgoaBB0XHa80lmiQsNRUpGAc1T6wtPMhsa3m7TWqdSUr6Nms5A7zAhBeiHbSUvzb+iDmrX8aJzgwLy3OS9M2TY=" ],
+    "exp" : 1629547459906,
+    "alg" : "RS384",
+    "n" : "5_9YdHai7gK-aNYuhpFcfSpjofMvCSJL71iwKXwWIcrOp_VIqrI_og1OLlhrTElN0L8r1qThoDLQzH4NP7pgXXawhzlKJBqTMECteVKXBLUo0my9tTlEqmQimaPhLu-ARFRgB5fNESXc7A2bZDzGrcWEqzkBheu40SWEw56oYYv3t6ikccgrvPtlt9kAjjWowM2I-dKBON-IGN5ZOjQJk90Tm1mOjSIAee69EMrHbFMLsJy1oTqFG0HfOvDNqhwNgCjwMjSFy-hOMGsuR4BEhSVflGsTp5VZhb34f1Uxk-yHFaOnVDcP-PRE_nwV0TluLoinxFq4WWTgXKDiJ94wvQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "68dcc954-b620-495b-821d-1cc35527e02d_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgV60uIZ+qeL6nYHlq4JmOdJyUUSUlGab0g9QTrtu7UOUwDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MTJaFw0yMTA4MjExMjA0MTlaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8MAtrzcFNQ3npeY34DKRGPT7hXnay7I7SshbuObOon9LN4m/M1oeA3amHL/4isTyzGwNa8D1me/evr/O1a14iAAKXeJqk/EZ3GpPFoNcsVlxyyf+7zeIvGtdWxx5Zy1x2vWxm/nBk8qsggSKxkMDRzKgQbpEgvFpnsjA/PaF171B84norNdcURyVzCjRD/ldmukOHd/ujWXJs6m3bxr1B8z+Bhd5TImK6qmxQdrqBImpIfF8DIbS4AC9vnYKlDq3nhCqMMLbg52Q+DivEXTdfG29Gjchz84UPRUIm9u3J7tNTv4prs2YbCDxk8cwaQOYQedFlS/tFtRZNh4JkZxznAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEAHAJHc64FatFLmWQou2R81GCJaSjsZuNXgCkoN8GIy9v1ikrUsmPfgN2v+d7HrAtNP068Q3rv3BAKiSu0iIUyekDDpcc3YjNdcbDay/DJqXGzEZ0MbpsRXP4REUuprokiePr9EDpB9Nk7kzEAwWA+rKaILOYOgROYC/Frb6JBsa+k6qkb6xQNSYdL8sRwDnNp2vq2U6TuoHyy30ESAiaE4ZXL4Svd3Te+H9fc8APw3T4Ujn6QUbww8Q7dz1dnV0IzjlIU1ckrBOqc5pQjwo1Usf5XtYeQ75NXKMEzGMB0Ych8YZY8tNFKMhvPSynuwa9o+Xuuoqm61rPYudO6t6XaUw==" ],
+    "exp" : 1629547459906,
+    "alg" : "RS512",
+    "n" : "vDALa83BTUN56XmN-AykRj0-4V52suyO0rIW7jmzqJ_SzeJvzNaHgN2phy_-IrE8sxsDWvA9Znv3r6_ztWteIgACl3iapPxGdxqTxaDXLFZccsn_u83iLxrXVsceWctcdr1sZv5wZPKrIIEisZDA0cyoEG6RILxaZ7IwPz2hde9QfOJ6KzXXFEclcwo0Q_5XZrpDh3f7o1lybOpt28a9QfM_gYXeUyJiuqpsUHa6gSJqSHxfAyG0uAAvb52CpQ6t54QqjDC24OdkPg4rxF03XxtvRo3Ic_OFD0VCJvbtye7TU7-Ka7NmGwg8ZPHMGkDmEHnRZUv7RbUWTYeCZGcc5w"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "e16fe258-27e9-4521-8b40-6b47edadcc28_sig_es256",
+    "x5c" : [ "MIIBeDCCAR6gAwIBAgIhAPy2EK8xahWgmybopplr2AK2eaVuJdTYQ4IyafE4lW46MAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDEzWhcNMjEwODIxMTIwNDE5WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEJK/1YyLVwb4Y4dLvWh9bAUUNLyKK1+kXCA+pMvFv+72JbPj/9mJ8zpjqpu39qo+HoQz85pTby5pLq+UhlUsUIaMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0gAMEUCIQCUi1DgWkEiKG6kMzIsBbPRUIwONuB2AcCdPTZwEc1UTwIgMsQJqElG2YAIZ9zGtq4Z5bRUcX4nxOLjhXl7fIp94Bc=" ],
+    "x" : "JK_1YyLVwb4Y4dLvWh9bAUUNLyKK1-kXCA-pMvFv-70",
+    "y" : "iWz4__ZifM6Y6qbt_aqPh6EM_OaU28uaS6vlIZVLFCE",
+    "exp" : 1629547459906,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "12f6090b-7ce5-4268-a633-57ffe11eaba6_sig_es384",
+    "x5c" : [ "MIIBtTCCATqgAwIBAgIgWJFHsOTEcOpBh5stU+hpHElibtIuprNILsY4fRCWqFowCgYIKoZIzj0EAwMwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MTNaFw0yMTA4MjExMjA0MTlaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAARYpQ13EbqZFOuL4v6AdgvJyJct/bqHpimN2Bt2rJYODkexyaWrJ9k0WuEhW4k+5NnPAWFJZREvsEKbZmAqf/U5ibMRNqBOhlrkgUv1e/mCNKChKgEZq5d1VLCP3rsM0kmjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDAwNpADBmAjEAiUPVdq3fzkwPYrIAGi1Iv6z7jR/SPNqHtVfJQj6bcVzNeUtm6bMbCmm7jq4C6+8GAjEA92hytosXI83uBFFF7usHYVTZNuprBQoIfLMaOQiJG05L2nOT3ExJoKi+Afv/WNRV" ],
+    "x" : "WKUNdxG6mRTri-L-gHYLyciXLf26h6YpjdgbdqyWDg5HscmlqyfZNFrhIVuJPuTZ",
+    "y" : "zwFhSWURL7BCm2ZgKn_1OYmzETagToZa5IFL9Xv5gjSgoSoBGauXdVSwj967DNJJ",
+    "exp" : 1629547459906,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "c9ae11f3-c21e-47c6-b8e1-0f9f318a8791_sig_es512",
+    "x5c" : [ "MIIB/zCCAWGgAwIBAgIhAJo+kVp4mfujV9z8DT5t3yTIxPrYGpYj8Yc0HS3Ew17nMAoGCCqGSM49BAMEMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDEzWhcNMjEwODIxMTIwNDE5WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQA7jeeaDrBBF6eMpafG4ejqAzxefM7EEhHKY/6JO24zVDGYzTYaimh9P+LdkppHklLmF4o5BY0tGvB+JEggFemtPEAlRLgZaXjn7YaXiaQJPWN60d1wkMpG0GyBqF0JeXfO70wBL6pU7rIqDB5rx3VzYNs4NqkWjW9ca4cLrf1rsc6gJ2jJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDBAOBiwAwgYcCQVTnreiTzcV4UjQc/lCI0hzRD+ztxgCX5NKZPOSVFRLTjcs2qA1GeMZlPSovbby+jjhlQLko0MFt224Jv5M9XCSVAkIAr0mVNSd5my+bKzylh4+CWpy+0DpSUrgK+pbv6Fv0fFlAWQ7kcgS7vg0Cd8KvaoFHWKf2yDX5IxcUeQgjFTlzqso=" ],
+    "x" : "7jeeaDrBBF6eMpafG4ejqAzxefM7EEhHKY_6JO24zVDGYzTYaimh9P-LdkppHklLmF4o5BY0tGvB-JEggFemtPE",
+    "y" : "lRLgZaXjn7YaXiaQJPWN60d1wkMpG0GyBqF0JeXfO70wBL6pU7rIqDB5rx3VzYNs4NqkWjW9ca4cLrf1rsc6gJ0",
+    "exp" : 1629547459906,
+    "alg" : "ES512"
+  } ]
+}
+
+12:04:23 08/21/20 Generating oxAuth OpenID Connect keys
+12:04:23 08/21/20 Creating empty JKS keystore
+12:04:23 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/api-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+12:04:25 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/api-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+12:04:26 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:26 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/api-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:32 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "7396712b-7c21-4b0c-8f30-2099905eb780_sig_rs256",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgTI4ngGCELxg5RiLwsBbNesO/kKCN/spWu3sj19+41CYwDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MTlaFw0yMTA4MjExMjA0MjdaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCyckODc+YzCyIuzSd0Ltb79AApRKZWjiF7SWtdKLzDg5/tUp3CRCtYXykjs78bbpWzkL0BKKZjoBgHXRDhmkpWHwYOrMYs5rXCcpbLj9PePKKy99VQ0E3K1jISqJ620zMb4MiHzwmstv41cFpAyosQeOCMgFZpkOyMUkMbMG7vEEakdlLOHLUjxDqOp5CrAo7+Z0QcaXx/AkybNppaPFTtsfcqSk/M+oaIljz4XnqpoNmPiz3s24RkbpZ6iBjDUQH/fRWd+sRKADRVVyzlWeYP4kfAU92oKXezTw0zw64L1phauQmJq+7a++WYUJdZpWv7NvGORgdozUWOoVfGlK9vAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAKLf+11M2s2QZ2RJnLkwmMvJ6FzlzKmIhxh+cncXHwjN9/MPew3kFXJhWlaUV21l7/gYqTNo/Xzjg1P5fPNWWf1ZQv8XJnZPrAPgp/z8pLDpeLIXWlGBFK9qJ4HxI3qydYE4yGShudmKWO2oMXLgD2EPTk8yGzxgEviSEmNH9ZNPTfcM5RvcyWIXSMfNkotBzgU2NDPXvgUMQman9x7f9kjaGCzLVRpSIBBmKyFz6WmUEJbVqf53a0D1oLNNyCm6YcfIUdU59BsJGqeiPD5LHr1LKQQLI0jA2QeL5c/5ulr+TpUnClZvtNBrmawx7qTiWpu76FhA1BQtMCpij9wvJmg==" ],
+    "exp" : 1629547467941,
+    "alg" : "RS256",
+    "n" : "snJDg3PmMwsiLs0ndC7W-_QAKUSmVo4he0lrXSi8w4Of7VKdwkQrWF8pI7O_G26Vs5C9ASimY6AYB10Q4ZpKVh8GDqzGLOa1wnKWy4_T3jyisvfVUNBNytYyEqiettMzG-DIh88JrLb-NXBaQMqLEHjgjIBWaZDsjFJDGzBu7xBGpHZSzhy1I8Q6jqeQqwKO_mdEHGl8fwJMmzaaWjxU7bH3KkpPzPqGiJY8-F56qaDZj4s97NuEZG6WeogYw1EB_30VnfrESgA0VVcs5VnmD-JHwFPdqCl3s08NM8OuC9aYWrkJiavu2vvlmFCXWaVr-zbxjkYHaM1FjqFXxpSvbw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "84baeaa2-451c-4167-ba56-00d279858924_sig_rs384",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgRYFltdILbkIrLN2mGeq5rcaeWzjVs9t1P+4/KrJD3AswDQYJKoZIhvcNAQEMBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MjBaFw0yMTA4MjExMjA0MjdaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRMm1z91fqs6f+pNk26h72momR6D2zUYCNieI91AKono67q9DPKpHg5+mJXHBmt5BdK4CbS/C3hGwKXnXLPU0zOU26wWqJMbaPyFbY1TCDxkeuE0rVfEfedHdZQ2vkov99pIEhMwb1W1eyL6G7rac5W5zik+fH2enkgVwPY7pWfQDjLlAz7ZCsn8Nxg4hCtXs9AUz8xMelJq2c5s5YPGHaPaqgke/ay6mKND6trZQGassJzRBk/ucJtEQmrlN/ceZ/YBOVUNlSoDLAFTrWWFfVit6nkZDuJADRyKVnSxj+cfN7PomOl3/bYe5/0rQIoOv/uBYn1APcWsKYeLCzaZSvAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQwFAAOCAQEAqGQBsXKHfb5D2aT/CTHyCs/R4ZqE5xz5oMyzWsU1DBcK6YuNPkhw/Cu0ZAJdOi1to/lVvQgz6JJz4h7L6zDIRuT8nXozQoPsL+sjBH3fCxbTvL/KdSH55bPM6l6yqEtbOmjE4cOSa0SEmBrXKBYSwwrmTCSSPNuaufqQeDOk7+o5BdL5aPD42F/XvoqhLecpIWbpbv0BQzev9hiG6kT/vUTjk2bEtjaA53D9LvYuV7Ougt5LXOSkrGD2VlLEXeJ0n/gOtcKPhFsIf/BOU/PmyZRAnNRjcup3DkcjResJrVm2L7QfTcMAI3I5zMymncxo5F7ff07AFQlCQ1OCHtog6g==" ],
+    "exp" : 1629547467941,
+    "alg" : "RS384",
+    "n" : "0TJtc_dX6rOn_qTZNuoe9pqJkeg9s1GAjYniPdQCqJ6Ou6vQzyqR4OfpiVxwZreQXSuAm0vwt4RsCl51yz1NMzlNusFqiTG2j8hW2NUwg8ZHrhNK1XxH3nR3WUNr5KL_faSBITMG9VtXsi-hu62nOVuc4pPnx9np5IFcD2O6Vn0A4y5QM-2QrJ_DcYOIQrV7PQFM_MTHpSatnObOWDxh2j2qoJHv2supijQ-ra2UBmrLCc0QZP7nCbREJq5Tf3Hmf2ATlVDZUqAywBU61lhX1Yrep5GQ7iQA0cilZ0sY_nHzez6Jjpd_22Huf9K0CKDr_7gWJ9QD3FrCmHiws2mUrw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "b4fac12d-017d-47d0-a098-8a883356e5fe_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgdtTEAvy53htFddLEKZ4VSP2gwF3HfFqg+vlo/63CgXEwDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MjBaFw0yMTA4MjExMjA0MjdaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDNxCNr9jg5UYo70xuKg74kp6ZsZsbmkSbvEg6Mfalp86pPfUJZdH7zqROH0zIet3IuUPBSimdHJ/Q5v+G4miLUuyt+aW3I0/GZuS0hiW7TkvpNeoFGSF6U2qV6W6SvJiQgpcXayTQ1KW3YfmHrOhqnhSFSb2rM7tCOAmy7NRC79fDfdclO13tglxmaMC2tZF1fjB+0hqYESaXHD3gjI377iVW4moctbdzZGtpkNpyqoft3txPk9mSjlbmKjJ0BrLZhOejU4x+yaeWYJeGjBLHoSzFbagJUi766dIYlzDr4YOVQ8AlLLopc6G1w+qEdAKtkViRJ9+o85vgB9q4cbeTAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEAYJMyABWdIoGn5nl763hmV0i0oruv5uFsp+SJ26qNj9RPjHDrpKV0RZnkJv68OoO/Q7yt2kjTTsd0kmmuFtMpAIhJroJffPU0oiyM6W5NmwDm3sHM3JwUvB2MAYwAzX7kLXEGBGgLIfcBaO0qsVjAtOBQBcOG2OPJptGEsLDquJ5IS7VFmhRLjeM+dL+mWmfdQ4gXAsrm1KPfrUyrrbfmgTgnvBaG+zLcFriTyFv0YpC6njtbDjUl2j1GT2VNnK9Quj818LxV0UnU1w9TVl2HS0HBbzf/s0ibOE0SlrNPihd4qwLq7XNEumaGCExDT95fNOjw+SUtDga11SHOctx/QQ==" ],
+    "exp" : 1629547467941,
+    "alg" : "RS512",
+    "n" : "wzcQja_Y4OVGKO9MbioO-JKembGbG5pEm7xIOjH2pafOqT31CWXR-86kTh9MyHrdyLlDwUopnRyf0Ob_huJoi1LsrfmltyNPxmbktIYlu05L6TXqBRkhelNqlelukryYkIKXF2sk0NSlt2H5h6zoap4UhUm9qzO7QjgJsuzUQu_Xw33XJTtd7YJcZmjAtrWRdX4wftIamBEmlxw94IyN--4lVuJqHLW3c2RraZDacqqH7d7cT5PZko5W5ioydAay2YTno1OMfsmnlmCXhowSx6EsxW2oCVIu-unSGJcw6-GDlUPAJSy6KXOhtcPqhHQCrZFYkSffqPOb4AfauHG3kw"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "f6f15f12-dd0b-477a-a739-6f79e10d380e_sig_es256",
+    "x5c" : [ "MIIBeDCCAR6gAwIBAgIhAPJBm6NMquszmSE2CG2jxpx1GzJCLURr9QKhQfZHP846MAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDIxWhcNMjEwODIxMTIwNDI3WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExU+p/NghhdiTf3McBFCjKU+aPRnokONXh/fxt75WopCIeYkTZB9s9eNkIvZ8p0GM/9LDYAz4pjySKDHJkxNCWKMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0gAMEUCIQCHyxibMzk8mAuYRLeOsil+cVRfFkhVsx1JpO/UToXXbQIgac3EyaXQsoAHRu7DOmH3jQPavQuHatmApo4TPmA3m18=" ],
+    "x" : "xU-p_NghhdiTf3McBFCjKU-aPRnokONXh_fxt75WopA",
+    "y" : "iHmJE2QfbPXjZCL2fKdBjP_Sw2AM-KY8kigxyZMTQlg",
+    "exp" : 1629547467941,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "7cc8b560-2adb-4f11-9d49-0595f68ccd9c_sig_es384",
+    "x5c" : [ "MIIBszCCATqgAwIBAgIgSQppBhon6qKtD+nZtgCm6nph1SuC05Rhg1JdI0wzgwQwCgYIKoZIzj0EAwMwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MjFaFw0yMTA4MjExMjA0MjdaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAASzBno7ChVFV1pVWMkq8ZeVjRvlD8QY6nZrm0SHj2FZ07b/li8pgtuIqykilyIWUPtxqyqFrEMxAieBNMBxrdZKQSb+fWPObEMWz1clQt+pvD71htfVwNKVOb4E6bzL+QGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDAwNnADBkAjAN/pnWmzo4SABsSyiNEc/KaXTCR1Tu+ITqm4E1vWx4yrC4NxQ1R/+zk8ogpHovIGgCMBxfwMzzTzTRS7gKxiKoHezLBC7HQNeXaOXiZnXv1nfAXkY2nPHhSfURtbcYSgF11w==" ],
+    "x" : "swZ6OwoVRVdaVVjJKvGXlY0b5Q_EGOp2a5tEh49hWdO2_5YvKYLbiKspIpciFlD7",
+    "y" : "casqhaxDMQIngTTAca3WSkEm_n1jzmxDFs9XJULfqbw-9YbX1cDSlTm-BOm8y_kB",
+    "exp" : 1629547467941,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "76e5d2c2-47e1-45e9-9078-8991c735bce9_sig_es512",
+    "x5c" : [ "MIICADCCAWGgAwIBAgIhAK0TRktBJxCh4X2nU6tORhj2QXBIyjP53U80idhtyvm4MAoGCCqGSM49BAMEMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDIxWhcNMjEwODIxMTIwNDI3WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQAZcg1KB5YbWuXi9zheJ7L1UNnHNyqZaCsIBH3pY976b59i2fsf0ItrqvluJs0BRsnaieJONkOG+VEqhk79Bz5TEIASHdyJ933xs1rMWnuWamHT0HrOIiaa0JI/p4o3UIyfMCY8ylkxsBsMfCjFi7yy3DCYImPCORHQ/5SxZRB3JinK3+jJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDBAOBjAAwgYgCQgEDyqNqKSMNkZ8V5G9ffDcJToyo/LKLxxY0J15zm/noxddci02OouNCieAZb9aR1gR6SCUR0SKvn/Nlnv9BuqePpAJCAJtS43OdHpt66UIrArm/N2d0iPQcOU8o29+0XdEASY1lVfd+qefKD4d+vvPShUiu+bkqZH7dwomchouITuuBfVM7" ],
+    "x" : "Zcg1KB5YbWuXi9zheJ7L1UNnHNyqZaCsIBH3pY976b59i2fsf0ItrqvluJs0BRsnaieJONkOG-VEqhk79Bz5TEI",
+    "y" : "SHdyJ933xs1rMWnuWamHT0HrOIiaa0JI_p4o3UIyfMCY8ylkxsBsMfCjFi7yy3DCYImPCORHQ_5SxZRB3JinK38",
+    "exp" : 1629547467941,
+    "alg" : "ES512"
+  } ]
+}
+
+12:04:32 08/21/20 Generating oxAuth OpenID Connect keys
+12:04:32 08/21/20 Creating empty JKS keystore
+12:04:32 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/scim-rs.jks -storepass NIY0izNp4yBo -keypass NIY0izNp4yBo -dname "CN=oxAuth CA Certificates"
+12:04:33 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/scim-rs.jks -storepass NIY0izNp4yBo -keypass NIY0izNp4yBo -dname "CN=oxAuth CA Certificates"
+12:04:34 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/scim-rs.jks -keypasswd NIY0izNp4yBo -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:34 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/scim-rs.jks -keypasswd NIY0izNp4yBo -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:40 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "ebf66577-acb4-4dd8-83ef-33cf14d78cbb_sig_rs256",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAIKbnumWcw3bf224fDM74rl2YN4vePtBUDqiTp0F3ooLMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDI3WhcNMjEwODIxMTIwNDM2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqMVyHZHM62IVEG7RcjppxUKFUj7gViJGeA+YSxBJd1Jppimh/9/p7KFEbcgO48O25k0jmB628oQgqlsN5o4yL4tRZsqFdP6d7Nwm8nEEcSxspU5eqVW4csnZ5DMiftGROTGRCr1X4Qz+lhioyyfqhF8PLksNY7RRiS5aBDkGOKdqUOh4UyPqt330fhVCe3XCFgDSnMzm+hRCYiWDr7XxmiH+tplCiLeT/IbB8dkSJ979EPqBgEda6PoMHR1fpoaFzIUdaq/UVMgzJRrIchGAvy60DkBLxJaoGQ54EH8hEKE2hwhiwUeJiMxQyO51mXihzs/Hk4SRM3f12tDv/k4MIQIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQELBQADggEBABDN/z+DO4ars2gaCgx0f75SQsmf5hcTHHI8nxPUDyGfFD3Fsb87bafkLrRhW9RUsUBBdcrzqUCXLM0Jsjk2cFqMJG3Sm+hH2cEySeH58XcqOKyYURhvabt8tTSYGO0LuzwuBjYMJLZx6R6aCkpb1w+e8PxRnDYZ20VsEHSdsQ/hjKowO2j4CSkfUSoc+D1g31EqPUCTe+XRq1CE5lFeyPDL4ZYWkmc4tgBeePW0zvrRqs8toyCx1Ih2It6xQgm4cYdR1NmjqsRPrUBA+Hi+JeCpyqsfYwTDNSWtcZzTdyOeKud/GzhAo541EjjI7ZgJlsfwqF0JP8B0vvnUmR/2ToE=" ],
+    "exp" : 1629547476276,
+    "alg" : "RS256",
+    "n" : "qMVyHZHM62IVEG7RcjppxUKFUj7gViJGeA-YSxBJd1Jppimh_9_p7KFEbcgO48O25k0jmB628oQgqlsN5o4yL4tRZsqFdP6d7Nwm8nEEcSxspU5eqVW4csnZ5DMiftGROTGRCr1X4Qz-lhioyyfqhF8PLksNY7RRiS5aBDkGOKdqUOh4UyPqt330fhVCe3XCFgDSnMzm-hRCYiWDr7XxmiH-tplCiLeT_IbB8dkSJ979EPqBgEda6PoMHR1fpoaFzIUdaq_UVMgzJRrIchGAvy60DkBLxJaoGQ54EH8hEKE2hwhiwUeJiMxQyO51mXihzs_Hk4SRM3f12tDv_k4MIQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "117f0441-38e6-4f2c-b719-e329033bb3be_sig_rs384",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgD5Zk42Vz+427KMBu13zzqyTIPgi8b4P0tonHw4/JdpUwDQYJKoZIhvcNAQEMBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MjhaFw0yMTA4MjExMjA0MzZaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQChvlmSDPj/qAstSB049mAvmRr/LOLYpZpgIm/9B4mlCaRqGnlyBllEoBABCMHnMhx/K+sFG5O7s9ykNa0vhYp9/GCsxHOIqtIyR1OoA3KlhSoCh9WqeaMGPoQi02guUfEYrFIp6OGmMAcsKUv4hnv66Q4+j2ho/cC5awDEGta+IvHDK7wE9jbRLiytRssQfErT3tEHkt4CrfPXH4OAnL2xUqg4GkUAHKRWtebJLJEJvIXfUKT/u6i2QoYl5QjZntDJXmXUQlyaGoDHoi+NkhR8fLTStPGrr91nZDoK+q94dwIUyvK2TAdURpAcUadHOVNXoTca2ZKL/K7LFev35aDpAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQwFAAOCAQEAa4EeyqdM0cA7N6JcO/awseoqi7gkHK7uS0RF8fZUoRIUNX0xH6V8y0tmMNF6SYjy4s2M0K9pfg4g5XsYnSZbywqjcMHdYUbL3hRJZbxAelOfhtwUF+y3EMEJZjnlLVpmfxrxcoi52SfHYiKgPdQvxFIYZaueB/BHCSyGShhiAmxT4Gm374yPM1yQQDMJFTdnx+IJQGJQC3A02ynRUj9MBxHwMnNot/cGZws1bp1ItneHpUdZbXMbzYhJZnuXfn2GY7Q9BcTfUvFXENFsZEcS6rkcA15Vnih3sxFZfMK0Y+8CvHGFgs82rXeOr8gb70j2v9Li3+krS+aXTTgK1qDDmw==" ],
+    "exp" : 1629547476276,
+    "alg" : "RS384",
+    "n" : "ob5Zkgz4_6gLLUgdOPZgL5ka_yzi2KWaYCJv_QeJpQmkahp5cgZZRKAQAQjB5zIcfyvrBRuTu7PcpDWtL4WKffxgrMRziKrSMkdTqANypYUqAofVqnmjBj6EItNoLlHxGKxSKejhpjAHLClL-IZ7-ukOPo9oaP3AuWsAxBrWviLxwyu8BPY20S4srUbLEHxK097RB5LeAq3z1x-DgJy9sVKoOBpFABykVrXmySyRCbyF31Ck_7uotkKGJeUI2Z7QyV5l1EJcmhqAx6IvjZIUfHy00rTxq6_dZ2Q6CvqveHcCFMrytkwHVEaQHFGnRzlTV6E3GtmSi_yuyxXr9-Wg6Q"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "af884507-8200-449c-adbe-d7d060742544_sig_rs512",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAKpIedgzJJzE6qOyqiU8sGj42L1FrfSaF3z+Eh3NzZpRMA0GCSqGSIb3DQEBDQUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDI4WhcNMjEwODIxMTIwNDM2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnY0/1LQrgpTjGBka/AhrO/2JYpWJuJAUXIcNBY8i2iaQ+exrSPWN+ZMQMyBMerjAyT5pE34MPOm2KqnY1NEKGN40ZeYG7abD9oWPUD+GbcR7ZiRzWkrhGRr7ZD4ZOD1e7/d5J3L3odFYDOGSO1RaJJ04PWe8DQiGcxjliRwJmeFF1+g/5hKGf7BYBNxXIezBCp016DKT/aiocrD6L3aln48TataHpRmJ6INvM8Fu6cOmSvJf5LOEn8o8QtRu0+OJVfM+iWfTf3cHedlkUDM29T5W//HkPks29YSlejg1qxewfEpC0DmQPcgXZCJ31YQ2Brn05mTLX7JoDjgl74/CdQIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQENBQADggEBABPJRUvhs/2e41F19KV7XdxofnMbm4CFNwYGT1cPJO3ci8DSKDOO3VeUBvqfWMU/52AXmID54INPcvQGr3i08p9aNJcGS1BZbPaPjjWKn2ZMwLodFMeJw+TZ6Y+KVfjPZksaXzLEXVpQCoXYqE0B2fl334R14prz0X3q6vs33nxJxltYMD8fcvFa5Qns6VY15uo0U9vvHHzIvX9HsZ7tjcvLXcouDIBfU0DAcUDToyWQE3ES/CvZlEY+MPEGjaEKUyh3NYtXuo2ze5VEI1os9bNibd/mC516QHfjy0q0CfXFQ1l1vgqFyiwQT7xbtR/O/lVhHxSrOPFz3evew8ZjQP0=" ],
+    "exp" : 1629547476276,
+    "alg" : "RS512",
+    "n" : "nY0_1LQrgpTjGBka_AhrO_2JYpWJuJAUXIcNBY8i2iaQ-exrSPWN-ZMQMyBMerjAyT5pE34MPOm2KqnY1NEKGN40ZeYG7abD9oWPUD-GbcR7ZiRzWkrhGRr7ZD4ZOD1e7_d5J3L3odFYDOGSO1RaJJ04PWe8DQiGcxjliRwJmeFF1-g_5hKGf7BYBNxXIezBCp016DKT_aiocrD6L3aln48TataHpRmJ6INvM8Fu6cOmSvJf5LOEn8o8QtRu0-OJVfM-iWfTf3cHedlkUDM29T5W__HkPks29YSlejg1qxewfEpC0DmQPcgXZCJ31YQ2Brn05mTLX7JoDjgl74_CdQ"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "3f2ac5e2-46ec-4f14-a5a3-76fae22fad54_sig_es256",
+    "x5c" : [ "MIIBeTCCAR6gAwIBAgIhAMCQn8iJBqOpoWdvx70UZ+ts41+ivHmDrq6ctsflBFodMAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDI5WhcNMjEwODIxMTIwNDM2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEtWZasCG7ecUNR66aRrcU30MzW7BAAMfJFmG60ZIqKoDbwGBEFR9LDeVC/Tk2380asRZQ2XFZtztD+JgYFaQqx6MnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0kAMEYCIQCvNntIOEbH7qu4qmzrmuc4R7K/Dcmtqmbrh2dD0IjXdAIhAKzTxwjaV48kfDyHucZjfyTBBhuFD484vb5snGRmU6OO" ],
+    "x" : "tWZasCG7ecUNR66aRrcU30MzW7BAAMfJFmG60ZIqKoA",
+    "y" : "28BgRBUfSw3lQv05Nt_NGrEWUNlxWbc7Q_iYGBWkKsc",
+    "exp" : 1629547476276,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "98af5ab5-a232-4207-a136-a5bb867750ce_sig_es384",
+    "x5c" : [ "MIIBtjCCATugAwIBAgIhAPQwj1+QwD71bP1JkyiJ3M2KeyBThJTS70FiclbURJYfMAoGCCqGSM49BAMDMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDI5WhcNMjEwODIxMTIwNDM2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEAkjc1eHmQ4zEGn7BT/KaNp+ssrbJUiyuLNNWmh0EZWesrz+cmlTsU9durjP/fLFDm/WdxGOZ9qBBbwF4OhBP6QXVIGkIE1MpT3uCr2PCQk5+AwpMzqby5+eyzr1NcinXoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwCgYIKoZIzj0EAwMDaQAwZgIxAP8xZ0tA+D5czmZCbSFVjWlSnqRtywYKzL/koFJueEoWJ4YQHX7ihtYX14PhZ9Op7QIxAMHLxNiNV34n59fG6BrkpePMZmGHf4l13YbBFM5IEYj0jLK2YPcmg0fvqGIGeWZqaA==" ],
+    "x" : "Akjc1eHmQ4zEGn7BT_KaNp-ssrbJUiyuLNNWmh0EZWesrz-cmlTsU9durjP_fLFD",
+    "y" : "m_WdxGOZ9qBBbwF4OhBP6QXVIGkIE1MpT3uCr2PCQk5-AwpMzqby5-eyzr1NcinX",
+    "exp" : 1629547476276,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "b9c2f8c6-f754-4c88-81ca-00de58b45c02_sig_es512",
+    "x5c" : [ "MIICADCCAWGgAwIBAgIhAL52b9K+r0A/Am71E7aiUyTO2OX9EQORRYj/A2UlanN3MAoGCCqGSM49BAMEMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDI5WhcNMjEwODIxMTIwNDM2WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQAIur6Kf4Mw3A7vOHYL3xp2yuPdj+9G7CK8rfj/EG+5dbbH864BbWPm8ROLoTsvoTsXPY5tLUVvt60VinivBxZm7IAc6DzSDROV59P2UyZ4bgT8RQZNo4/X9BjhRQ90T3UCX4AlIsLiUPdVJxyN2pv5zDvWSd0iI69Zm8oy7ViLyiUOqijJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDBAOBjAAwgYgCQgDYVBV/42cEKjNLWFAhBT7uW9BtRlGJ5s0OGDzbk8fVD6fghUFSD0ISnYB404gegP7QQ6+/f13ptoZK9Absig+BBgJCAIQX2MjeHavJm1YQF6076ML3UIrHraKQffz2NxffaPnoe7aAkApXewYqqk3p587ugVMKdT1KzHNmMRJZ7ZgnhpCb" ],
+    "x" : "Iur6Kf4Mw3A7vOHYL3xp2yuPdj-9G7CK8rfj_EG-5dbbH864BbWPm8ROLoTsvoTsXPY5tLUVvt60VinivBxZm7I",
+    "y" : "c6DzSDROV59P2UyZ4bgT8RQZNo4_X9BjhRQ90T3UCX4AlIsLiUPdVJxyN2pv5zDvWSd0iI69Zm8oy7ViLyiUOqg",
+    "exp" : 1629547476276,
+    "alg" : "ES512"
+  } ]
+}
+
+12:04:40 08/21/20 Generating oxAuth OpenID Connect keys
+12:04:40 08/21/20 Creating empty JKS keystore
+12:04:40 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /install/community-edition-setup/output/scim-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+12:04:41 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /install/community-edition-setup/output/scim-rp.jks -storepass secret -keypass secret -dname "CN=oxAuth CA Certificates"
+12:04:42 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /install/community-edition-setup/output/scim-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:42 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /install/community-edition-setup/output/scim-rp.jks -keypasswd secret -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 -enc_keys RS256 RS384 RS512 ES256 ES384 ES512 -dnname "CN=oxAuth CA Certificates" -expiration 365
+12:04:49 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "04caa7b0-ace7-421d-85d4-79de885a328d_sig_rs256",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgJUBTzh+LS1X3q5C40zzkdlm6w/AHhcPEsk+R93/hVcIwDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MzVaFw0yMTA4MjExMjA0NDRaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcoYI3rK8y3cqD0uAm+KJwCoHyYE+UQL+AKmufVEr5n0FgLXtp7GBdgNeGjT2NHiX6vRLKbUGHzByjZa2WbIO98AWwqlWjG5ED+8iFKMnbDQ9oyM5MKSwMdtB0wgkZKH/CUdGS0kTYdIRGJ+IW1QlUUjXfPF3Gn+h9ToJnyrMMNipn7npypL4cqFfYXh9S5M2XASqShdY+Rt/VFrVGjRb6MvCHc2YyG13kV1K3ZhBicZlv+qnP4MQJkQ+6L9mh5uhVt7bygCXkizXvDwA3ydQj1BZfWq9XjD8Mqmi/xkYE4kw0e7xdf7pgUIxIFN4swwCxymMX0F1GYyTnbTJ0Ek5xAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAd8D9t/mfraJEFiYOlxkvxGYw225AM/hcoELllJzyiDbMD6emKlLUrCITx7hQ4MEQSDLwxceqBHZlvOg2CGGMOjnHJkAwI8a6vyKXuzAw2WCDTOsrgXmBR4W52R68cxXwzPN+yQfbmEHh82XEkSkMWAYgudcXrcBCeVYmgHSirlbt6I+GBDHmR/xnSD54OtTh8n9Eld1lK7lpDAFaZLQbGHVekV1HcPz4r6CiwUhbdgv1858wjrGTBPEjYoksf8n5iZ80ajwLcCJ08M0P7wS2lNmS5aGuDI7zC4IAlNaTQU5bwpIz3Ek8X64FmZM+kRalKt3JmatQTBePXAKbhjsxag==" ],
+    "exp" : 1629547484161,
+    "alg" : "RS256",
+    "n" : "nKGCN6yvMt3Kg9LgJviicAqB8mBPlEC_gCprn1RK-Z9BYC17aexgXYDXho09jR4l-r0Sym1Bh8wco2WtlmyDvfAFsKpVoxuRA_vIhSjJ2w0PaMjOTCksDHbQdMIJGSh_wlHRktJE2HSERifiFtUJVFI13zxdxp_ofU6CZ8qzDDYqZ-56cqS-HKhX2F4fUuTNlwEqkoXWPkbf1Ra1Ro0W-jLwh3NmMhtd5FdSt2YQYnGZb_qpz-DECZEPui_ZoeboVbe28oAl5Is17w8AN8nUI9QWX1qvV4w_DKpov8ZGBOJMNHu8XX-6YFCMSBTeLMMAscpjF9BdRmMk520ydBJOcQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "69391a3c-afc7-48d9-9f4c-9de70ecb5731_sig_rs384",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhALW5pqJVunqf7swuSob4ANMDdUHNrYEFUJ57s54B0qUdMA0GCSqGSIb3DQEBDAUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDM3WhcNMjEwODIxMTIwNDQ0WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl9dLulZdAjVxgPwggtdy7mpSqEZaUNnQdyRncMoCIqm3EokKWkq7EpAHaqYoCvrgEZkJTJPwF6Hscf19y8hfzeNRxSTi+1S1JSyy91I28a9Y6qjgEiBe7OHIuISPVIhHZFA9R5S76v5poaPPLmWQDg6M1KNwAjzUf4jr0KCFttjn+H/Lz8mFCEUXcdANK9VzkLxT8YbAb21UcSiLENMpZuqhBIx+MzFj5a7MWcbO+z0mDRwDNcWpYLb4MhXY1A2Z6suJ/WDwoDdtV9e36/DzFNXw5h1hsl59QyZr/hygvPHe0Oh0h94648hSIgMEvWftv4W4AvJCbPdfXvzRMbi7cwIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQEMBQADggEBAFGomhBkd1k5mikE8ZiDthbfJcfvRjC/QSqpE0DD+NHBRTbkjtlIj9vpY3IX7HJ53v0yvdlGr6VPMGFIdmk3A7g3kehMcOVcjKrBlEBwBWlCrrW+wrPrOwFNRQK7u3MIT1JkNrnOQ9JXfbR9R5hErC5xDK5dcxvHhHuTC76+eqfYQMpWG+7XKZXg8PFd1N0NeU0JrdHgU5Tt/F6Jl4/9GxnkdTk4fNQMcV+IcFHTPuSeKBMMnvUOdSD0WV07W17I88NPrrcvwKxfZpLDt0M1WFhCbE/I8yrsF0oCyNbG451A0w/lB5huEIAgJEWjLzQ0ry1IQGnnKGGguvtHKe97d8s=" ],
+    "exp" : 1629547484161,
+    "alg" : "RS384",
+    "n" : "l9dLulZdAjVxgPwggtdy7mpSqEZaUNnQdyRncMoCIqm3EokKWkq7EpAHaqYoCvrgEZkJTJPwF6Hscf19y8hfzeNRxSTi-1S1JSyy91I28a9Y6qjgEiBe7OHIuISPVIhHZFA9R5S76v5poaPPLmWQDg6M1KNwAjzUf4jr0KCFttjn-H_Lz8mFCEUXcdANK9VzkLxT8YbAb21UcSiLENMpZuqhBIx-MzFj5a7MWcbO-z0mDRwDNcWpYLb4MhXY1A2Z6suJ_WDwoDdtV9e36_DzFNXw5h1hsl59QyZr_hygvPHe0Oh0h94648hSIgMEvWftv4W4AvJCbPdfXvzRMbi7cw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "6c607b96-6aac-49e1-8ac1-b35f11717af5_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgPRVPEwzgJrICKn5v4QI2EDdFPp3KHN3lhCPj47mIDMgwDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MzdaFw0yMTA4MjExMjA0NDRaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDeVg5aOSHYf2s2jnKLJ+fRUHNJRwGivDXc2d0ISSfeAvbnEDlIaIU15tAPtQ7IdjFnVAAIgqs91oTZzdEgPDF96wdZdVPUnQrM/QZI9wcWo/sHfLpWKYFvdfRRnbiK1rcD9Pca+JpnkTkduv3VPjajGun13VWwQ3QlY2ic6kKS+LiZMR/wB9W2vLQxtRq5GbPfKYwGVnARmQTVXjqSy/oSakacxWP9ogWbn0M06oNc+N48eNpsziYZaYT8HD9psds2+iH0EnGA0+nVhydoiQGBPcLEnUUK+JgIsbfZMX2YFJm0HuZwd4u6luWDndmi9zUDg2TrbHbf536ZbApEL0qdAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEAw0204Bzp0M0qyH5c6lpbajryC6mG8WXAPxXu1FQr87Io+8IXGiSgEHsBcKPle3OwrArwslw8jzPysY9q4HAblSKMfRHFRqYDIY7kNCYVEy4AOoC8owIl1Y5hgBrmGyWCVnkKC/zkLMRYs+mcnSjCU7xUp1LXK4Iu4ia8nA/rQ9OXUeqGCFedpE9oa9FoF01rz02Bldxweaez9x4h2fW+jleRoXdMrN10ApS04LbwrcVvkqCeShCf099B7mzYAH3+/LADNVrSP+8pwVusFfy9PdYrcGpuLhNzVqR+O/S+8EFQjECto+T9KjGK3Mxr99tPe1gtI/ojGh3DcDzTyx7ZrA==" ],
+    "exp" : 1629547484161,
+    "alg" : "RS512",
+    "n" : "3lYOWjkh2H9rNo5yiyfn0VBzSUcBorw13NndCEkn3gL25xA5SGiFNebQD7UOyHYxZ1QACIKrPdaE2c3RIDwxfesHWXVT1J0KzP0GSPcHFqP7B3y6VimBb3X0UZ24ita3A_T3GviaZ5E5Hbr91T42oxrp9d1VsEN0JWNonOpCkvi4mTEf8AfVtry0MbUauRmz3ymMBlZwEZkE1V46ksv6EmpGnMVj_aIFm59DNOqDXPjePHjabM4mGWmE_Bw_abHbNvoh9BJxgNPp1YcnaIkBgT3CxJ1FCviYCLG32TF9mBSZtB7mcHeLupblg53Zovc1A4Nk62x23-d-mWwKRC9KnQ"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "c6d1713e-f237-4008-aa5c-e10a99e9f96f_sig_es256",
+    "x5c" : [ "MIIBdzCCAR2gAwIBAgIgDKFQ1dHZLMo85LnpiYDolb6hSmIMh9EWqp7Ltp8A3wAwCgYIKoZIzj0EAwIwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MzhaFw0yMTA4MjExMjA0NDRaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQR3i3zrkxd7GfRROYIehRoZO1kDE4srhKk4sykoEbo2ypj+fHEffqVocfiqBT5YLV5Vw9zEmXS6pC+qOgHaMIUoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwCgYIKoZIzj0EAwIDSAAwRQIhALMgrTUeGubVZBJDAq/J1vepGGM6diWVmkk/iq/PGsCQAiAuvVGxxlRSW+wPQOcidPqDLQArEhLf6MFvOuLv9Pbnnw==" ],
+    "x" : "Ed4t865MXexn0UTmCHoUaGTtZAxOLK4SpOLMpKBG6Ns",
+    "y" : "KmP58cR9-pWhx-KoFPlgtXlXD3MSZdLqkL6o6AdowhQ",
+    "exp" : 1629547484161,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "8523d888-f465-4001-befe-23ddcbe3e179_sig_es384",
+    "x5c" : [ "MIIBtTCCATqgAwIBAgIgbLKUCsVHQadpTmO2+pqQbvQ4d4a+IFbpwFOs22otFSAwCgYIKoZIzj0EAwMwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MzhaFw0yMTA4MjExMjA0NDRaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAAQZpAe5KYGyhcQs+ujLbOrvBqCLJn0H6won4RB+xT5uKD2A4QgIjS7GWCI3CP0Ab0zQ4T4yrZkO1X4KazIZiB4WRnj16XZCcwPjD3NpXfbYVQuiTyGeRhzrxXY0tD1dnKSjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADAKBggqhkjOPQQDAwNpADBmAjEA/I1ZQzHElwOVcNxrAE79TN8BJibDXPhJy2ibAwuTQLfSQW9vNOcnNS3whvunnJGgAjEArly6Ms+/HhTxSvh1A51pM9IY7IczajzdLawStGn4WoWV5Ea8MWNbeydJ1TcdN0cz" ],
+    "x" : "GaQHuSmBsoXELProy2zq7wagiyZ9B-sKJ-EQfsU-big9gOEICI0uxlgiNwj9AG9M",
+    "y" : "0OE-Mq2ZDtV-CmsyGYgeFkZ49el2QnMD4w9zaV322FULok8hnkYc68V2NLQ9XZyk",
+    "exp" : 1629547484161,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "a77a857e-60db-4529-bdb8-92178c82b83e_sig_es512",
+    "x5c" : [ "MIIB/jCCAWCgAwIBAgIgEMJzK/hPkJNT9pVMM3dCESKe3HpjdBFEawt6YJCJLJkwCgYIKoZIzj0EAwQwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0MzhaFw0yMTA4MjExMjA0NDRaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwgZswEAYHKoZIzj0CAQYFK4EEACMDgYYABAE3nAiVtJTyfm2CF2kf2cCIdkfyv4uXdTou/1nrB4N7JhnZm38lriV3KEpBUyMOmdOOm7kl5sf2OsZwcxZ9Avt9oQF+iual1O4BzRCSAyDhxzx/JqDSofIPhjeco2o0WY194xXiDgAi9UhLyZ82LRoDxTmiUItEhKV64Wp/NcxKK/oGU6MnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMEA4GLADCBhwJCATE80ft4v4S0uF2A4WrjAa5i6emk4cksFTDkviJTpF/OLCtaRfj8nC2c4j1tuvBnyNX1q4sL4uiRg1qcsHElPW2iAkE+BsSlTJzdTX4uGvHtFHEqv56C1Rx6iqWpfHb4uJH7UPfrfPh0ilq78F53jI97xE6ouAXrV/n4x6mbMJS4U01RWA==" ],
+    "x" : "ATecCJW0lPJ-bYIXaR_ZwIh2R_K_i5d1Oi7_WesHg3smGdmbfyWuJXcoSkFTIw6Z046buSXmx_Y6xnBzFn0C-32h",
+    "y" : "AX6K5qXU7gHNEJIDIOHHPH8moNKh8g-GN5yjajRZjX3jFeIOACL1SEvJnzYtGgPFOaJQi0SEpXrhan81zEor-gZT",
+    "exp" : 1629547484161,
+    "alg" : "ES512"
+  } ]
+}
+
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/spontaneous_scope/spontaneous_scope.py
+12:04:49 08/21/20 Loaded script spontaneous_scope.py with type spontaneous_scope into spontaneous_scope_spontaneous_scope
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/client_registration/Casa.py
+12:04:49 08/21/20 Loaded script Casa.py with type client_registration into client_registration_casa
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/client_registration/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type client_registration into client_registration_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/idp/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type idp into idp_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/update_user/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type update_user into update_user_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/cache_refresh/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type cache_refresh into cache_refresh_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/work_phone.py
+12:04:49 08/21/20 Loaded script work_phone.py with type dynamic_scope into dynamic_scope_work_phone
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/memberof_attribute.py
+12:04:49 08/21/20 Loaded script memberof_attribute.py with type dynamic_scope into dynamic_scope_memberof_attribute
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/org_name.py
+12:04:49 08/21/20 Loaded script org_name.py with type dynamic_scope into dynamic_scope_org_name
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/session_parameter.py
+12:04:49 08/21/20 Loaded script session_parameter.py with type dynamic_scope into dynamic_scope_session_parameter
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/dynamic_scope/dynamic_permission.py
+12:04:49 08/21/20 Loaded script dynamic_permission.py with type dynamic_scope into dynamic_scope_dynamic_permission
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/consent_gathering/ConsentGatheringSample.py
+12:04:49 08/21/20 Loaded script ConsentGatheringSample.py with type consent_gathering into consent_gathering_consentgatheringsample
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/ciba/end_user_notification.py
+12:04:49 08/21/20 Loaded script end_user_notification.py with type ciba into ciba_end_user_notification
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/scim/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type scim into scim_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/persistence_extension/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type persistence_extension into persistence_extension_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/id_generator/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type id_generator into id_generator_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/SuperGluuExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script SuperGluuExternalAuthenticator.py with type person_authentication into person_authentication_supergluuexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/SamlPassportAuthenticator.py
+12:04:49 08/21/20 Loaded script SamlPassportAuthenticator.py with type person_authentication into person_authentication_samlpassportauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/PassportExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script PassportExternalAuthenticator.py with type person_authentication into person_authentication_passportexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/YubicloudExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script YubicloudExternalAuthenticator.py with type person_authentication into person_authentication_yubicloudexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/Fido2ExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script Fido2ExternalAuthenticator.py with type person_authentication into person_authentication_fido2externalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/UserCertExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script UserCertExternalAuthenticator.py with type person_authentication into person_authentication_usercertexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/BasicExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script BasicExternalAuthenticator.py with type person_authentication into person_authentication_basicexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/DuoExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script DuoExternalAuthenticator.py with type person_authentication into person_authentication_duoexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/BasicLockAccountExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script BasicLockAccountExternalAuthenticator.py with type person_authentication into person_authentication_basiclockaccountexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/smpp2FA.py
+12:04:49 08/21/20 Loaded script smpp2FA.py with type person_authentication into person_authentication_smpp2fa
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/UafExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script UafExternalAuthenticator.py with type person_authentication into person_authentication_uafexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/OtpExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script OtpExternalAuthenticator.py with type person_authentication into person_authentication_otpexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/ThumbSignInExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script ThumbSignInExternalAuthenticator.py with type person_authentication into person_authentication_thumbsigninexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/Casa.py
+12:04:49 08/21/20 Loaded script Casa.py with type person_authentication into person_authentication_casa
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/twilio2FA.py
+12:04:49 08/21/20 Loaded script twilio2FA.py with type person_authentication into person_authentication_twilio2fa
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/person_authentication/U2fExternalAuthenticator.py
+12:04:49 08/21/20 Loaded script U2fExternalAuthenticator.py with type person_authentication into person_authentication_u2fexternalauthenticator
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/end_session/end_session.py
+12:04:49 08/21/20 Loaded script end_session.py with type end_session into end_session_end_session
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_rpt_policy/UmaClientAuthzRptPolicy.py
+12:04:49 08/21/20 Loaded script UmaClientAuthzRptPolicy.py with type uma_rpt_policy into uma_rpt_policy_umaclientauthzrptpolicy
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_rpt_policy/uma_rpt_policy.py
+12:04:49 08/21/20 Loaded script uma_rpt_policy.py with type uma_rpt_policy into uma_rpt_policy_uma_rpt_policy
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/introspection/introspection_custom_params.py
+12:04:49 08/21/20 Loaded script introspection_custom_params.py with type introspection into introspection_introspection_custom_params
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/introspection/introspection.py
+12:04:49 08/21/20 Loaded script introspection.py with type introspection into introspection_introspection
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/resource_owner_password_credentials/resource_owner_password_credentials.py
+12:04:49 08/21/20 Loaded script resource_owner_password_credentials.py with type resource_owner_password_credentials into resource_owner_password_credentials_resource_owner_password_credentials
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/resource_owner_password_credentials/resource_owner_password_credentials_custom_params.py
+12:04:49 08/21/20 Loaded script resource_owner_password_credentials_custom_params.py with type resource_owner_password_credentials into resource_owner_password_credentials_resource_owner_password_credentials_custom_params
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/user_registration/ConfirmRegistrationSampleScript.py
+12:04:49 08/21/20 Loaded script ConfirmRegistrationSampleScript.py with type user_registration into user_registration_confirmregistrationsamplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/user_registration/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type user_registration into user_registration_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/application_session/SampleScript.py
+12:04:49 08/21/20 Loaded script SampleScript.py with type application_session into application_session_samplescript
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/post_authn/post_authn.py
+12:04:49 08/21/20 Loaded script post_authn.py with type post_authn into post_authn_post_authn
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_claims_gathering/uma_claims_gathering.py
+12:04:49 08/21/20 Loaded script uma_claims_gathering.py with type uma_claims_gathering into uma_claims_gathering_uma_claims_gathering
+12:04:49 08/21/20 Loading file /install/community-edition-setup/static/extension/uma_rpt_claims/uma_rpt_claims.py
+12:04:49 08/21/20 Loaded script uma_rpt_claims.py with type uma_rpt_claims into uma_rpt_claims_uma_rpt_claims
+12:04:49 08/21/20 Rendering templates
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxauth-config.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxauth-config.json
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/python.txt
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/python.txt
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust-config.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxtrust-config.json
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust-cache-refresh.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxtrust-cache-refresh.json
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust-import-person.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxtrust-import-person.json
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxidp-config.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxidp-config.json
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/gluu-ldap.properties
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/gluu-ldap.properties
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxauth-static-conf.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxauth-static-conf.json
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxTrustLogRotationConfiguration.xml
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxTrustLogRotationConfiguration.xml
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/opendj-setup.properties
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/opendj-setup.properties
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/httpd.conf
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/httpd.conf
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/https_gluu.conf
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/https_gluu.conf
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/httpd_2.4.conf
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/httpd_2.4.conf
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/hostname
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/hostname
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/base.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/base.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/attributes.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/attributes.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/scopes.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/scopes.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/clients.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/clients.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/people.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/people.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/groups.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/groups.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/scripts.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/scripts.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/scim.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/scim.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/scim_clients.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/scim_clients.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxidp.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxidp.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/network
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/network
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/scripts_casa.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/scripts_casa.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust_api.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxtrust_api.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/oxtrust_api_clients.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/oxtrust_api_clients.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/gluu.properties
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/gluu.properties
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/datasource.properties
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/datasource.properties
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/casa.ldif
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/casa.ldif
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/fido2-dynamic-conf.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/fido2-dynamic-conf.json
+12:04:49 08/21/20 Rendering template /install/community-edition-setup/templates/fido2-static-conf.json
+12:04:49 08/21/20 Writing file /install/community-edition-setup/output/fido2-static-conf.json
+12:04:49 08/21/20 Generating certificates and keystores
+12:04:49 08/21/20 Generating Certificate for httpd
+12:04:49 08/21/20 Running: /usr/local/bin/openssl genrsa -des3 -out /etc/certs/httpd.key.orig -passout pass:iD4Yyp52k6bl 2048
+12:04:50 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+..........................................................+++++
+............................+++++
+e is 65537 (0x010001)
+
+12:04:50 08/21/20 Running: /usr/local/bin/openssl rsa -in /etc/certs/httpd.key.orig -passin pass:iD4Yyp52k6bl -out /etc/certs/httpd.key
+12:04:50 08/21/20 writing RSA key
+
+12:04:50 08/21/20 Running: /usr/local/bin/openssl req -new -key /etc/certs/httpd.key -out /etc/certs/httpd.csr -subj /C=test/ST=test/L=test/O=test/CN=instance-1.us-central1-a.c.nifty-canyon-287111.internal/emailAddress=test@mail.ru
+12:04:50 08/21/20 problems making Certificate Request
+140387386397888:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:50 08/21/20 Running: /usr/local/bin/openssl x509 -req -days 365 -in /etc/certs/httpd.csr -signkey /etc/certs/httpd.key -out /etc/certs/httpd.crt
+12:04:50 08/21/20 Can't open /etc/certs/httpd.csr for reading, No such file or directory
+140019045819584:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/httpd.csr','r')
+140019045819584:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:50 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/httpd.key.orig
+12:04:50 08/21/20 Running: /bin/chmod 700 /etc/certs/httpd.key.orig
+12:04:50 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/httpd.key
+12:04:50 08/21/20 Running: /bin/chmod 700 /etc/certs/httpd.key
+12:04:50 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-1.us-central1-a.c.nifty-canyon-287111.internal_httpd -file /etc/certs/httpd.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+12:04:50 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/httpd.crt (No such file or directory)
+
+12:04:50 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:50 08/21/20 Generating Certificate for shibIDP
+12:04:50 08/21/20 Running: /usr/local/bin/openssl genrsa -des3 -out /etc/certs/shibIDP.key.orig -passout pass:bTQvmt217Big 2048
+12:04:50 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+...........................+++++
+..................................................................+++++
+e is 65537 (0x010001)
+
+12:04:50 08/21/20 Running: /usr/local/bin/openssl rsa -in /etc/certs/shibIDP.key.orig -passin pass:bTQvmt217Big -out /etc/certs/shibIDP.key
+12:04:50 08/21/20 writing RSA key
+
+12:04:50 08/21/20 Running: /usr/local/bin/openssl req -new -key /etc/certs/shibIDP.key -out /etc/certs/shibIDP.csr -subj /C=test/ST=test/L=test/O=test/CN=instance-1.us-central1-a.c.nifty-canyon-287111.internal/emailAddress=test@mail.ru
+12:04:50 08/21/20 problems making Certificate Request
+140175619146944:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:50 08/21/20 Running: /usr/local/bin/openssl x509 -req -days 365 -in /etc/certs/shibIDP.csr -signkey /etc/certs/shibIDP.key -out /etc/certs/shibIDP.crt
+12:04:50 08/21/20 Can't open /etc/certs/shibIDP.csr for reading, No such file or directory
+140197148701888:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/shibIDP.csr','r')
+140197148701888:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:50 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.key.orig
+12:04:50 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.key.orig
+12:04:50 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.key
+12:04:50 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.key
+12:04:50 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-1.us-central1-a.c.nifty-canyon-287111.internal_shibIDP -file /etc/certs/shibIDP.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+12:04:51 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/shibIDP.crt (No such file or directory)
+
+12:04:51 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:51 08/21/20 Generating Certificate for idp-encryption
+12:04:51 08/21/20 Running: /usr/local/bin/openssl genrsa -des3 -out /etc/certs/idp-encryption.key.orig -passout pass:bTQvmt217Big 2048
+12:04:51 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+.+++++
+...........................................................................+++++
+e is 65537 (0x010001)
+
+12:04:51 08/21/20 Running: /usr/local/bin/openssl rsa -in /etc/certs/idp-encryption.key.orig -passin pass:bTQvmt217Big -out /etc/certs/idp-encryption.key
+12:04:51 08/21/20 writing RSA key
+
+12:04:51 08/21/20 Running: /usr/local/bin/openssl req -new -key /etc/certs/idp-encryption.key -out /etc/certs/idp-encryption.csr -subj /C=test/ST=test/L=test/O=test/CN=instance-1.us-central1-a.c.nifty-canyon-287111.internal/emailAddress=test@mail.ru
+12:04:51 08/21/20 problems making Certificate Request
+140612707980480:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:51 08/21/20 Running: /usr/local/bin/openssl x509 -req -days 365 -in /etc/certs/idp-encryption.csr -signkey /etc/certs/idp-encryption.key -out /etc/certs/idp-encryption.crt
+12:04:51 08/21/20 Can't open /etc/certs/idp-encryption.csr for reading, No such file or directory
+140696119653568:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/idp-encryption.csr','r')
+140696119653568:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:51 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-encryption.key.orig
+12:04:51 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-encryption.key.orig
+12:04:51 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-encryption.key
+12:04:51 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-encryption.key
+12:04:51 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-1.us-central1-a.c.nifty-canyon-287111.internal_idp-encryption -file /etc/certs/idp-encryption.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+12:04:52 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/idp-encryption.crt (No such file or directory)
+
+12:04:52 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:52 08/21/20 Generating Certificate for idp-signing
+12:04:52 08/21/20 Running: /usr/local/bin/openssl genrsa -des3 -out /etc/certs/idp-signing.key.orig -passout pass:bTQvmt217Big 2048
+12:04:52 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+.................+++++
+...............................+++++
+e is 65537 (0x010001)
+
+12:04:52 08/21/20 Running: /usr/local/bin/openssl rsa -in /etc/certs/idp-signing.key.orig -passin pass:bTQvmt217Big -out /etc/certs/idp-signing.key
+12:04:52 08/21/20 writing RSA key
+
+12:04:52 08/21/20 Running: /usr/local/bin/openssl req -new -key /etc/certs/idp-signing.key -out /etc/certs/idp-signing.csr -subj /C=test/ST=test/L=test/O=test/CN=instance-1.us-central1-a.c.nifty-canyon-287111.internal/emailAddress=test@mail.ru
+12:04:52 08/21/20 problems making Certificate Request
+140167010006208:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:52 08/21/20 Running: /usr/local/bin/openssl x509 -req -days 365 -in /etc/certs/idp-signing.csr -signkey /etc/certs/idp-signing.key -out /etc/certs/idp-signing.crt
+12:04:52 08/21/20 Can't open /etc/certs/idp-signing.csr for reading, No such file or directory
+139634337957056:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/idp-signing.csr','r')
+139634337957056:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:52 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-signing.key.orig
+12:04:52 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-signing.key.orig
+12:04:52 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/idp-signing.key
+12:04:52 08/21/20 Running: /bin/chmod 700 /etc/certs/idp-signing.key
+12:04:52 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-1.us-central1-a.c.nifty-canyon-287111.internal_idp-signing -file /etc/certs/idp-signing.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+12:04:52 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/idp-signing.crt (No such file or directory)
+
+12:04:52 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:52 08/21/20 Generating Certificate for passport-sp
+12:04:52 08/21/20 Running: /usr/local/bin/openssl genrsa -des3 -out /etc/certs/passport-sp.key.orig -passout pass:7QNjfRAQM0bJ 2048
+12:04:53 08/21/20 Generating RSA private key, 2048 bit long modulus (2 primes)
+.....................................................................................................................................................................+++++
+.....................................................+++++
+e is 65537 (0x010001)
+
+12:04:53 08/21/20 Running: /usr/local/bin/openssl rsa -in /etc/certs/passport-sp.key.orig -passin pass:7QNjfRAQM0bJ -out /etc/certs/passport-sp.key
+12:04:53 08/21/20 writing RSA key
+
+12:04:53 08/21/20 Running: /usr/local/bin/openssl req -new -key /etc/certs/passport-sp.key -out /etc/certs/passport-sp.csr -subj /C=test/ST=test/L=test/O=test/CN=localhost/emailAddress=test@mail.ru
+12:04:53 08/21/20 problems making Certificate Request
+139701052957888:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:crypto/asn1/a_mbstr.c:107:maxsize=2
+
+12:04:53 08/21/20 Running: /usr/local/bin/openssl x509 -req -days 365 -in /etc/certs/passport-sp.csr -signkey /etc/certs/passport-sp.key -out /etc/certs/passport-sp.crt
+12:04:53 08/21/20 Can't open /etc/certs/passport-sp.csr for reading, No such file or directory
+140250380764352:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/passport-sp.csr','r')
+140250380764352:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:53 08/21/20 Running: /bin/chown ldap:ldap /etc/certs/passport-sp.key.orig
+12:04:53 08/21/20 Running: /bin/chmod 700 /etc/certs/passport-sp.key.orig
+12:04:53 08/21/20 Running: /bin/chown ldap:ldap /etc/certs/passport-sp.key
+12:04:53 08/21/20 Running: /bin/chmod 700 /etc/certs/passport-sp.key
+12:04:53 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-1.us-central1-a.c.nifty-canyon-287111.internal_passport-sp -file /etc/certs/passport-sp.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+12:04:53 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/passport-sp.crt (No such file or directory)
+
+12:04:53 08/21/20 Warning: use -cacerts option to access cacerts keystore
+
+12:04:53 08/21/20 Creating keystore shibIDP
+12:04:53 08/21/20 Running: /usr/local/bin/openssl pkcs12 -export -inkey /etc/certs/shibIDP.key -in /etc/certs/shibIDP.crt -out /etc/certs/shibIDP.pkcs12 -name instance-1.us-central1-a.c.nifty-canyon-287111.internal -passout pass:bTQvmt217Big
+12:04:53 08/21/20 Can't open /etc/certs/shibIDP.crt for reading, No such file or directory
+140379829892288:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:72:fopen('/etc/certs/shibIDP.crt','r')
+140379829892288:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:79:
+
+12:04:53 08/21/20 Running: /opt/jre/bin/keytool -importkeystore -srckeystore /etc/certs/shibIDP.pkcs12 -srcstorepass bTQvmt217Big -srcstoretype PKCS12 -destkeystore /etc/certs/shibIDP.jks -deststorepass bTQvmt217Big -deststoretype JKS -keyalg RSA -noprompt
+12:04:54 08/21/20 keytool error: java.io.FileNotFoundException: /etc/certs/shibIDP.pkcs12 (No such file or directory)
+
+12:04:54 08/21/20 Importing keystore /etc/certs/shibIDP.pkcs12 to /etc/certs/shibIDP.jks...
+
+12:04:54 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.pkcs12
+12:04:54 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+12:04:54 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.pkcs12
+12:04:54 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.pkcs12': No such file or directory
+
+12:04:54 08/21/20 Running: /bin/chown jetty:jetty /etc/certs/shibIDP.jks
+12:04:54 08/21/20 /bin/chown: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+12:04:54 08/21/20 Running: /bin/chmod 700 /etc/certs/shibIDP.jks
+12:04:54 08/21/20 /bin/chmod: cannot access '/etc/certs/shibIDP.jks': No such file or directory
+
+12:04:54 08/21/20 Running: /bin/chown -R jetty:jetty /etc/certs
+12:04:54 08/21/20 Running: /bin/chmod -R 500 /etc/certs
+12:04:54 08/21/20 Generating oxAuth OpenID Connect keys
+12:04:54 08/21/20 Creating empty JKS keystore
+12:04:54 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -genkey -alias dummy -keystore /etc/certs/oxauth-keys.jks -storepass s3gp4WSUBknr -keypass s3gp4WSUBknr -dname "CN=oxAuth CA Certificates"
+12:04:55 08/21/20 Running: /bin/sh -c /opt/jre/bin/keytool -delete -alias dummy -keystore /etc/certs/oxauth-keys.jks -storepass s3gp4WSUBknr -keypass s3gp4WSUBknr -dname "CN=oxAuth CA Certificates"
+12:04:56 08/21/20 Runnning: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/oxauth-keys.jks -keypasswd s3gp4WSUBknr -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 PS256 PS384 PS512 -enc_keys RSA1_5 RSA-OAEP -dnname "CN=oxAuth CA Certificates" -expiration 2
+12:04:56 08/21/20 Running: /bin/sh -c /opt/jre/bin/java -Dlog4j.defaultInitOverride=true -cp /opt/dist/gluu/oxauth-client-jar-with-dependencies.jar org.gluu.oxauth.util.KeyGenerator -keystore /etc/certs/oxauth-keys.jks -keypasswd s3gp4WSUBknr -sig_keys RS256 RS384 RS512 ES256 ES384 ES512 PS256 PS384 PS512 -enc_keys RSA1_5 RSA-OAEP -dnname "CN=oxAuth CA Certificates" -expiration 2
+12:05:05 08/21/20 {
+  "keys" : [ {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "0d255562-9b45-42ba-ae7a-8e74e3c0919c_sig_rs256",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAOCBvKD1S1dUoFG8CBgr49Euygl0jTGdN6Bxh1SeyNwaMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDQ5WhcNMjAwODIzMTIwNDU4WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArAQ9d4ADJQHuXc5h/Vk7efU2OxJp9H5KLSX1Froehg8X8DnX+1sDPmbyCHQrfhkZPueiiYjnUdmfcmgomT7FXHRCXjDzunHMi7JAq0wOchTDc9bEoyD0mF5iMkmZLrvmLw+EYHBnGZUOYXsRTt72xp+H6jeoumFTBUNMYXA8XWjSWKxnbnyDN8YmK+JtVdnr4r6gunPNUQyBHNZ0du/jg6kB/5Ok0c/MIv32pMJ7kPZgAOHkKPXErTZQB+b4DOU3FVED5oU1QzotCNyfKysaVr+V0WlGGMBJF2Fq3TTUb09P4i+ReLg5Q3gCy+pYDkYOzvv/G0lfRg4OY1envs7jzwIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQELBQADggEBAB5bFI+ys7M6N+Do3xBUh/neyxehjPdAFKCmW+V+98MMv2XgYSJaem42Ibp/NFKJa0e3eAvYHSi0S6oUm1y3WnliJ6pdlWGHLY7mdB3kdQ41RK0WfYcQyE7n2/eo8Rn/QuY2LUU3Jw2Oaaa34A02E4E1Vw7z7DElDeCJRDSLG14BpWklRocgZ3Z5eeCzWpWuUhLE7KZaZzi4XuUrHEJG7wlBiL+JWRAgHa/EkelB5Fp68BHi5dQvwz+1acdam6lBZ3cltUupx0XzwtctJkl1wXz9H5DImsi0FlP/QWOOsN6uBlVMDH5g35DGxxNzFdDlWbyx25GpZPGxAVMr+eOsIYY=" ],
+    "exp" : 1598184298285,
+    "alg" : "RS256",
+    "n" : "rAQ9d4ADJQHuXc5h_Vk7efU2OxJp9H5KLSX1Froehg8X8DnX-1sDPmbyCHQrfhkZPueiiYjnUdmfcmgomT7FXHRCXjDzunHMi7JAq0wOchTDc9bEoyD0mF5iMkmZLrvmLw-EYHBnGZUOYXsRTt72xp-H6jeoumFTBUNMYXA8XWjSWKxnbnyDN8YmK-JtVdnr4r6gunPNUQyBHNZ0du_jg6kB_5Ok0c_MIv32pMJ7kPZgAOHkKPXErTZQB-b4DOU3FVED5oU1QzotCNyfKysaVr-V0WlGGMBJF2Fq3TTUb09P4i-ReLg5Q3gCy-pYDkYOzvv_G0lfRg4OY1envs7jzw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "5ef68e6d-b752-4cbf-bc07-90d35993a781_sig_rs384",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAIa1Mj2MTracp7q5m2obpnlayES654T/YMxapVsf50NuMA0GCSqGSIb3DQEBDAUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDUwWhcNMjAwODIzMTIwNDU4WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlZzEBXpRSbVjNwJBzZ5ZlYopZrb58moarlknNaX59x/pynqu9+LFkcIZVTETZGk0bQPEgV6nVTZagiFpkuzt7BIzTZkixMNdmtKu408+ojjrvR/xUf+8ezUV14QhJL54VxMv9hFSxlaP6MZygb1kVvFqF+KWMmlcg0JQ4ZOlLXV2OaT3h1KtWMcrNWIL0zt+8vrLQzWX1Atw2E6tGMJm6kbiEhC/za3xxKikIvOTUQbsh6IE3seY6cMvnqOu5PatcxriSANdhAA9avYQIbznGZgu5PBNy4RwcnfRx93DIsN9KbpFjjyBkD/trcKWeqXQRrUcOYe9GTFvcxo88qS2pwIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQEMBQADggEBAC+g5MBhTmqleMlFcmquvfOdWQi5h6Z55A3LwFk666u4EmKo8+W8RRzJ87wHyQdInd+Er1Htmrm9VfLAlkoIeIvU4HWu9BdcP1D0JEAWBia/FIu7mHwOoMwHeeKMAjr7v3oE1ekSRCXuaGYgiI/vXIfh3BKXaBymcSOERweyHlpbXxlltbFSPO51EFdjj6prAqTSLs8bHECYfpvx538UK0mRITutYkLDfKlwCBWY/lJ6q1laQhfKnZ1I0ZMVsl8dhWKlofKTGic37jtGn1D8JUvTTGXOVbCqdmgFmEkptMl8v+kVYkqviCEsbHkhBNj2uGxl9CmJYXExsg9WzSUFIIo=" ],
+    "exp" : 1598184298285,
+    "alg" : "RS384",
+    "n" : "lZzEBXpRSbVjNwJBzZ5ZlYopZrb58moarlknNaX59x_pynqu9-LFkcIZVTETZGk0bQPEgV6nVTZagiFpkuzt7BIzTZkixMNdmtKu408-ojjrvR_xUf-8ezUV14QhJL54VxMv9hFSxlaP6MZygb1kVvFqF-KWMmlcg0JQ4ZOlLXV2OaT3h1KtWMcrNWIL0zt-8vrLQzWX1Atw2E6tGMJm6kbiEhC_za3xxKikIvOTUQbsh6IE3seY6cMvnqOu5PatcxriSANdhAA9avYQIbznGZgu5PBNy4RwcnfRx93DIsN9KbpFjjyBkD_trcKWeqXQRrUcOYe9GTFvcxo88qS2pw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "30a8105b-91cd-4c6b-a76b-14c5b2e49b2f_sig_rs512",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgXH4rCj67eQwOdcNcP+UJu6RLTiRinmMgpxgWN/uq1kkwDQYJKoZIhvcNAQENBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0NTBaFw0yMDA4MjMxMjA0NThaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDU8vklra3V2p/pmRVUC8/BX4QZej1zUcMzwuNZAWrYZFgXRh0qi757oaGo/ym9J7/blvbFmVt8YIrH/DYoJD+tuc1fJA6LBFJKYQgSzWCGgPUl/tZj5cYDwa6MH5WjqOw6k/UWyI6qmMV9hhIRr35oGiOyxN47krztL7MvEp9Yy3Ew/zGjeqF64Ne2y/nve3foyuW3bu2jcRmdQmqo4Gml4smP7NRdPkREVs8a1lskQMZtfW3Rw7ousa0nmkEFQLiJgo6010iGDfE9M/GN9NE2CrmEOaYaYLFZhIh+X6kgtnvdXNBP1KQsUOZhqPqJ6h31UoRYf9SkzSWPaRQaGiwBAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQ0FAAOCAQEAiOY3AbHjfw8gHx51b1SLB71STbLafUV1GdLfyov22ELVEYjwkeclM2Ej0O1y7MaKQgyyq6tMbAeswfKTsqdJcBwKgRB5ZcfyMeDGOQpfHqgRrgOyyeoZkYFd2OITjunmfAudvGMVhOwje60K4vgzAKnyVaZwEnFGxC7LO1vj6SLsyonq/KfHQBuJ/ibUHGB8MBbhQr0dOX0Fd0rFBnKg9gIFeyQ7/rkvxyrmjX3HTqPeTokLbPyXLZykCL4/zZsluDu/LupkleKHbHc9Dfi7HQPqxDnsrHFSGzRU0FnEviY9+FIlj4AiEG7kwQXRN5/XWZIiwF4HiMY1QmQPkX+Bjw==" ],
+    "exp" : 1598184298285,
+    "alg" : "RS512",
+    "n" : "1PL5Ja2t1dqf6ZkVVAvPwV-EGXo9c1HDM8LjWQFq2GRYF0YdKou-e6GhqP8pvSe_25b2xZlbfGCKx_w2KCQ_rbnNXyQOiwRSSmEIEs1ghoD1Jf7WY-XGA8GujB-Vo6jsOpP1FsiOqpjFfYYSEa9-aBojssTeO5K87S-zLxKfWMtxMP8xo3qheuDXtsv573t36Mrlt27to3EZnUJqqOBppeLJj-zUXT5ERFbPGtZbJEDGbX1t0cO6LrGtJ5pBBUC4iYKOtNdIhg3xPTPxjfTRNgq5hDmmGmCxWYSIfl-pILZ73VzQT9SkLFDmYaj6ieod9VKEWH_UpM0lj2kUGhosAQ"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-256",
+    "kid" : "d87c2aa9-4848-4f44-bb9f-5f3134097dd3_sig_es256",
+    "x5c" : [ "MIIBeDCCAR6gAwIBAgIhAKYhid0d3dZljYDSLyCmcoeI8gm+lj3/cBPrg+c63mGHMAoGCCqGSM49BAMCMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDUxWhcNMjAwODIzMTIwNDU4WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE68pdJMaMtkSEMdJDH3UnCoybZiU0UUmYma2kbnC3hXf0PRKX8ZWi0VcQmVQgni3PJqfZ+WW3g3kS9how4i2iKqMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMCA0gAMEUCIQC/uEUEeSyVbUmXdqNAGA0IgS0JjyHRr4MaDAiFO92sbAIgFdni35TUvtGTIFuUASXc8roPDujCnEvJxu2G8F525QE=" ],
+    "x" : "68pdJMaMtkSEMdJDH3UnCoybZiU0UUmYma2kbnC3hXc",
+    "y" : "9D0Sl_GVotFXEJlUIJ4tzyan2fllt4N5EvYaMOItoio",
+    "exp" : 1598184298285,
+    "alg" : "ES256"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-384",
+    "kid" : "a926af9a-ef3c-49bc-9075-c2b77e0be74c_sig_es384",
+    "x5c" : [ "MIIBtDCCATugAwIBAgIhALt/wr3sEbS7Lh/0nOh+Xh4MWVulCqYsL/TKnmouV0I3MAoGCCqGSM49BAMDMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDUxWhcNMjAwODIzMTIwNDU4WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEbScJpbBysVRMoAMaxi2J6PdRN05TL9DmyvvC8qFXNBqoCfa2jg98mu7cqgC4rOmW4ktWURVJh/GIpR5UkyBYE9uJzYK+Utt6DA+886KAL53KW80X+3wxyXCJ1pSvhEwooycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwCgYIKoZIzj0EAwMDZwAwZAIwDwYtCnVrLq/jCBtOKVw59GE9sPFsZMfRgVCGwf1pFG+hboktYbn8MmK4Vt1mjbpHAjAJC6oOIhSawgK70TgQlGI0iIbAM8wRjkMjS1ZYd/xaPQjuoDq9lKFOTsMnq8bHQF8=" ],
+    "x" : "bScJpbBysVRMoAMaxi2J6PdRN05TL9DmyvvC8qFXNBqoCfa2jg98mu7cqgC4rOmW",
+    "y" : "4ktWURVJh_GIpR5UkyBYE9uJzYK-Utt6DA-886KAL53KW80X-3wxyXCJ1pSvhEwo",
+    "exp" : 1598184298285,
+    "alg" : "ES384"
+  }, {
+    "kty" : "EC",
+    "use" : "sig",
+    "crv" : "P-521",
+    "kid" : "7d8240bf-4dcd-4b10-8895-c28c691a61dd_sig_es512",
+    "x5c" : [ "MIIB/jCCAWCgAwIBAgIgafhlnwe89ljnT6Onq9dPjdzY1l83Cwmazvg5G49X5KIwCgYIKoZIzj0EAwQwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0NTFaFw0yMDA4MjMxMjA0NThaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwgZswEAYHKoZIzj0CAQYFK4EEACMDgYYABABlFsF72kNqNjDPcUBwFzm2kQKjUyRp4Ki6vNMN22qPFVyaiiIy6tTUwlVnD2eD/gccEW9J5j8MxwKwThkYJtDKCgCadXaLED7hmSFgURo3PF/Uw9mFnj77v3gNao/Tan1yGKmN2/nyop3ppxoXXDNPTc/+q24uzIQyCq5bVNfjt4P/BKMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMAoGCCqGSM49BAMEA4GLADCBhwJBV4YRWZSvlS88MsFqeA4yj/bgZaCnRegzYx5gyB5O19m/S6OVAzgPGAEIsqZPE/pUKY2MSWWJt3rS0QgLzC4zAt4CQgCLsfhARx9L4aryJrFsCopRrXkZrF+/mJUY5IygdIq+dlQ3ZGgLApgzc/qdDS5F6oTorC+Wr0beR1uk/CHG+3VLrA==" ],
+    "x" : "ZRbBe9pDajYwz3FAcBc5tpECo1MkaeCourzTDdtqjxVcmooiMurU1MJVZw9ng_4HHBFvSeY_DMcCsE4ZGCbQygo",
+    "y" : "mnV2ixA-4ZkhYFEaNzxf1MPZhZ4--794DWqP02p9chipjdv58qKd6acaF1wzT03P_qtuLsyEMgquW1TX47eD_wQ",
+    "exp" : 1598184298285,
+    "alg" : "ES512"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "32bb70d8-7b0b-44b2-a8b7-c2002ef3a698_sig_ps256",
+    "x5c" : [ "MIIDazCCAh+gAwIBAgIgZ6icgkvt5QCWzhu2oZ7aXh9h4zeiwtJ3H8HkAcZsLRcwQQYJKoZIhvcNAQEKMDSgDzANBglghkgBZQMEAgEFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgEFAKIDAgEgMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDUyWhcNMjAwODIzMTIwNDU4WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnL6AiBnONEahklWZin8YlaM4R8bU3ZgwyOdG79rOoR7n65C+Sh/mzRawJGwK5emfxR+pfZgeExad5QqXym35VfsmVX67ewIzdeNSStSBrswb3lzEho9DNn3aKsii+XgrdbpmcJFrwfR73oXLQSGRgY/M/dBVCFkQ7pdfLOMXR1Pdwa6Ww4tygANwYpcyFAHkKGCzj1Et5NUpABlfAWAhGGnOMNXJ3D5QjVBSKBzP3Q6VQSKrCIstGFTGZPvPrkkQQXv1BfWy9jZ1jxkX70wAqVjF3J0PhjMXoG2ZwKi/uK6c46EHOfnpYacmt6LumREw2Vp/HChEltnEAL+mpLEVoQIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwQQYJKoZIhvcNAQEKMDSgDzANBglghkgBZQMEAgEFAKEcMBoGCSqGSIb3DQEBCDANBglghkgBZQMEAgEFAKIDAgEgA4IBAQAaarg7x9tto42XyDuOywcT3/z3bMhY7WDspVMXs+J/7Z6Zi784T1+mg5Kirc6pomWzV8Xq/WqxoFJ7+fD2CQXR8j2JE0KJoyFZU9WnpYQm4fEjpe6eThFIjSqzEqclMr/h9QKHaA5ET79s8AK5JRi+CvXo2gHdvxJFsOt43/mUiVcFVvF/LuJfK4fMpDqzrZbaSYogYe9OM3NpVsHE/Rint6Uh9028Ejt38Heid6NA8n0gNleSTzNz9V3QDh95S0sarITXfmTpevwHzecOVIu1PNNIUIRQubj5NCoa1+jZaQWKNUeh6VIzKxgUm9Bhw/9xI4S72/TaItsD1XDfNdjs" ],
+    "exp" : 1598184298285,
+    "alg" : "PS256",
+    "n" : "nL6AiBnONEahklWZin8YlaM4R8bU3ZgwyOdG79rOoR7n65C-Sh_mzRawJGwK5emfxR-pfZgeExad5QqXym35VfsmVX67ewIzdeNSStSBrswb3lzEho9DNn3aKsii-XgrdbpmcJFrwfR73oXLQSGRgY_M_dBVCFkQ7pdfLOMXR1Pdwa6Ww4tygANwYpcyFAHkKGCzj1Et5NUpABlfAWAhGGnOMNXJ3D5QjVBSKBzP3Q6VQSKrCIstGFTGZPvPrkkQQXv1BfWy9jZ1jxkX70wAqVjF3J0PhjMXoG2ZwKi_uK6c46EHOfnpYacmt6LumREw2Vp_HChEltnEAL-mpLEVoQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "7bb02880-5f06-4e55-a368-8213a1da338b_sig_ps384",
+    "x5c" : [ "MIIDbDCCAiCgAwIBAgIhAIKw6693L82qxKNSJCmAVBHO4cI0ZUokdcAI8P24hKbOMEEGCSqGSIb3DQEBCjA0oA8wDQYJYIZIAWUDBAICBQChHDAaBgkqhkiG9w0BAQgwDQYJYIZIAWUDBAICBQCiAwIBMDAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMB4XDTIwMDgyMTEyMDQ1M1oXDTIwMDgyMzEyMDQ1OFowITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJDV/IjR4GDZTAql/w/DK/LOjB0i50xT0qLR9oDEw/SMzsJrZw9Eqt5+qcOia7JihqpRdrSAlcXQJwRA5GukONIUnWFiVppqn23wSjHKXUcSnSNmaDeSmxAaHq8BcCrBbZ0lG36YBFHqoUrqnO6GjqgRItPPXlzsgVFqU5cGTGsu+PTPHTz5VqFJuGT+A2dcNxI8I3j7DvyUTNZSIdWl1l4xjv0KIFr6ZDhoKX/RgJbACyNBymF5zplhX9MUsmXT/ECYX9OrGdCIZxPjT5RSpwZDWGLQKfaFxXhPJQ0Ptp2S7QHuoU+OBJj20wFIB2ClFLRsDdEeSy2lP8E+ADL3C0kCAwEAAaMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMEEGCSqGSIb3DQEBCjA0oA8wDQYJYIZIAWUDBAICBQChHDAaBgkqhkiG9w0BAQgwDQYJYIZIAWUDBAICBQCiAwIBMAOCAQEAHeO+43Zhj0gbJN/TMBwt1xqW7CIbYf+OYpUALYLD4BaG2uD+NKkkhrw8nN/4ETuU+OTFFR2E9zoVKxqVS7jEMouMLQAaxx4ZTmlsJQuK6Tenq93Eu/C/KFL03yzD8fwt+F8QadcvK/CI0BOw29MuiBWmzk6QfKxIIYFrl2dg2ydujNtwHRIPK9/fTKdq5SMgtH1nvjt6N/Xe62WyxNz3SL6j02mHNWg0sDczo73B/MoqbpPkVc3TQqd6qJV4YZUvjiSHwzPtcuvWzZQwS01HlMIUXnS06vWjKGub1LG70wzwpV1wgZFyShbcCkiDB6FWVBT3C5wvd8W8TnHsWzo9IA==" ],
+    "exp" : 1598184298285,
+    "alg" : "PS384",
+    "n" : "kNX8iNHgYNlMCqX_D8Mr8s6MHSLnTFPSotH2gMTD9IzOwmtnD0Sq3n6pw6JrsmKGqlF2tICVxdAnBEDka6Q40hSdYWJWmmqfbfBKMcpdRxKdI2ZoN5KbEBoerwFwKsFtnSUbfpgEUeqhSuqc7oaOqBEi089eXOyBUWpTlwZMay749M8dPPlWoUm4ZP4DZ1w3EjwjePsO_JRM1lIh1aXWXjGO_QogWvpkOGgpf9GAlsALI0HKYXnOmWFf0xSyZdP8QJhf06sZ0IhnE-NPlFKnBkNYYtAp9oXFeE8lDQ-2nZLtAe6hT44EmPbTAUgHYKUUtGwN0R5LLaU_wT4AMvcLSQ"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "sig",
+    "crv" : "",
+    "kid" : "9b200abb-bb29-4386-b073-4c60f3401321_sig_ps512",
+    "x5c" : [ "MIIDbDCCAiCgAwIBAgIhAOYRI4IFIA4zzTtyylhHZeM2MDzKEL73qzDW66rwyCtQMEEGCSqGSIb3DQEBCjA0oA8wDQYJYIZIAWUDBAIDBQChHDAaBgkqhkiG9w0BAQgwDQYJYIZIAWUDBAIDBQCiAwIBQDAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMB4XDTIwMDgyMTEyMDQ1M1oXDTIwMDgyMzEyMDQ1OFowITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALSQpIX0/cyP/IUm41B9047iYHNlLckHJyay8D1wn30QVTWkt5AaCvB/1ab4L+2uGfSVFdWn3Pg228aETKSQ1Ti00fqfsE/6HameE93mttMvz7Pp+4c7Nu8UHiM3tq8mB1yN6jDXPsh5iKwuLxHqKe9j5P/M56Yr9GQ1gdndYlG7DpLHVcpVnWOCbsfcdk0qTyjopDno59ouhU4fkQfrPxrZAIx6lJheNvSPtD9CG8rtEUDr94+LSJV4xdCCdGnlCmJfUWIxUi9APL0fWaEeQZux75qg8CvIOrEXI4UTr0/27vUNC+PRn9GNKtI6RM6qmwa6wS/7J/ZyqlwegoXaptsCAwEAAaMnMCUwIwYDVR0lBBwwGgYIKwYBBQUHAwEGCCsGAQUFBwMCBgRVHSUAMEEGCSqGSIb3DQEBCjA0oA8wDQYJYIZIAWUDBAIDBQChHDAaBgkqhkiG9w0BAQgwDQYJYIZIAWUDBAIDBQCiAwIBQAOCAQEAV3zKSe/GpaWG22a+FBrGTNGdBjpO4/UUe01awRgUHrieH0hkcvD6g2mPeMCVA1cXL8v6U0+Q7WiV5y5p515BEMxqEklR44+Z4LA9hFEnfkybz0hqjpM/oqqCga4vDYSuw2xzQt0cdW0D7VUlQsOPZxvf5Nq8jHzfr8BMOS9TzZRyukQaoqEaoAKY16iBcnjWBJg93djXPErIFZJrF6c0QhZsIiwcF6aRxJsftWJvQPHlO2r4YQDxrd/xxbcQkf94Vze+b5dpbNMveElQ4/6Gmh5FJlzn2olAgmDNk/b4ZlOCErbRFcqL1k97xwUbEJsXR3dqHtFJnfCPTRPvM/WEVQ==" ],
+    "exp" : 1598184298285,
+    "alg" : "PS512",
+    "n" : "tJCkhfT9zI_8hSbjUH3TjuJgc2UtyQcnJrLwPXCffRBVNaS3kBoK8H_Vpvgv7a4Z9JUV1afc-DbbxoRMpJDVOLTR-p-wT_odqZ4T3ea20y_Ps-n7hzs27xQeIze2ryYHXI3qMNc-yHmIrC4vEeop72Pk_8znpiv0ZDWB2d1iUbsOksdVylWdY4Jux9x2TSpPKOikOejn2i6FTh-RB-s_GtkAjHqUmF429I-0P0Ibyu0RQOv3j4tIlXjF0IJ0aeUKYl9RYjFSL0A8vR9ZoR5Bm7HvmqDwK8g6sRcjhROvT_bu9Q0L49Gf0Y0q0jpEzqqbBrrBL_sn9nKqXB6Chdqm2w"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "enc",
+    "crv" : "",
+    "kid" : "e83c070e-85a4-4115-bea7-0ad22f4f4bd6_enc_rsa1_5",
+    "x5c" : [ "MIIDAzCCAeugAwIBAgIgdRbxx0cQ3ALJrfhrwjk0Ip9YEjOkT8Be9ZoCM4OAqugwDQYJKoZIhvcNAQELBQAwITEfMB0GA1UEAwwWb3hBdXRoIENBIENlcnRpZmljYXRlczAeFw0yMDA4MjExMjA0NTRaFw0yMDA4MjMxMjA0NThaMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5UaQRcPE7QwfGfdl3f7y9Wwv5hz6y7/dvC85PlZwQD87aLu2uJzy4c4m0NZkP18CJpniNzhj5+3dP8OMbouiV+B7FA1bYHSYXHK4TgtQik9wmVtuKsvJIJs2iP9MFA3fdBb9x/Scd8KnZACEEHUTVqcYZ6vgFmIMkiE59v67AaMxw5WmJ+ms3VELXxAGhIMNdV7OJ3wn2jIDOaY2SvZwZQEIE+mRHqV7b2nmMhJBldyZFUfkCQPn4CV0vgKNd+o7C6UG9q3bibVtMCgor9Y3aT/+6Fc+ylS9CxdY95ONE+fdGnckpplvn8Kf8TE7+4KxQMJhc9WKf91EYR20jgwVPAgMBAAGjJzAlMCMGA1UdJQQcMBoGCCsGAQUFBwMBBggrBgEFBQcDAgYEVR0lADANBgkqhkiG9w0BAQsFAAOCAQEAfyFOpbXwpPad5MU4hc/K5e18zAGRCPKIQwhjiOFO2rxrFg5kOb3E3gnvmnbgj0fQ0W4KtW0bdzz2Pge6gRfdfQFYPN2yVIDYfarhXWwcs1/HZyWpMbwSQo8+B83V7p1syaagkbusv3zyTSzlFvDU4J9sHilrtyh3BY+3fkFj7Vyu6wHW2OLZUPXFGdlp7hCn/FQIMAYEfeRyd9UqMAMqjvBcufG72AxW0gbhP9n4WQyXXm/IbUKMzxNsQG9qD4dmTa6CMo3FJWWz1JPc0UTB4OFdJKME6DdZdl96pgv/dldekg/SD3wflezxvHFr/lU7hZ/yJVoPNC2CVL5miETOKA==" ],
+    "exp" : 1598184298285,
+    "alg" : "RSA1_5",
+    "n" : "uVGkEXDxO0MHxn3Zd3-8vVsL-Yc-su_3bwvOT5WcEA_O2i7tric8uHOJtDWZD9fAiaZ4jc4Y-ft3T_DjG6LolfgexQNW2B0mFxyuE4LUIpPcJlbbirLySCbNoj_TBQN33QW_cf0nHfCp2QAhBB1E1anGGer4BZiDJIhOfb-uwGjMcOVpifprN1RC18QBoSDDXVezid8J9oyAzmmNkr2cGUBCBPpkR6le29p5jISQZXcmRVH5AkD5-AldL4CjXfqOwulBvat24m1bTAoKK_WN2k__uhXPspUvQsXWPeTjRPn3Rp3JKaZb5_Cn_ExO_uCsUDCYXPVin_dRGEdtI4MFTw"
+  }, {
+    "kty" : "RSA",
+    "e" : "AQAB",
+    "use" : "enc",
+    "crv" : "",
+    "kid" : "34b9680a-69e6-43b9-94cb-e8512aba4339_enc_rsa-oaep",
+    "x5c" : [ "MIIDBDCCAeygAwIBAgIhAKd4USAT5YIpXY+9XlkfbrNzr/TVZ4Uxul48Ddr/qZQqMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNVBAMMFm94QXV0aCBDQSBDZXJ0aWZpY2F0ZXMwHhcNMjAwODIxMTIwNDU1WhcNMjAwODIzMTIwNDU4WjAhMR8wHQYDVQQDDBZveEF1dGggQ0EgQ2VydGlmaWNhdGVzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA36QcveZ4hBX2DlC7fsmQeleR15dSzBFhu8m+UlgOQEaE/2xm/TvAgWLWtc+jmZToUN1sKRTeJWGX661XyylS7/epjQUfJ3RR2tkEE73VP24j6jC4j6VvN2uX6dj9np44QjUO8Uzcyvc5BgHvubCQiF/2gSPQZCz8xGE5GG0V2ijg3bZJXaVCM4rfu5h79rKnHOTemuLcOvJfx2OfafHp7YRUkirMuofMIa7drvFmrXUhNDU0aR6eLQYnhmm2rQk/Ykm9Q11XQeqEJwvCoD1Zi0G5a+W+/3QwBQqxS6GdkrEfHFSWAQ+G89ImdvnllR6fIVSEWnGGSaNwxZ0LY6rLuwIDAQABoycwJTAjBgNVHSUEHDAaBggrBgEFBQcDAQYIKwYBBQUHAwIGBFUdJQAwDQYJKoZIhvcNAQELBQADggEBABNyqEmgT84BKZeodLDAteJQL+6WGj2bvZQj/w3Trp9ah4gmCQnv4iKXhGTiKQePACPkQuicn9+8MNQsJOBOz5WwjxbRzoHZtych+EcZVnr/aCU++uFQGJLzdxenMRVJDWd0VAdY9xHZnUutqzQobv/EjiGTFaRFPCEUZvY/zOE3qE6E21Oxi9gNtfuR2x9y0odrlzDwEX1QpZB0rvzvXmj00O4RefeFSCYOArp/ss2qzONRPqLhuutPEe5e1f1ZRolxXU3IJK11qzQ1610pK7IoYNjJG8tkx3SNAxl5HsXJuFBW7TfoAohEBYnAhmMn2MT+N+2BMaX7T/YpeAciwR8=" ],
+    "exp" : 1598184298285,
+    "alg" : "RSA-OAEP",
+    "n" : "36QcveZ4hBX2DlC7fsmQeleR15dSzBFhu8m-UlgOQEaE_2xm_TvAgWLWtc-jmZToUN1sKRTeJWGX661XyylS7_epjQUfJ3RR2tkEE73VP24j6jC4j6VvN2uX6dj9np44QjUO8Uzcyvc5BgHvubCQiF_2gSPQZCz8xGE5GG0V2ijg3bZJXaVCM4rfu5h79rKnHOTemuLcOvJfx2OfafHp7YRUkirMuofMIa7drvFmrXUhNDU0aR6eLQYnhmm2rQk_Ykm9Q11XQeqEJwvCoD1Zi0G5a-W-_3QwBQqxS6GdkrEfHFSWAQ-G89ImdvnllR6fIVSEWnGGSaNwxZ0LY6rLuw"
+  } ]
+}
+
+12:05:05 08/21/20 Writing oxAuth OpenID Connect keys
+12:05:05 08/21/20 Running: /bin/chown jetty:jetty /install/community-edition-setup/output/oxauth-keys.json
+12:05:05 08/21/20 Running: /bin/chmod 600 /install/community-edition-setup/output/oxauth-keys.json
+12:05:05 08/21/20 Wrote oxAuth OpenID Connect key to /install/community-edition-setup/output/oxauth-keys.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/oxauth-config.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/oxauth-static-conf.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/static/oxauth/oxauth-errors.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/oxauth-keys.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/fido2-dynamic-conf.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/fido2-static-conf.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/oxtrust-config.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/oxtrust-cache-refresh.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/oxtrust-import-person.json
+12:05:05 08/21/20 Loading file /install/community-edition-setup/output/oxidp-config.json
+12:05:05 08/21/20 Rendering configuration templates
+12:05:05 08/21/20 Rendering template /install/community-edition-setup/templates/configuration.ldif
+12:05:06 08/21/20 Writing file /install/community-edition-setup/output/configuration.ldif
+12:05:06 08/21/20 Rendering template /install/community-edition-setup/templates/fido2.ldif
+12:05:06 08/21/20 Writing file /install/community-edition-setup/output/fido2.ldif
+12:05:06 08/21/20 Copying hosts and hostname to final destination
+12:05:06 08/21/20 Running: cp -f /etc/hostname /etc/hostname.gluu-4.2.0-1~
+12:05:06 08/21/20 Copying file /install/community-edition-setup/output/hostname to /etc/hostname
+12:05:06 08/21/20 Copied /install/community-edition-setup/output/hostname to /etc/hostname
+12:05:06 08/21/20 Running: /bin/chmod -f 644 /etc/hostname
+12:05:06 08/21/20 Running: /bin/hostname instance-1.us-central1-a.c.nifty-canyon-287111.internal
+12:05:06 08/21/20 Running: /bin/chmod -R 644 /etc/hosts
+12:05:06 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-1~
+12:05:06 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-2~
+12:05:06 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-3~
+12:05:06 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-4~
+12:05:06 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-5~
+12:05:06 08/21/20 Running: cp -f /etc/security/limits.conf /etc/security/limits.conf.gluu-4.2.0-6~
+12:05:06 08/21/20 Copying rendered templates to final destination
+12:05:06 08/21/20 Copying /install/community-edition-setup/output/python.txt to /opt/gluu/python/libs/python.txt
+12:05:06 08/21/20 Created destination folder /opt/gluu/python/libs
+12:05:06 08/21/20 Copying /install/community-edition-setup/output/gluu-ldap.properties to /etc/gluu/conf/gluu-ldap.properties
+12:05:06 08/21/20 Copying /install/community-edition-setup/output/oxTrustLogRotationConfiguration.xml to /etc/gluu/conf/oxTrustLogRotationConfiguration.xml
+12:05:06 08/21/20 Copying /install/community-edition-setup/output/gluu.properties to /etc/gluu/conf/gluu.properties
+12:05:06 08/21/20 Running: /usr/sbin/update-rc.d apache2 defaults
+12:05:07 08/21/20 Running: /usr/sbin/update-rc.d apache2 enable
+12:05:07 08/21/20 Running: /usr/sbin/update-rc.d rsyslog defaults
+12:05:08 08/21/20 Running: /usr/sbin/update-rc.d rsyslog enable
+12:05:08 08/21/20 Rendering node templates
+12:05:08 08/21/20 Rendering templates folder: /install/community-edition-setup/templates/node/
+12:05:08 08/21/20 Rendering test template /install/community-edition-setup/templates/node//passport
+12:05:09 08/21/20 Running WrenDS Setup
+12:05:09 08/21/20 Unzipping /opt/dist/app/opendj-server-legacy-4.0.0-M3.zip in /opt/
+12:05:09 08/21/20 Running: unzip -n -q /opt/dist/app/opendj-server-legacy-4.0.0-M3.zip -d /opt/
+12:05:09 08/21/20 Running: /bin/chown -R ldap:ldap /opt/opendj
+12:05:09 08/21/20 Running: /bin/chown ldap:ldap /home/ldap/.pw
+12:05:09 08/21/20 Running WrenDS Setup
+12:05:09 08/21/20 Changing ownership
+12:05:09 08/21/20 Running: /bin/chown -R root:gluu /etc/certs
+12:05:09 08/21/20 Running: /bin/chown -R root:gluu /etc/gluu/conf
+12:05:09 08/21/20 Running: /bin/chown -R root:gluu /opt/gluu/python
+12:05:09 08/21/20 Running: /bin/chown -R root:gluu /var/gluu
+12:05:09 08/21/20 Running: /bin/chmod -R 440 /etc/certs
+12:05:09 08/21/20 Running: /bin/chmod a+X /etc/certs
+12:05:09 08/21/20 Running: /bin/chown -R jetty:jetty /etc/certs/oxauth-keys.jks
+12:05:09 08/21/20 Running: /bin/chmod 660 /etc/certs/oxauth-keys.jks
+12:05:09 08/21/20 Running: /bin/chown -R jetty:jetty /opt/shibboleth-idp
+12:05:09 08/21/20 Running: chown ldap:ldap /opt/opendj/opendj-setup.properties
+12:05:09 08/21/20 Running: /bin/su ldap -c /opt/opendj/setup --no-prompt --cli --propertiesFilePath /opt/opendj/opendj-setup.properties --acceptLicense
+12:05:32 08/21/20 
+Configuring Directory Server ..... Done.
+Configuring Certificates ..... Done.
+Starting Directory Server .......... Done.
+
+To see basic server configuration status and configuration, you can launch /opt/opendj/bin/status
+
+
+12:05:32 08/21/20 WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.opends.server.util.Platform$PlatformIMPL (file:/opt/opendj/lib/wrends.jar) to constructor sun.security.tools.keytool.CertAndKeyGen(java.lang.String,java.lang.String)
+WARNING: Please consider reporting this to the maintainers of org.opends.server.util.Platform$PlatformIMPL
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+12:05:32 08/21/20 append self.jre_home to WrenDS /opt/opendj/config/java.properties
+12:05:32 08/21/20 Stopping opendj server
+12:05:32 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/stop-ds
+12:05:39 08/21/20 Stopping Server...
+[21/Aug/2020:12:05:38 +0000] category=BACKEND severity=NOTICE msgID=370 msg=The backend userRoot is now taken offline
+[21/Aug/2020:12:05:38 +0000] category=CORE severity=NOTICE msgID=203 msg=The Directory Server is now stopped
+
+12:05:39 08/21/20 Copying WrenDS schema
+12:05:39 08/21/20 Copying file /install/community-edition-setup/static/opendj/96-eduperson.ldif to /opt/opendj/config/schema
+12:05:39 08/21/20 Copied /install/community-edition-setup/static/opendj/96-eduperson.ldif to /opt/opendj/config/schema
+12:05:39 08/21/20 Copying file /install/community-edition-setup/static/opendj/101-ox.ldif to /opt/opendj/config/schema
+12:05:39 08/21/20 Copied /install/community-edition-setup/static/opendj/101-ox.ldif to /opt/opendj/config/schema
+12:05:39 08/21/20 Copying file /install/community-edition-setup/static/opendj/77-customAttributes.ldif to /opt/opendj/config/schema
+12:05:39 08/21/20 Copied /install/community-edition-setup/static/opendj/77-customAttributes.ldif to /opt/opendj/config/schema
+12:05:39 08/21/20 Running: /bin/chmod -R a+rX /opt/opendj
+12:05:39 08/21/20 Running: /bin/chown -R ldap:ldap /opt/opendj
+12:05:39 08/21/20 Copying file /install/community-edition-setup/static/opendj/systemd/opendj.service to /etc/systemd/system
+12:05:39 08/21/20 Copied /install/community-edition-setup/static/opendj/systemd/opendj.service to /etc/systemd/system
+12:05:39 08/21/20 Running: /bin/systemctl daemon-reload
+12:05:39 08/21/20 Running: /bin/systemctl enable opendj.service
+12:05:39 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/opendj.service → /etc/systemd/system/opendj.service.
+
+12:05:39 08/21/20 Running: /bin/systemctl start opendj.service
+12:05:52 08/21/20 Configuring WrenDS
+12:05:52 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-backend-prop --backend-name userRoot --set db-cache-percent:70
+12:05:57 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-global-configuration-prop --set single-structural-objectclass-behavior:accept
+12:06:01 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-password-policy-prop --policy-name "Default Password Policy" --set allow-pre-encoded-passwords:true
+12:06:06 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-log-publisher-prop --publisher-name "File-Based Audit Logger" --set enabled:true
+12:06:10 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-backend --backend-name metric --set base-dn:o=metric --type je --set enabled:true --set db-cache-percent:20
+12:06:15 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-backend --backend-name site --set base-dn:o=site --type je --set enabled:true --set db-cache-percent:20
+12:06:20 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-connection-handler-prop --handler-name "LDAP Connection Handler" --set enabled:false
+12:06:24 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-connection-handler-prop --handler-name "JMX Connection Handler" --set enabled:false
+12:06:28 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-access-control-handler-prop --remove global-aci:'(targetattr!="userPassword||authPassword||debugsearchindex||changes||changeNumber||changeType||changeTime||targetDN||newRDN||newSuperior||deleteOldRDN")(version 3.0; acl "Anonymous read access"; allow (read,search,compare) userdn="ldap:///anyone";)'
+12:06:32 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-global-configuration-prop --set reject-unauthenticated-requests:true
+12:06:37 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-password-policy-prop --policy-name "Default Password Policy" --set default-password-storage-scheme:"Salted SHA-512"
+12:06:41 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-plugin --plugin-name "Unique mail address" --type unique-attribute --set enabled:true --set base-dn:o=gluu --set type:mail
+12:06:46 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw create-plugin --plugin-name "Unique uid entry" --type unique-attribute --set enabled:true --set base-dn:o=gluu --set type:uid
+12:06:50 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-password-policy-prop --policy-name "Default Password Policy" --set default-password-storage-scheme:"Salted SHA-512"
+12:06:54 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-connection-handler-prop --handler-name "LDAPS Connection Handler" --set enabled:true --set listen-address:127.0.0.1
+12:06:59 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig --trustAll --no-prompt --hostname localhost --port 4444 --bindDN "cn=directory manager" --bindPasswordFile /home/ldap/.pw set-administration-connector-prop --set listen-address:127.0.0.1
+12:07:04 08/21/20 Getting WrenDS certificate
+12:07:04 08/21/20 Importing WrenDS certificate to truststore
+12:07:04 08/21/20 Running: /opt/jre/bin/keytool -importcert -noprompt -alias server-cert -file /etc/certs/opendj.crt -keystore /etc/certs/opendj.pkcs12 -storetype PKCS12 -storepass 65ZKAcH2CwvF
+12:07:05 08/21/20 Certificate was added to keystore
+
+12:07:05 08/21/20 Import WrenDS certificate
+12:07:05 08/21/20 Running: /opt/jre/bin/keytool -import -trustcacerts -alias instance-1.us-central1-a.c.nifty-canyon-287111.internal_opendj -file /etc/certs/opendj.crt -keystore /opt/jre/jre/lib/security/cacerts -storepass changeit -noprompt
+12:07:05 08/21/20 Warning: use -cacerts option to access cacerts keystore
+Certificate was added to keystore
+
+12:07:05 08/21/20 Running LDAP index creation commands for userRoot backend
+12:07:06 08/21/20 Creating equality index for attribute displayName
+12:07:06 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name displayName --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:10 08/21/20 Creating equality index for attribute description
+12:07:10 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name description --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:14 08/21/20 Creating equality index for attribute owner
+12:07:14 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name owner --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:18 08/21/20 Creating equality index for attribute inum
+12:07:18 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name inum --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:22 08/21/20 Creating equality index for attribute iname
+12:07:22 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name iname --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:27 08/21/20 Creating equality index for attribute uniqueIdentifier
+12:07:27 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name uniqueIdentifier --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:31 08/21/20 Creating equality index for attribute uuid
+12:07:31 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name uuid --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:35 08/21/20 Creating equality index for attribute oxId
+12:07:35 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:40 08/21/20 Creating equality index for attribute oxAuthClientId
+12:07:40 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxAuthClientId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:44 08/21/20 Creating equality index for attribute clnId
+12:07:44 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name clnId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:49 08/21/20 Creating ordering index for attribute oxAuthClientSecretExpiresAt
+12:07:49 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxAuthClientSecretExpiresAt --set index-type:ordering --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:53 08/21/20 Creating equality index for attribute grtId
+12:07:53 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name grtId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:07:57 08/21/20 Creating equality index for attribute authzCode
+12:07:57 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name authzCode --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:01 08/21/20 Creating equality index for attribute tknCde
+12:08:01 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name tknCde --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:06 08/21/20 Creating equality index for attribute oxSectorIdentifier
+12:08:06 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxSectorIdentifier --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:10 08/21/20 Creating equality index for attribute gluuStatus
+12:08:10 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name gluuStatus --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:14 08/21/20 Creating equality index for attribute oxState
+12:08:14 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxState --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:19 08/21/20 Creating equality index for attribute oxScriptType
+12:08:19 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxScriptType --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:23 08/21/20 Creating ordering index for attribute exp
+12:08:23 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name exp --set index-type:ordering --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:27 08/21/20 Creating ordering index for attribute oxLastAccessTime
+12:08:27 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxLastAccessTime --set index-type:ordering --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:31 08/21/20 Creating ordering index for attribute lastModifiedTime
+12:08:31 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name lastModifiedTime --set index-type:ordering --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:36 08/21/20 Creating equality index for attribute oxApplication
+12:08:36 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxApplication --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:40 08/21/20 Creating equality index for attribute oxRequestId
+12:08:40 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxRequestId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:45 08/21/20 Creating ordering index for attribute creationDate
+12:08:45 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name creationDate --set index-type:ordering --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:49 08/21/20 Creating ordering index for attribute oxStartDate
+12:08:49 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxStartDate --set index-type:ordering --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:53 08/21/20 Creating ordering index for attribute oxEndDate
+12:08:53 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxEndDate --set index-type:ordering --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:08:57 08/21/20 Creating equality index for attribute oxApplicationType
+12:08:57 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxApplicationType --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:02 08/21/20 Creating equality index for attribute oxMetricType
+12:09:02 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxMetricType --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:06 08/21/20 Creating equality index for attribute oxDeviceHashCode
+12:09:06 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxDeviceHashCode --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:10 08/21/20 Creating equality index for attribute oxDeviceKeyHandle
+12:09:10 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxDeviceKeyHandle --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:14 08/21/20 Creating equality index for attribute ssnId
+12:09:14 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name ssnId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:19 08/21/20 Creating equality index for attribute oxExternalUid
+12:09:19 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxExternalUid --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:23 08/21/20 Creating equality index for attribute oxTicket
+12:09:23 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxTicket --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:27 08/21/20 Creating equality index for attribute oxCodeChallenge
+12:09:27 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxCodeChallenge --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:31 08/21/20 Creating equality index for attribute chlng
+12:09:31 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name chlng --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:35 08/21/20 Creating equality index for attribute oxCodeChallengeHash
+12:09:35 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxCodeChallengeHash --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:40 08/21/20 Creating equality index for attribute oxPublicKeyId
+12:09:40 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxPublicKeyId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:44 08/21/20 Creating equality index for attribute oxStatus
+12:09:44 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxStatus --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:48 08/21/20 Creating equality index for attribute oxAttributes
+12:09:48 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxAttributes --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:53 08/21/20 Creating equality index for attribute oxConfigurationCode
+12:09:53 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxConfigurationCode --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:09:57 08/21/20 Creating equality index for attribute oxResourceSetId
+12:09:57 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxResourceSetId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:01 08/21/20 Creating equality index for attribute oxAuthUmaScope
+12:10:01 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxAuthUmaScope --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:05 08/21/20 Creating equality index for attribute oxAuthUserId
+12:10:05 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxAuthUserId --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:09 08/21/20 Creating equality index for attribute del
+12:10:09 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name del --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:14 08/21/20 Creating presence, equality index for attribute oxTrustExternalId
+12:10:14 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxTrustExternalId --set index-type:presence --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:18 08/21/20 Creating presence, equality index for attribute oxAuthUserDN
+12:10:18 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name userRoot --type generic --index-name oxAuthUserDN --set index-type:presence --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:22 08/21/20 Running LDAP index creation commands for site backend
+12:10:22 08/21/20 Creating equality index for attribute inum
+12:10:22 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name site --type generic --index-name inum --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:26 08/21/20 Creating equality index for attribute iname
+12:10:26 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name site --type generic --index-name iname --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:30 08/21/20 Creating equality index for attribute gluuStatus
+12:10:30 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name site --type generic --index-name gluuStatus --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:34 08/21/20 Creating equality index for attribute oxScriptType
+12:10:34 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/dsconfig create-backend-index --backend-name site --type generic --index-name oxScriptType --set index-type:equality --set index-entry-limit:4000 --hostName localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --noPropertiesFile --no-prompt
+12:10:39 08/21/20 Importing LDIF File(s): /install/community-edition-setup/output/base.ldif /install/community-edition-setup/output/attributes.ldif /install/community-edition-setup/output/scopes.ldif /install/community-edition-setup/output/scripts.ldif /install/community-edition-setup/output/configuration.ldif /install/community-edition-setup/output/scim.ldif /install/community-edition-setup/output/fido2.ldif /install/community-edition-setup/output/oxidp.ldif /install/community-edition-setup/output/oxtrust_api.ldif /install/community-edition-setup/output/clients.ldif /install/community-edition-setup/output/oxtrust_api_clients.ldif /install/community-edition-setup/output/scim_clients.ldif /install/community-edition-setup/static/metric/o_metric.ldif /install/community-edition-setup/output/casa.ldif /install/community-edition-setup/output/scripts_casa.ldif /install/community-edition-setup/output/people.ldif /install/community-edition-setup/output/groups.ldif /install/community-edition-setup/static/cache-refresh/o_site.ldif
+12:10:39 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/base.ldif
+12:10:42 08/21/20 Processing ADD request for o=gluu
+ADD operation successful for DN o=gluu
+Processing ADD request for ou=people,o=gluu
+ADD operation successful for DN ou=people,o=gluu
+Processing ADD request for ou=groups,o=gluu
+ADD operation successful for DN ou=groups,o=gluu
+Processing ADD request for ou=attributes,o=gluu
+ADD operation successful for DN ou=attributes,o=gluu
+Processing ADD request for ou=scopes,o=gluu
+ADD operation successful for DN ou=scopes,o=gluu
+Processing ADD request for ou=clients,o=gluu
+ADD operation successful for DN ou=clients,o=gluu
+Processing ADD request for ou=sessions,o=gluu
+ADD operation successful for DN ou=sessions,o=gluu
+Processing ADD request for ou=tokens,o=gluu
+ADD operation successful for DN ou=tokens,o=gluu
+Processing ADD request for ou=authorizations,o=gluu
+ADD operation successful for DN ou=authorizations,o=gluu
+Processing ADD request for ou=scripts,o=gluu
+ADD operation successful for DN ou=scripts,o=gluu
+Processing ADD request for ou=resetPasswordRequests,o=gluu
+ADD operation successful for DN ou=resetPasswordRequests,o=gluu
+Processing ADD request for ou=uma,o=gluu
+ADD operation successful for DN ou=uma,o=gluu
+Processing ADD request for ou=resources,ou=uma,o=gluu
+ADD operation successful for DN ou=resources,ou=uma,o=gluu
+Processing ADD request for ou=pct,ou=uma,o=gluu
+ADD operation successful for DN ou=pct,ou=uma,o=gluu
+Processing ADD request for ou=push,o=gluu
+ADD operation successful for DN ou=push,o=gluu
+Processing ADD request for ou=application,ou=push,o=gluu
+ADD operation successful for DN ou=application,ou=push,o=gluu
+Processing ADD request for ou=device,ou=push,o=gluu
+ADD operation successful for DN ou=device,ou=push,o=gluu
+Processing ADD request for ou=u2f,o=gluu
+ADD operation successful for DN ou=u2f,o=gluu
+Processing ADD request for ou=registration_requests,ou=u2f,o=gluu
+ADD operation successful for DN ou=registration_requests,ou=u2f,o=gluu
+Processing ADD request for ou=authentication_requests,ou=u2f,o=gluu
+ADD operation successful for DN ou=authentication_requests,ou=u2f,o=gluu
+Processing ADD request for ou=registered_devices,ou=u2f,o=gluu
+ADD operation successful for DN ou=registered_devices,ou=u2f,o=gluu
+Processing ADD request for ou=metric,o=gluu
+ADD operation successful for DN ou=metric,o=gluu
+Processing ADD request for ou=sector_identifiers,o=gluu
+ADD operation successful for DN ou=sector_identifiers,o=gluu
+Processing ADD request for ou=ciba,o=gluu
+ADD operation successful for DN ou=ciba,o=gluu
+
+12:10:42 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/attributes.ldif
+12:10:47 08/21/20 Processing ADD request for inum=29DA,ou=attributes,o=gluu
+ADD operation successful for DN inum=29DA,ou=attributes,o=gluu
+Processing ADD request for inum=B4B0,ou=attributes,o=gluu
+ADD operation successful for DN inum=B4B0,ou=attributes,o=gluu
+Processing ADD request for inum=42E0,ou=attributes,o=gluu
+ADD operation successful for DN inum=42E0,ou=attributes,o=gluu
+Processing ADD request for inum=B52A,ou=attributes,o=gluu
+ADD operation successful for DN inum=B52A,ou=attributes,o=gluu
+Processing ADD request for inum=64A0,ou=attributes,o=gluu
+ADD operation successful for DN inum=64A0,ou=attributes,o=gluu
+Processing ADD request for inum=3B47,ou=attributes,o=gluu
+ADD operation successful for DN inum=3B47,ou=attributes,o=gluu
+Processing ADD request for inum=8F88,ou=attributes,o=gluu
+ADD operation successful for DN inum=8F88,ou=attributes,o=gluu
+Processing ADD request for inum=B17A,ou=attributes,o=gluu
+ADD operation successful for DN inum=B17A,ou=attributes,o=gluu
+Processing ADD request for inum=C8D5,ou=attributes,o=gluu
+ADD operation successful for DN inum=C8D5,ou=attributes,o=gluu
+Processing ADD request for inum=BE64,ou=attributes,o=gluu
+ADD operation successful for DN inum=BE64,ou=attributes,o=gluu
+Processing ADD request for inum=3692,ou=attributes,o=gluu
+ADD operation successful for DN inum=3692,ou=attributes,o=gluu
+Processing ADD request for inum=98FC,ou=attributes,o=gluu
+ADD operation successful for DN inum=98FC,ou=attributes,o=gluu
+Processing ADD request for inum=D2E0,ou=attributes,o=gluu
+ADD operation successful for DN inum=D2E0,ou=attributes,o=gluu
+Processing ADD request for inum=A901,ou=attributes,o=gluu
+ADD operation successful for DN inum=A901,ou=attributes,o=gluu
+Processing ADD request for inum=36D9,ou=attributes,o=gluu
+ADD operation successful for DN inum=36D9,ou=attributes,o=gluu
+Processing ADD request for inum=8A11,ou=attributes,o=gluu
+ADD operation successful for DN inum=8A11,ou=attributes,o=gluu
+Processing ADD request for inum=C703,ou=attributes,o=gluu
+ADD operation successful for DN inum=C703,ou=attributes,o=gluu
+Processing ADD request for inum=6493,ou=attributes,o=gluu
+ADD operation successful for DN inum=6493,ou=attributes,o=gluu
+Processing ADD request for inum=5CA2,ou=attributes,o=gluu
+ADD operation successful for DN inum=5CA2,ou=attributes,o=gluu
+Processing ADD request for inum=CAE3,ou=attributes,o=gluu
+ADD operation successful for DN inum=CAE3,ou=attributes,o=gluu
+Processing ADD request for inum=A0E8,ou=attributes,o=gluu
+ADD operation successful for DN inum=A0E8,ou=attributes,o=gluu
+Processing ADD request for inum=5EC6,ou=attributes,o=gluu
+ADD operation successful for DN inum=5EC6,ou=attributes,o=gluu
+Processing ADD request for inum=0C85,ou=attributes,o=gluu
+ADD operation successful for DN inum=0C85,ou=attributes,o=gluu
+Processing ADD request for inum=BCA8,ou=attributes,o=gluu
+ADD operation successful for DN inum=BCA8,ou=attributes,o=gluu
+Processing ADD request for inum=BCB8,ou=attributes,o=gluu
+ADD operation successful for DN inum=BCB8,ou=attributes,o=gluu
+Processing ADD request for inum=BCE8,ou=attributes,o=gluu
+ADD operation successful for DN inum=BCE8,ou=attributes,o=gluu
+Processing ADD request for inum=2B29,ou=attributes,o=gluu
+ADD operation successful for DN inum=2B29,ou=attributes,o=gluu
+Processing ADD request for inum=EC3A,ou=attributes,o=gluu
+ADD operation successful for DN inum=EC3A,ou=attributes,o=gluu
+Processing ADD request for inum=D03E,ou=attributes,o=gluu
+ADD operation successful for DN inum=D03E,ou=attributes,o=gluu
+Processing ADD request for inum=AAEE,ou=attributes,o=gluu
+ADD operation successful for DN inum=AAEE,ou=attributes,o=gluu
+Processing ADD request for inum=C001,ou=attributes,o=gluu
+ADD operation successful for DN inum=C001,ou=attributes,o=gluu
+Processing ADD request for inum=4502,ou=attributes,o=gluu
+ADD operation successful for DN inum=4502,ou=attributes,o=gluu
+Processing ADD request for inum=BD22,ou=attributes,o=gluu
+ADD operation successful for DN inum=BD22,ou=attributes,o=gluu
+Processing ADD request for inum=08E2,ou=attributes,o=gluu
+ADD operation successful for DN inum=08E2,ou=attributes,o=gluu
+Processing ADD request for inum=3D44,ou=attributes,o=gluu
+ADD operation successful for DN inum=3D44,ou=attributes,o=gluu
+Processing ADD request for inum=D054,ou=attributes,o=gluu
+ADD operation successful for DN inum=D054,ou=attributes,o=gluu
+Processing ADD request for inum=6DA6,ou=attributes,o=gluu
+ADD operation successful for DN inum=6DA6,ou=attributes,o=gluu
+Processing ADD request for inum=0C18,ou=attributes,o=gluu
+ADD operation successful for DN inum=0C18,ou=attributes,o=gluu
+Processing ADD request for inum=E6B8,ou=attributes,o=gluu
+ADD operation successful for DN inum=E6B8,ou=attributes,o=gluu
+Processing ADD request for inum=42D8,ou=attributes,o=gluu
+ADD operation successful for DN inum=42D8,ou=attributes,o=gluu
+Processing ADD request for inum=6609,ou=attributes,o=gluu
+ADD operation successful for DN inum=6609,ou=attributes,o=gluu
+Processing ADD request for inum=E999,ou=attributes,o=gluu
+ADD operation successful for DN inum=E999,ou=attributes,o=gluu
+Processing ADD request for inum=D0C9,ou=attributes,o=gluu
+ADD operation successful for DN inum=D0C9,ou=attributes,o=gluu
+Processing ADD request for inum=894A,ou=attributes,o=gluu
+ADD operation successful for DN inum=894A,ou=attributes,o=gluu
+Processing ADD request for inum=570B,ou=attributes,o=gluu
+ADD operation successful for DN inum=570B,ou=attributes,o=gluu
+Processing ADD request for inum=D90B,ou=attributes,o=gluu
+ADD operation successful for DN inum=D90B,ou=attributes,o=gluu
+Processing ADD request for inum=AC0B,ou=attributes,o=gluu
+ADD operation successful for DN inum=AC0B,ou=attributes,o=gluu
+Processing ADD request for inum=4649,ou=attributes,o=gluu
+ADD operation successful for DN inum=4649,ou=attributes,o=gluu
+Processing ADD request for inum=27DB,ou=attributes,o=gluu
+ADD operation successful for DN inum=27DB,ou=attributes,o=gluu
+Processing ADD request for inum=6EEB,ou=attributes,o=gluu
+ADD operation successful for DN inum=6EEB,ou=attributes,o=gluu
+Processing ADD request for inum=2A3D,ou=attributes,o=gluu
+ADD operation successful for DN inum=2A3D,ou=attributes,o=gluu
+Processing ADD request for inum=48EE,ou=attributes,o=gluu
+ADD operation successful for DN inum=48EE,ou=attributes,o=gluu
+Processing ADD request for inum=4E0C,ou=attributes,o=gluu
+ADD operation successful for DN inum=4E0C,ou=attributes,o=gluu
+Processing ADD request for inum=E7BC,ou=attributes,o=gluu
+ADD operation successful for DN inum=E7BC,ou=attributes,o=gluu
+Processing ADD request for inum=6366,ou=attributes,o=gluu
+ADD operation successful for DN inum=6366,ou=attributes,o=gluu
+Processing ADD request for inum=ED0D,ou=attributes,o=gluu
+ADD operation successful for DN inum=ED0D,ou=attributes,o=gluu
+Processing ADD request for inum=91E7,ou=attributes,o=gluu
+ADD operation successful for DN inum=91E7,ou=attributes,o=gluu
+Processing ADD request for inum=096B,ou=attributes,o=gluu
+ADD operation successful for DN inum=096B,ou=attributes,o=gluu
+Processing ADD request for inum=BF03,ou=attributes,o=gluu
+ADD operation successful for DN inum=BF03,ou=attributes,o=gluu
+Processing ADD request for inum=0247,ou=attributes,o=gluu
+ADD operation successful for DN inum=0247,ou=attributes,o=gluu
+Processing ADD request for inum=002A,ou=attributes,o=gluu
+ADD operation successful for DN inum=002A,ou=attributes,o=gluu
+Processing ADD request for inum=8FF3,ou=attributes,o=gluu
+ADD operation successful for DN inum=8FF3,ou=attributes,o=gluu
+Processing ADD request for inum=4B0F,ou=attributes,o=gluu
+ADD operation successful for DN inum=4B0F,ou=attributes,o=gluu
+Processing ADD request for inum=4A0A,ou=attributes,o=gluu
+ADD operation successful for DN inum=4A0A,ou=attributes,o=gluu
+Processing ADD request for inum=4A0B,ou=attributes,o=gluu
+ADD operation successful for DN inum=4A0B,ou=attributes,o=gluu
+Processing ADD request for inum=4A0C,ou=attributes,o=gluu
+ADD operation successful for DN inum=4A0C,ou=attributes,o=gluu
+Processing ADD request for inum=5039,ou=attributes,o=gluu
+ADD operation successful for DN inum=5039,ou=attributes,o=gluu
+Processing ADD request for inum=42E1,ou=attributes,o=gluu
+ADD operation successful for DN inum=42E1,ou=attributes,o=gluu
+Processing ADD request for inum=6049,ou=attributes,o=gluu
+ADD operation successful for DN inum=6049,ou=attributes,o=gluu
+Processing ADD request for inum=CACA,ou=attributes,o=gluu
+ADD operation successful for DN inum=CACA,ou=attributes,o=gluu
+Processing ADD request for inum=11AA,ou=attributes,o=gluu
+ADD operation successful for DN inum=11AA,ou=attributes,o=gluu
+Processing ADD request for inum=11AB,ou=attributes,o=gluu
+ADD operation successful for DN inum=11AB,ou=attributes,o=gluu
+
+12:10:47 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/scopes.ldif
+12:10:50 08/21/20 Processing ADD request for inum=F0C4,ou=scopes,o=gluu
+ADD operation successful for DN inum=F0C4,ou=scopes,o=gluu
+Processing ADD request for inum=43F1,ou=scopes,o=gluu
+ADD operation successful for DN inum=43F1,ou=scopes,o=gluu
+Processing ADD request for inum=764C,ou=scopes,o=gluu
+ADD operation successful for DN inum=764C,ou=scopes,o=gluu
+Processing ADD request for inum=C17A,ou=scopes,o=gluu
+ADD operation successful for DN inum=C17A,ou=scopes,o=gluu
+Processing ADD request for inum=D491,ou=scopes,o=gluu
+ADD operation successful for DN inum=D491,ou=scopes,o=gluu
+Processing ADD request for inum=341A,ou=scopes,o=gluu
+ADD operation successful for DN inum=341A,ou=scopes,o=gluu
+Processing ADD request for inum=10B2,ou=scopes,o=gluu
+ADD operation successful for DN inum=10B2,ou=scopes,o=gluu
+Processing ADD request for inum=6D99,ou=scopes,o=gluu
+ADD operation successful for DN inum=6D99,ou=scopes,o=gluu
+Processing ADD request for inum=6D90,ou=scopes,o=gluu
+ADD operation successful for DN inum=6D90,ou=scopes,o=gluu
+Processing ADD request for inum=7D90,ou=scopes,o=gluu
+ADD operation successful for DN inum=7D90,ou=scopes,o=gluu
+Processing ADD request for inum=8A01,ou=scopes,o=gluu
+ADD operation successful for DN inum=8A01,ou=scopes,o=gluu
+Processing ADD request for inum=C4F5,ou=scopes,o=gluu
+ADD operation successful for DN inum=C4F5,ou=scopes,o=gluu
+
+12:10:50 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/scripts.ldif
+12:10:54 08/21/20 Processing ADD request for inum=2124-0CF1,ou=scripts,o=gluu
+ADD operation successful for DN inum=2124-0CF1,ou=scripts,o=gluu
+Processing ADD request for inum=2FDB-CF02,ou=scripts,o=gluu
+ADD operation successful for DN inum=2FDB-CF02,ou=scripts,o=gluu
+Processing ADD request for inum=CB5B-3211,ou=scripts,o=gluu
+ADD operation successful for DN inum=CB5B-3211,ou=scripts,o=gluu
+Processing ADD request for inum=031C-4A65,ou=scripts,o=gluu
+ADD operation successful for DN inum=031C-4A65,ou=scripts,o=gluu
+Processing ADD request for inum=031C-5621,ou=scripts,o=gluu
+ADD operation successful for DN inum=031C-5621,ou=scripts,o=gluu
+Processing ADD request for inum=031C-5622,ou=scripts,o=gluu
+ADD operation successful for DN inum=031C-5622,ou=scripts,o=gluu
+Processing ADD request for inum=13D3-E7AD,ou=scripts,o=gluu
+ADD operation successful for DN inum=13D3-E7AD,ou=scripts,o=gluu
+Processing ADD request for inum=24FD-B96E,ou=scripts,o=gluu
+ADD operation successful for DN inum=24FD-B96E,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-F995,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-F995,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-F9A5,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-F9A5,ou=scripts,o=gluu
+Processing ADD request for inum=OO11-BAFE,ou=scripts,o=gluu
+ADD operation successful for DN inum=OO11-BAFE,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-F996,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-F996,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-AA90,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-AA90,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-BA90,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-BA90,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-CA90,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-CA90,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-AA91,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-AA91,ou=scripts,o=gluu
+Processing ADD request for inum=2DAF-BA91,ou=scripts,o=gluu
+ADD operation successful for DN inum=2DAF-BA91,ou=scripts,o=gluu
+Processing ADD request for inum=4BBE-C6A8,ou=scripts,o=gluu
+ADD operation successful for DN inum=4BBE-C6A8,ou=scripts,o=gluu
+Processing ADD request for inum=5018-AF9C,ou=scripts,o=gluu
+ADD operation successful for DN inum=5018-AF9C,ou=scripts,o=gluu
+Processing ADD request for inum=5018-D4BF,ou=scripts,o=gluu
+ADD operation successful for DN inum=5018-D4BF,ou=scripts,o=gluu
+Processing ADD request for inum=5018-F9CF,ou=scripts,o=gluu
+ADD operation successful for DN inum=5018-F9CF,ou=scripts,o=gluu
+Processing ADD request for inum=522F-CDC5,ou=scripts,o=gluu
+ADD operation successful for DN inum=522F-CDC5,ou=scripts,o=gluu
+Processing ADD request for inum=6EA0-8F0C,ou=scripts,o=gluu
+ADD operation successful for DN inum=6EA0-8F0C,ou=scripts,o=gluu
+Processing ADD request for inum=6EA0-8F0D,ou=scripts,o=gluu
+ADD operation successful for DN inum=6EA0-8F0D,ou=scripts,o=gluu
+Processing ADD request for inum=8BAF-80D6,ou=scripts,o=gluu
+ADD operation successful for DN inum=8BAF-80D6,ou=scripts,o=gluu
+Processing ADD request for inum=8BAF-80D7,ou=scripts,o=gluu
+ADD operation successful for DN inum=8BAF-80D7,ou=scripts,o=gluu
+Processing ADD request for inum=92F0-BF9E,ou=scripts,o=gluu
+ADD operation successful for DN inum=92F0-BF9E,ou=scripts,o=gluu
+Processing ADD request for inum=92F0-759E,ou=scripts,o=gluu
+ADD operation successful for DN inum=92F0-759E,ou=scripts,o=gluu
+Processing ADD request for inum=A51E-76DA,ou=scripts,o=gluu
+ADD operation successful for DN inum=A51E-76DA,ou=scripts,o=gluu
+Processing ADD request for inum=A910-56AB,ou=scripts,o=gluu
+ADD operation successful for DN inum=A910-56AB,ou=scripts,o=gluu
+Processing ADD request for inum=D40C-1CA4,ou=scripts,o=gluu
+ADD operation successful for DN inum=D40C-1CA4,ou=scripts,o=gluu
+Processing ADD request for inum=DAA9-B788,ou=scripts,o=gluu
+ADD operation successful for DN inum=DAA9-B788,ou=scripts,o=gluu
+Processing ADD request for inum=09A0-93D6,ou=scripts,o=gluu
+ADD operation successful for DN inum=09A0-93D6,ou=scripts,o=gluu
+Processing ADD request for inum=09A0-93D7,ou=scripts,o=gluu
+ADD operation successful for DN inum=09A0-93D7,ou=scripts,o=gluu
+Processing ADD request for inum=DAA9-B789,ou=scripts,o=gluu
+ADD operation successful for DN inum=DAA9-B789,ou=scripts,o=gluu
+Processing ADD request for inum=DAA9-BA60,ou=scripts,o=gluu
+ADD operation successful for DN inum=DAA9-BA60,ou=scripts,o=gluu
+Processing ADD request for inum=8AF7.D82A,ou=scripts,o=gluu
+ADD operation successful for DN inum=8AF7.D82A,ou=scripts,o=gluu
+Processing ADD request for inum=8AF7.D82B,ou=scripts,o=gluu
+ADD operation successful for DN inum=8AF7.D82B,ou=scripts,o=gluu
+Processing ADD request for inum=C1BA-C1BA,ou=scripts,o=gluu
+ADD operation successful for DN inum=C1BA-C1BA,ou=scripts,o=gluu
+
+12:10:54 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/configuration.ldif
+12:10:59 08/21/20 Processing ADD request for ou=configuration,o=gluu
+ADD operation successful for DN ou=configuration,o=gluu
+Processing ADD request for ou=trustRelationships,o=gluu
+ADD operation successful for DN ou=trustRelationships,o=gluu
+Processing ADD request for ou=federations,o=gluu
+ADD operation successful for DN ou=federations,o=gluu
+Processing ADD request for ou=oxauth,ou=configuration,o=gluu
+ADD operation successful for DN ou=oxauth,ou=configuration,o=gluu
+Processing ADD request for ou=oxtrust,ou=configuration,o=gluu
+ADD operation successful for DN ou=oxtrust,ou=configuration,o=gluu
+Processing ADD request for ou=oxidp,ou=configuration,o=gluu
+ADD operation successful for DN ou=oxidp,ou=configuration,o=gluu
+
+12:10:59 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/scim.ldif
+12:11:02 08/21/20 Processing ADD request for inum=8CAD-B06D,ou=scopes,o=gluu
+ADD operation successful for DN inum=8CAD-B06D,ou=scopes,o=gluu
+Processing ADD request for oxId=1203.b53f46e7-c745-4dbe-b5fc-2125718e4f86,ou=resources,ou=uma,o=gluu
+ADD operation successful for DN oxId=1203.b53f46e7-c745-4dbe-b5fc-2125718e4f86,ou=resources,ou=uma,o=gluu
+
+12:11:02 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/fido2.ldif
+12:11:06 08/21/20 Processing ADD request for ou=fido2,ou=configuration,o=gluu
+ADD operation successful for DN ou=fido2,ou=configuration,o=gluu
+
+12:11:06 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/oxidp.ldif
+12:11:09 08/21/20 Processing ADD request for ou=oxidp,o=gluu
+ADD operation successful for DN ou=oxidp,o=gluu
+Processing ADD request for ou=cas,ou=oxidp,o=gluu
+ADD operation successful for DN ou=cas,ou=oxidp,o=gluu
+Processing ADD request for ou=samlAcrs,o=gluu
+ADD operation successful for DN ou=samlAcrs,o=gluu
+Processing ADD request for inum=F3FB,ou=samlAcrs,o=gluu
+ADD operation successful for DN inum=F3FB,ou=samlAcrs,o=gluu
+Processing ADD request for inum=B227,ou=samlAcrs,o=gluu
+ADD operation successful for DN inum=B227,ou=samlAcrs,o=gluu
+Processing ADD request for inum=FF64,ou=samlAcrs,o=gluu
+ADD operation successful for DN inum=FF64,ou=samlAcrs,o=gluu
+
+12:11:09 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/oxtrust_api.ldif
+12:11:13 08/21/20 Processing ADD request for inum=OO11-AABB,ou=scopes,o=gluu
+ADD operation successful for DN inum=OO11-AABB,ou=scopes,o=gluu
+Processing ADD request for inum=1122-BBCC,ou=scopes,o=gluu
+ADD operation successful for DN inum=1122-BBCC,ou=scopes,o=gluu
+Processing ADD request for oxId=1403.8081959c-cbbe-4843-a35c-fc76002c6bf8,ou=resources,ou=uma,o=gluu
+ADD operation successful for DN oxId=1403.8081959c-cbbe-4843-a35c-fc76002c6bf8,ou=resources,ou=uma,o=gluu
+
+12:11:13 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/clients.ldif
+12:11:16 08/21/20 Processing ADD request for inum=1001.e085f66e-33dc-4ac1-8c08-39faa07b4ff8,ou=clients,o=gluu
+ADD operation successful for DN inum=1001.e085f66e-33dc-4ac1-8c08-39faa07b4ff8,ou=clients,o=gluu
+Processing ADD request for inum=1101.b187e9ba-12aa-45e1-8998-83cc4931fe96,ou=clients,o=gluu
+ADD operation successful for DN inum=1101.b187e9ba-12aa-45e1-8998-83cc4931fe96,ou=clients,o=gluu
+
+12:11:16 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/oxtrust_api_clients.ldif
+12:11:19 08/21/20 Processing ADD request for inum=1401.09df89b8-1809-4a65-89b7-e7d83da550d5,ou=clients,o=gluu
+ADD operation successful for DN inum=1401.09df89b8-1809-4a65-89b7-e7d83da550d5,ou=clients,o=gluu
+Processing ADD request for inum=1402.ea813f43-e860-47fe-8356-7cb31aa03004,ou=clients,o=gluu
+ADD operation successful for DN inum=1402.ea813f43-e860-47fe-8356-7cb31aa03004,ou=clients,o=gluu
+
+12:11:19 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/scim_clients.ldif
+12:11:23 08/21/20 Processing ADD request for inum=1201.eae9e629-1dff-47e0-a065-e655c23fcfb5,ou=clients,o=gluu
+ADD operation successful for DN inum=1201.eae9e629-1dff-47e0-a065-e655c23fcfb5,ou=clients,o=gluu
+Processing ADD request for inum=1202.0509cc32-059f-4045-ae35-e117f778b65c,ou=clients,o=gluu
+ADD operation successful for DN inum=1202.0509cc32-059f-4045-ae35-e117f778b65c,ou=clients,o=gluu
+
+12:11:23 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/static/metric/o_metric.ldif
+12:11:27 08/21/20 Processing ADD request for o=metric
+ADD operation successful for DN o=metric
+Processing ADD request for ou=statistic,o=metric
+ADD operation successful for DN ou=statistic,o=metric
+
+12:11:27 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/casa.ldif
+12:11:30 08/21/20 Processing ADD request for ou=casa,ou=configuration,o=gluu
+ADD operation successful for DN ou=casa,ou=configuration,o=gluu
+
+12:11:30 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/scripts_casa.ldif
+12:11:34 08/21/20 Processing ADD request for inum=BABA-CACA,ou=scripts,o=gluu
+ADD operation successful for DN inum=BABA-CACA,ou=scripts,o=gluu
+Processing ADD request for inum=DAA9-F7F8,ou=scripts,o=gluu
+ADD operation successful for DN inum=DAA9-F7F8,ou=scripts,o=gluu
+
+12:11:34 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/people.ldif
+12:11:37 08/21/20 Processing ADD request for inum=8c7336a8-4167-42b0-92d4-c53778277ee4,ou=people,o=gluu
+ADD operation successful for DN inum=8c7336a8-4167-42b0-92d4-c53778277ee4,ou=people,o=gluu
+
+12:11:37 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/output/groups.ldif
+12:11:41 08/21/20 Processing ADD request for inum=60B7,ou=groups,o=gluu
+ADD operation successful for DN inum=60B7,ou=groups,o=gluu
+
+12:11:41 08/21/20 Running: /bin/su ldap -c /opt/opendj/bin/ldapmodify --hostname localhost --port 4444 --bindDN "cn=directory manager" -j /home/ldap/.pw --trustAll --useSSL --continueOnError --filename /install/community-edition-setup/static/cache-refresh/o_site.ldif
+12:11:44 08/21/20 Processing ADD request for o=site
+ADD operation successful for DN o=site
+Processing ADD request for ou=cache-refresh,o=site
+ADD operation successful for DN ou=cache-refresh,o=site
+
+12:11:45 08/21/20 Running: /bin/systemctl stop apache2
+12:11:45 08/21/20 Run: /bin/systemctl stop apache2 with result code: 0
+12:11:45 08/21/20 Copying file /install/community-edition-setup/output/https_gluu.conf to /etc/apache2/sites-available/https_gluu.conf
+12:11:45 08/21/20 Copied /install/community-edition-setup/output/https_gluu.conf to /etc/apache2/sites-available/https_gluu.conf
+12:11:45 08/21/20 Running: /bin/ln -s /etc/apache2/sites-available/https_gluu.conf /etc/apache2/sites-enabled/https_gluu.conf
+12:11:45 08/21/20 Writing file /var/www/html/index.html
+12:11:45 08/21/20 Running: cp -f /var/www/html/index.html /var/www/html/index.html.gluu-4.2.0-1~
+12:11:45 08/21/20 Writing file /etc/apache2/mods-available/alias.conf
+12:11:45 08/21/20 Running: cp -f /etc/apache2/mods-available/alias.conf /etc/apache2/mods-available/alias.conf.gluu-4.2.0-1~
+12:11:45 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_404.html to /var/www/html
+12:11:45 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_404.html to /var/www/html
+12:11:45 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_502.html to /var/www/html
+12:11:45 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_502.html to /var/www/html
+12:11:45 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_503.html to /var/www/html
+12:11:45 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_503.html to /var/www/html
+12:11:45 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_504.html to /var/www/html
+12:11:45 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_504.html to /var/www/html
+12:11:45 08/21/20 Copying file /install/community-edition-setup/templates/apache/custom_500.html to /var/www/html
+12:11:45 08/21/20 Copied /install/community-edition-setup/templates/apache/custom_500.html to /var/www/html
+12:11:45 08/21/20 Running: /bin/systemctl start apache2
+12:11:45 08/21/20 Run: /bin/systemctl start apache2 with result code: 1
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/mod_token_binding.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/deflate.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/filter.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/auth_basic.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/deflate.conf
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/dir.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/negotiation.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/authz_user.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/mod_token_binding.conf
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/negotiation.conf
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/autoindex.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/authn_file.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/autoindex.conf
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/status.load
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/dir.conf
+12:11:45 08/21/20 Running: unlink /etc/apache2/mods-enabled/status.conf
+12:11:45 08/21/20 Running: /bin/systemctl enable apache2
+12:11:45 08/21/20 Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+
+12:11:46 08/21/20 Copying oxauth.war into jetty webapps folder...
+12:11:46 08/21/20 Installing jetty service oxauth...
+12:11:46 08/21/20 Preparing oxauth service base folders
+12:11:46 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth
+12:11:46 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom
+12:11:46 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/pages
+12:11:46 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/i18n
+12:11:46 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/static
+12:11:46 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/oxauth/custom/libs
+12:11:46 08/21/20 Preparing oxauth service base configuration
+12:11:46 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/oxauth --add-to-start=server,deploy,annotations,resources,http,http-forwarded,threadpool,console-capture,jsp,websocket
+12:11:46 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:46 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/oxauth
+12:11:46 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/oxauth
+12:11:47 08/21/20 Writing file /install/community-edition-setup/output/jetty/oxauth
+12:11:47 08/21/20 Copying file /install/community-edition-setup/output/jetty/oxauth to /etc/default
+12:11:47 08/21/20 Copied /install/community-edition-setup/output/jetty/oxauth to /etc/default
+12:11:47 08/21/20 Running: /bin/chown root:root /etc/default/oxauth
+12:11:47 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/oxauth_web_resources.xml
+12:11:47 08/21/20 Writing file /install/community-edition-setup/output/jetty/oxauth_web_resources.xml
+12:11:47 08/21/20 Copying file /install/community-edition-setup/output/jetty/oxauth_web_resources.xml to /opt/gluu/jetty/oxauth/webapps
+12:11:47 08/21/20 Copied /install/community-edition-setup/output/jetty/oxauth_web_resources.xml to /opt/gluu/jetty/oxauth/webapps
+12:11:47 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/oxauth.xml
+12:11:47 08/21/20 Writing file /install/community-edition-setup/output/jetty/oxauth.xml
+12:11:47 08/21/20 Copying file /install/community-edition-setup/output/jetty/oxauth.xml to /opt/gluu/jetty/oxauth/webapps
+12:11:47 08/21/20 Copied /install/community-edition-setup/output/jetty/oxauth.xml to /opt/gluu/jetty/oxauth/webapps
+12:11:47 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/oxauth
+12:11:47 08/21/20 Running: /bin/systemctl enable oxauth
+12:11:47 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/oxauth.service → /lib/systemd/system/oxauth.service.
+
+12:11:47 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+12:11:47 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:47 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:47 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+12:11:47 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+12:11:47 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service oxauth
+12:11:47 08/21/20 Writing file /opt/gluu/jetty/oxauth/start.ini
+12:11:47 08/21/20 Running: cp -f /opt/gluu/jetty/oxauth/start.ini /opt/gluu/jetty/oxauth/start.ini.gluu-4.2.0-1~
+12:11:47 08/21/20 Copying file /opt/dist/gluu/oxauth.war to /opt/gluu/jetty/oxauth/webapps
+12:11:47 08/21/20 Copied /opt/dist/gluu/oxauth.war to /opt/gluu/jetty/oxauth/webapps
+12:11:47 08/21/20 Copying fido.war into jetty webapps folder...
+12:11:47 08/21/20 Installing jetty service fido2...
+12:11:47 08/21/20 Preparing fido2 service base folders
+12:11:47 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2
+12:11:47 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom
+12:11:47 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/pages
+12:11:47 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/i18n
+12:11:47 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/static
+12:11:47 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/fido2/custom/libs
+12:11:47 08/21/20 Preparing fido2 service base configuration
+12:11:47 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/fido2 --add-to-start=server,deploy,resources,http,http-forwarded,threadpool,console-capture,jsp
+12:11:48 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:48 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/fido2
+12:11:48 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/fido2
+12:11:48 08/21/20 Writing file /install/community-edition-setup/output/jetty/fido2
+12:11:48 08/21/20 Copying file /install/community-edition-setup/output/jetty/fido2 to /etc/default
+12:11:48 08/21/20 Copied /install/community-edition-setup/output/jetty/fido2 to /etc/default
+12:11:48 08/21/20 Running: /bin/chown root:root /etc/default/fido2
+12:11:48 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/fido2
+12:11:48 08/21/20 Running: /bin/systemctl enable fido2
+12:11:48 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/fido2.service → /lib/systemd/system/fido2.service.
+
+12:11:48 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+12:11:48 08/21/20 Running: cp -f /usr/lib/tmpfiles.d/jetty.conf /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-1~
+12:11:48 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:48 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:48 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+12:11:48 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+12:11:48 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service fido2
+12:11:48 08/21/20 Writing file /opt/gluu/jetty/fido2/start.ini
+12:11:48 08/21/20 Running: cp -f /opt/gluu/jetty/fido2/start.ini /opt/gluu/jetty/fido2/start.ini.gluu-4.2.0-1~
+12:11:48 08/21/20 Copying file /opt/dist/gluu/fido2.war to /opt/gluu/jetty/fido2/webapps
+12:11:49 08/21/20 Copied /opt/dist/gluu/fido2.war to /opt/gluu/jetty/fido2/webapps
+12:11:49 08/21/20 Copying identity.war into jetty webapps folder...
+12:11:49 08/21/20 Installing jetty service identity...
+12:11:49 08/21/20 Preparing identity service base folders
+12:11:49 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity
+12:11:49 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom
+12:11:49 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/pages
+12:11:49 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/i18n
+12:11:49 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/static
+12:11:49 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/identity/custom/libs
+12:11:49 08/21/20 Preparing identity service base configuration
+12:11:49 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/identity --add-to-start=server,deploy,annotations,resources,http,http-forwarded,threadpool,console-capture,jsp,websocket
+12:11:50 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : annotations     initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : transactions    transitively enabled
+INFO  : threadpool      initialized in ${jetty.base}/start.ini
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : websocket       initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : client          transitively enabled
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:50 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/identity
+12:11:50 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/identity
+12:11:50 08/21/20 Writing file /install/community-edition-setup/output/jetty/identity
+12:11:50 08/21/20 Copying file /install/community-edition-setup/output/jetty/identity to /etc/default
+12:11:50 08/21/20 Copied /install/community-edition-setup/output/jetty/identity to /etc/default
+12:11:50 08/21/20 Running: /bin/chown root:root /etc/default/identity
+12:11:50 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/identity_web_resources.xml
+12:11:50 08/21/20 Writing file /install/community-edition-setup/output/jetty/identity_web_resources.xml
+12:11:50 08/21/20 Copying file /install/community-edition-setup/output/jetty/identity_web_resources.xml to /opt/gluu/jetty/identity/webapps
+12:11:50 08/21/20 Copied /install/community-edition-setup/output/jetty/identity_web_resources.xml to /opt/gluu/jetty/identity/webapps
+12:11:50 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/identity.xml
+12:11:50 08/21/20 Writing file /install/community-edition-setup/output/jetty/identity.xml
+12:11:50 08/21/20 Copying file /install/community-edition-setup/output/jetty/identity.xml to /opt/gluu/jetty/identity/webapps
+12:11:50 08/21/20 Copied /install/community-edition-setup/output/jetty/identity.xml to /opt/gluu/jetty/identity/webapps
+12:11:50 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/identity
+12:11:50 08/21/20 Running: /bin/systemctl enable identity
+12:11:50 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/identity.service → /lib/systemd/system/identity.service.
+
+12:11:50 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+12:11:50 08/21/20 Running: cp -f /usr/lib/tmpfiles.d/jetty.conf /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-2~
+12:11:50 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:50 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:50 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+12:11:50 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+12:11:50 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service identity
+12:11:50 08/21/20 Writing file /opt/gluu/jetty/identity/start.ini
+12:11:50 08/21/20 Running: cp -f /opt/gluu/jetty/identity/start.ini /opt/gluu/jetty/identity/start.ini.gluu-4.2.0-1~
+12:11:50 08/21/20 Copying file /opt/dist/gluu/identity.war to /opt/gluu/jetty/identity/webapps
+12:11:52 08/21/20 Copied /opt/dist/gluu/identity.war to /opt/gluu/jetty/identity/webapps
+12:11:52 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service identity
+12:11:52 08/21/20 Writing file /opt/gluu/jetty/identity/start.ini
+12:11:52 08/21/20 Running: cp -f /opt/gluu/jetty/identity/start.ini /opt/gluu/jetty/identity/start.ini.gluu-4.2.0-2~
+12:11:52 08/21/20 Copying scim.war into jetty webapps folder...
+12:11:52 08/21/20 Installing jetty service scim...
+12:11:52 08/21/20 Preparing scim service base folders
+12:11:52 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim
+12:11:52 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom
+12:11:52 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/pages
+12:11:52 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/i18n
+12:11:52 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/static
+12:11:52 08/21/20 Running: /bin/mkdir -p /opt/gluu/jetty/scim/custom/libs
+12:11:52 08/21/20 Preparing scim service base configuration
+12:11:52 08/21/20 Running: /opt/jre/bin/java -jar /opt/jetty/start.jar jetty.home=/opt/jetty jetty.base=/opt/gluu/jetty/scim --add-to-start=server,deploy,resources,http,http-forwarded,console-capture,jsp
+12:11:53 08/21/20 INFO  : webapp          transitively enabled, ini template available with --add-to-start=webapp
+INFO  : server          initialized in ${jetty.base}/start.ini
+INFO  : mail            transitively enabled
+INFO  : servlet         transitively enabled
+INFO  : jsp             initialized in ${jetty.base}/start.ini
+INFO  : http-forwarded  initialized in ${jetty.base}/start.ini
+INFO  : resources       initialized in ${jetty.base}/start.ini
+INFO  : annotations     transitively enabled
+INFO  : transactions    transitively enabled
+INFO  : threadpool      transitively enabled, ini template available with --add-to-start=threadpool
+INFO  : plus            transitively enabled
+INFO  : deploy          initialized in ${jetty.base}/start.ini
+INFO  : security        transitively enabled
+INFO  : apache-jsp      transitively enabled
+INFO  : console-capture initialized in ${jetty.base}/start.ini
+INFO  : jndi            transitively enabled
+INFO  : http            initialized in ${jetty.base}/start.ini
+INFO  : bytebufferpool  transitively enabled, ini template available with --add-to-start=bytebufferpool
+MKDIR : ${jetty.base}/resources
+MKDIR : ${jetty.base}/webapps
+MKDIR : ${jetty.base}/logs
+INFO  : Base directory was modified
+
+12:11:53 08/21/20 Running: /bin/chown -R jetty:jetty /opt/gluu/jetty/scim
+12:11:53 08/21/20 Rendering template /install/community-edition-setup/templates/jetty/scim
+12:11:53 08/21/20 Writing file /install/community-edition-setup/output/jetty/scim
+12:11:53 08/21/20 Copying file /install/community-edition-setup/output/jetty/scim to /etc/default
+12:11:53 08/21/20 Copied /install/community-edition-setup/output/jetty/scim to /etc/default
+12:11:53 08/21/20 Running: /bin/chown root:root /etc/default/scim
+12:11:53 08/21/20 Running: /bin/chmod +x /opt/dist/scripts/scim
+12:11:53 08/21/20 Running: /bin/systemctl enable scim
+12:11:53 08/21/20 Created symlink /etc/systemd/system/multi-user.target.wants/scim.service → /lib/systemd/system/scim.service.
+
+12:11:53 08/21/20 Creating 'jetty.conf' tmpfiles daemon file
+12:11:53 08/21/20 Running: cp -f /usr/lib/tmpfiles.d/jetty.conf /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-3~
+12:11:53 08/21/20 Copying file /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:53 08/21/20 Copied /install/community-edition-setup/templates/jetty.conf.tmpfiles.d to /usr/lib/tmpfiles.d/jetty.conf
+12:11:53 08/21/20 Running: /bin/chown root:root /usr/lib/tmpfiles.d/jetty.conf
+12:11:53 08/21/20 Running: /bin/chmod 644 /usr/lib/tmpfiles.d/jetty.conf
+12:11:53 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service scim
+12:11:53 08/21/20 Writing file /opt/gluu/jetty/scim/start.ini
+12:11:53 08/21/20 Running: cp -f /opt/gluu/jetty/scim/start.ini /opt/gluu/jetty/scim/start.ini.gluu-4.2.0-1~
+12:11:53 08/21/20 Copying file /opt/dist/gluu/scim.war to /opt/gluu/jetty/scim/webapps
+12:11:53 08/21/20 Copied /opt/dist/gluu/scim.war to /opt/gluu/jetty/scim/webapps
+12:11:53 08/21/20 Seeting jetty parameter jetty.httpConfig.sendServerVersion=false for service scim
+12:11:53 08/21/20 Writing file /opt/gluu/jetty/scim/start.ini
+12:11:53 08/21/20 Running: cp -f /opt/gluu/jetty/scim/start.ini /opt/gluu/jetty/scim/start.ini.gluu-4.2.0-2~
+12:11:54 08/21/20 Install SAML Shibboleth IDP v3...
+12:11:54 08/21/20 Created dir: /etc/gluu/conf/shibboleth3
+12:11:54 08/21/20 Created dir: /opt/gluu/jetty/identity/conf/shibboleth3/idp
+12:11:54 08/21/20 Created dir: /opt/gluu/jetty/identity/conf/shibboleth3/sp
+12:11:54 08/21/20 Running: /opt/jre/bin/jar xf /opt/dist/gluu/shibboleth-idp.jar
+12:11:54 08/21/20 Removed dir: /opt/META-INF
+12:11:54 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/idp.properties
+12:11:54 08/21/20 Writing file /opt/shibboleth-idp/conf/idp.properties
+12:11:54 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/idp.properties /opt/shibboleth-idp/conf/idp.properties.gluu-4.2.0-1~
+12:11:54 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/ldap.properties
+12:11:55 08/21/20 Writing file /opt/shibboleth-idp/conf/ldap.properties
+12:11:55 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/ldap.properties /opt/shibboleth-idp/conf/ldap.properties.gluu-4.2.0-1~
+12:11:55 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/saml-nameid.properties
+12:11:55 08/21/20 Writing file /opt/shibboleth-idp/conf/saml-nameid.properties
+12:11:55 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/saml-nameid.properties /opt/shibboleth-idp/conf/saml-nameid.properties.gluu-4.2.0-1~
+12:11:55 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/services.properties
+12:11:55 08/21/20 Writing file /opt/shibboleth-idp/conf/services.properties
+12:11:55 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/services.properties /opt/shibboleth-idp/conf/services.properties.gluu-4.2.0-1~
+12:11:55 08/21/20 Rendering template /install/community-edition-setup/static/idp3/conf/authn/password-authn-config.xml
+12:11:55 08/21/20 Writing file /opt/shibboleth-idp/conf/authn/password-authn-config.xml
+12:11:55 08/21/20 Running: cp -f /opt/shibboleth-idp/conf/authn/password-authn-config.xml /opt/shibboleth-idp/conf/authn/password-authn-config.xml.gluu-4.2.0-1~
+12:11:55 08/21/20 Load certificate /etc/certs/idp-encryption.crt

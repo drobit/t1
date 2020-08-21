@@ -1,0 +1,8 @@
+{
+    "passportUmaClientId":"1501.2a81d8f0-04e8-4e7b-ad29-cf7e701a2417",
+    "passportUmaClientKeyId":"",
+    "passportUmaResourceId":"1504.a1b8a578-fe11-4054-8c49-c6adfc9e177c",
+    "passportUmaScope":"https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/oxauth/restv1/uma/scopes/passport_access",
+    "passportUmaClientKeyStoreFile":"/etc/certs/passport-rs.jks",
+    "passportUmaClientKeyStorePassword":"Mv3LVvsPNeGxo3P4kppD3w=="
+}

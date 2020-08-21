@@ -1,0 +1,22 @@
+# SCIM Scope
+dn: inum=8CAD-B06D,ou=scopes,o=gluu
+objectClass: oxAuthCustomScope
+objectClass: top
+displayName: SCIM Access
+inum: 8CAD-B06D
+oxId: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/oxauth/restv1/uma/scopes/scim_access
+oxUmaPolicyScriptDn: inum=2DAF-F9A5,ou=scripts,o=gluu
+oxScopeType: uma
+
+# SCIM Resource
+dn: oxId=1203.b53f46e7-c745-4dbe-b5fc-2125718e4f86,ou=resources,ou=uma,o=gluu
+objectClass: oxUmaResource
+objectClass: top
+displayName: SCIM Resource
+owner: inum=8c7336a8-4167-42b0-92d4-c53778277ee4,ou=people,o=gluu
+oxFaviconImage: http://www.gluu.org/img/scim_logo.png
+oxAssociatedClient: inum=1201.eae9e629-1dff-47e0-a065-e655c23fcfb5,ou=clients,o=gluu
+oxAuthUmaScope: inum=8CAD-B06D,ou=scopes,o=gluu
+oxId: 1203.b53f46e7-c745-4dbe-b5fc-2125718e4f86
+oxResource: https://instance-1.us-central1-a.c.nifty-canyon-287111.internal/identity/restv1/scim/v2
+oxRevision: 1

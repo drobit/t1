@@ -1,0 +1,26 @@
+dn: inum=8c7336a8-4167-42b0-92d4-c53778277ee4,ou=people,o=gluu
+objectClass: top
+objectClass: gluuPerson
+objectClass: gluuCustomPerson
+inum: 8c7336a8-4167-42b0-92d4-c53778277ee4
+uid: admin
+givenName: Admin
+middleName: Admin
+nickname: Admin
+preferredUsername: admin
+sn: User
+userPassword: {SSHA}J0OQREgQIn5Z0QBZC0PKhZla1gcI2jUh
+gluuStatus: active
+memberOf: inum=60B7,ou=groups,o=gluu
+displayName: Default Admin User
+mail: admin@instance-1.us-central1-a.c.nifty-canyon-287111.internal
+emailVerified: true
+telephoneNumber: 555-1212
+phoneNumberVerified: true
+profile: https://www.facebook.com/gluufederation/
+picture: https://www.gluu.org/wp-content/themes/gluu/images/gl.png
+website: https://www.gluu.org/
+gender: male
+birthdate: 20170907123010.485Z
+zoneinfo: America/Los_Angeles
+c: US

@@ -1,0 +1,156 @@
+File /install/community-edition-setup/output/system_profile_systemd was backed up as /install/community-edition-setup/output/system_profile_systemd.gluu-4.2.0-1~
+File /etc/profile was backed up as /etc/profile.gluu-4.2.0-1~
+File /etc/profile was backed up as /etc/profile.gluu-4.2.0-2~
+Setting permission of /etc/profile to 644
+User ldap with homedir /home/ldap was created
+User jetty with homedir /home/jetty was created
+User node with homedir /home/node was created
+User radius with homedir /opt/gluu/radius was created
+Group gluu was created
+User ldap was added to group gluu
+User jetty was added to group gluu
+User node was added to group gluu
+User radius was added to group gluu
+User ldap was added to group adm
+Setting permission of /tmp to ga+w
+Creating directory /etc/gluu/conf
+Creating directory /etc/certs
+Creating directory /install/community-edition-setup/output
+Creating directory /home/jetty/lib
+Creating directory /etc/gluu/conf/fido2
+Creating directory /etc/gluu/conf/fido2//authenticator_cert
+Creating directory /etc/gluu/conf/fido2//mds/cert
+Creating directory /etc/gluu/conf/fido2//mds/toc
+Creating directory /etc/gluu/conf/fido2//server_metadata
+Creating directory /var/gluu/photos
+Creating directory /var/gluu/identity/removed
+Creating directory /var/gluu/identity/cr-snapshots
+Making owner of /var/gluu/photos to root:gluu
+Making owner of /var/gluu/identity/removed to root:gluu
+Making owner of /var/gluu/identity/cr-snapshots to root:gluu
+Creating directory /var/run/jetty
+Setting permission of /var/run/jetty to 775
+Making group of /var/run/jetty to jetty
+File /install/community-edition-setup/output/passport_oxtrust_config.son was backed up as /install/community-edition-setup/output/passport_oxtrust_config.son.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxauth-config.json was backed up as /install/community-edition-setup/output/oxauth-config.json.gluu-4.2.0-1~
+File /install/community-edition-setup/output/python.txt was backed up as /install/community-edition-setup/output/python.txt.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxtrust-config.json was backed up as /install/community-edition-setup/output/oxtrust-config.json.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxtrust-cache-refresh.json was backed up as /install/community-edition-setup/output/oxtrust-cache-refresh.json.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxtrust-import-person.json was backed up as /install/community-edition-setup/output/oxtrust-import-person.json.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxidp-config.json was backed up as /install/community-edition-setup/output/oxidp-config.json.gluu-4.2.0-1~
+File /install/community-edition-setup/output/gluu-ldap.properties was backed up as /install/community-edition-setup/output/gluu-ldap.properties.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxauth-static-conf.json was backed up as /install/community-edition-setup/output/oxauth-static-conf.json.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxTrustLogRotationConfiguration.xml was backed up as /install/community-edition-setup/output/oxTrustLogRotationConfiguration.xml.gluu-4.2.0-1~
+File /install/community-edition-setup/output/opendj-setup.properties was backed up as /install/community-edition-setup/output/opendj-setup.properties.gluu-4.2.0-1~
+File /install/community-edition-setup/output/httpd.conf was backed up as /install/community-edition-setup/output/httpd.conf.gluu-4.2.0-1~
+File /install/community-edition-setup/output/https_gluu.conf was backed up as /install/community-edition-setup/output/https_gluu.conf.gluu-4.2.0-1~
+File /install/community-edition-setup/output/httpd_2.4.conf was backed up as /install/community-edition-setup/output/httpd_2.4.conf.gluu-4.2.0-1~
+File /install/community-edition-setup/output/hostname was backed up as /install/community-edition-setup/output/hostname.gluu-4.2.0-1~
+File /install/community-edition-setup/output/base.ldif was backed up as /install/community-edition-setup/output/base.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/attributes.ldif was backed up as /install/community-edition-setup/output/attributes.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/scopes.ldif was backed up as /install/community-edition-setup/output/scopes.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/clients.ldif was backed up as /install/community-edition-setup/output/clients.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/people.ldif was backed up as /install/community-edition-setup/output/people.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/groups.ldif was backed up as /install/community-edition-setup/output/groups.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/scripts.ldif was backed up as /install/community-edition-setup/output/scripts.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/scim.ldif was backed up as /install/community-edition-setup/output/scim.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/scim_clients.ldif was backed up as /install/community-edition-setup/output/scim_clients.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxidp.ldif was backed up as /install/community-edition-setup/output/oxidp.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/network was backed up as /install/community-edition-setup/output/network.gluu-4.2.0-1~
+File /install/community-edition-setup/output/scripts_casa.ldif was backed up as /install/community-edition-setup/output/scripts_casa.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxtrust_api.ldif was backed up as /install/community-edition-setup/output/oxtrust_api.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/oxtrust_api_clients.ldif was backed up as /install/community-edition-setup/output/oxtrust_api_clients.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/gluu.properties was backed up as /install/community-edition-setup/output/gluu.properties.gluu-4.2.0-1~
+File /install/community-edition-setup/output/datasource.properties was backed up as /install/community-edition-setup/output/datasource.properties.gluu-4.2.0-1~
+File /install/community-edition-setup/output/casa.ldif was backed up as /install/community-edition-setup/output/casa.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/fido2-dynamic-conf.json was backed up as /install/community-edition-setup/output/fido2-dynamic-conf.json.gluu-4.2.0-1~
+File /install/community-edition-setup/output/fido2-static-conf.json was backed up as /install/community-edition-setup/output/fido2-static-conf.json.gluu-4.2.0-1~
+Making owner of /etc/certs/httpd.key.orig to jetty:jetty
+Setting permission of /etc/certs/httpd.key.orig to 700
+Making owner of /etc/certs/httpd.key to jetty:jetty
+Setting permission of /etc/certs/httpd.key to 700
+Making owner of /etc/certs/shibIDP.key.orig to jetty:jetty
+Setting permission of /etc/certs/shibIDP.key.orig to 700
+Making owner of /etc/certs/shibIDP.key to jetty:jetty
+Setting permission of /etc/certs/shibIDP.key to 700
+Making owner of /etc/certs/idp-encryption.key.orig to jetty:jetty
+Setting permission of /etc/certs/idp-encryption.key.orig to 700
+Making owner of /etc/certs/idp-encryption.key to jetty:jetty
+Setting permission of /etc/certs/idp-encryption.key to 700
+Making owner of /etc/certs/idp-signing.key.orig to jetty:jetty
+Setting permission of /etc/certs/idp-signing.key.orig to 700
+Making owner of /etc/certs/idp-signing.key to jetty:jetty
+Setting permission of /etc/certs/idp-signing.key to 700
+Making owner of /etc/certs/passport-sp.key.orig to ldap:ldap
+Setting permission of /etc/certs/passport-sp.key.orig to 700
+Making owner of /etc/certs/passport-sp.key to ldap:ldap
+Setting permission of /etc/certs/passport-sp.key to 700
+Making owner of /etc/certs/shibIDP.pkcs12 to jetty:jetty
+Setting permission of /etc/certs/shibIDP.pkcs12 to 700
+Making owner of /etc/certs/shibIDP.jks to jetty:jetty
+Setting permission of /etc/certs/shibIDP.jks to 700
+Making owner of /etc/certs to jetty:jetty
+Setting permission of /etc/certs to 500
+File /install/community-edition-setup/output/oxauth-keys.json was backed up as /install/community-edition-setup/output/oxauth-keys.json.gluu-4.2.0-1~
+Making owner of /install/community-edition-setup/output/oxauth-keys.json to jetty:jetty
+Setting permission of /install/community-edition-setup/output/oxauth-keys.json to 600
+File /install/community-edition-setup/output/configuration.ldif was backed up as /install/community-edition-setup/output/configuration.ldif.gluu-4.2.0-1~
+File /install/community-edition-setup/output/fido2.ldif was backed up as /install/community-edition-setup/output/fido2.ldif.gluu-4.2.0-1~
+File /etc/hostname was backed up as /etc/hostname.gluu-4.2.0-1~
+Setting permission of 644, /etc/hostname to -f
+Setting permission of /etc/hosts to 644
+File /etc/security/limits.conf was backed up as /etc/security/limits.conf.gluu-4.2.0-1~
+File /etc/security/limits.conf was backed up as /etc/security/limits.conf.gluu-4.2.0-2~
+File /etc/security/limits.conf was backed up as /etc/security/limits.conf.gluu-4.2.0-3~
+File /etc/security/limits.conf was backed up as /etc/security/limits.conf.gluu-4.2.0-4~
+File /etc/security/limits.conf was backed up as /etc/security/limits.conf.gluu-4.2.0-5~
+File /etc/security/limits.conf was backed up as /etc/security/limits.conf.gluu-4.2.0-6~
+File /etc/gluu/conf/gluu-ldap.properties/gluu-ldap.properties was backed up as /etc/gluu/conf/gluu-ldap.properties/gluu-ldap.properties.gluu-4.2.0-1~
+File /etc/gluu/conf/oxTrustLogRotationConfiguration.xml/oxTrustLogRotationConfiguration.xml was backed up as /etc/gluu/conf/oxTrustLogRotationConfiguration.xml/oxTrustLogRotationConfiguration.xml.gluu-4.2.0-1~
+File /etc/gluu/conf/gluu.properties/gluu.properties was backed up as /etc/gluu/conf/gluu.properties/gluu.properties.gluu-4.2.0-1~
+File /install/community-edition-setup/output/node//passport was backed up as /install/community-edition-setup/output/node//passport.gluu-4.2.0-1~
+Making owner of /home/ldap/.pw to ldap:ldap
+Making owner of /etc/certs to root:gluu
+Making owner of /etc/gluu/conf to root:gluu
+Making owner of /var/gluu to root:gluu
+Setting permission of /etc/certs to 440
+Setting permission of /etc/certs to a+X
+Making owner of /etc/certs/oxauth-keys.jks to jetty:jetty
+Setting permission of /etc/certs/oxauth-keys.jks to 660
+File /etc/systemd/system/opendj.service was backed up as /etc/systemd/system/opendj.service.gluu-4.2.0-1~
+File /etc/apache2/sites-available/https_gluu.conf/https_gluu.conf was backed up as /etc/apache2/sites-available/https_gluu.conf/https_gluu.conf.gluu-4.2.0-1~
+File /var/www/html/index.html was backed up as /var/www/html/index.html.gluu-4.2.0-1~
+File /etc/apache2/mods-available/alias.conf was backed up as /etc/apache2/mods-available/alias.conf.gluu-4.2.0-1~
+File /var/www/html/custom_404.html was backed up as /var/www/html/custom_404.html.gluu-4.2.0-1~
+File /var/www/html/custom_502.html was backed up as /var/www/html/custom_502.html.gluu-4.2.0-1~
+File /var/www/html/custom_503.html was backed up as /var/www/html/custom_503.html.gluu-4.2.0-1~
+File /var/www/html/custom_504.html was backed up as /var/www/html/custom_504.html.gluu-4.2.0-1~
+File /var/www/html/custom_500.html was backed up as /var/www/html/custom_500.html.gluu-4.2.0-1~
+File /install/community-edition-setup/output/jetty/oxauth was backed up as /install/community-edition-setup/output/jetty/oxauth.gluu-4.2.0-1~
+File /etc/default/oxauth was backed up as /etc/default/oxauth.gluu-4.2.0-1~
+Making owner of /etc/default/oxauth to root:root
+File /install/community-edition-setup/output/jetty/oxauth_web_resources.xml was backed up as /install/community-edition-setup/output/jetty/oxauth_web_resources.xml.gluu-4.2.0-1~
+File /install/community-edition-setup/output/jetty/oxauth.xml was backed up as /install/community-edition-setup/output/jetty/oxauth.xml.gluu-4.2.0-1~
+File /usr/lib/tmpfiles.d/jetty.conf/jetty.conf.tmpfiles.d was backed up as /usr/lib/tmpfiles.d/jetty.conf/jetty.conf.tmpfiles.d.gluu-4.2.0-1~
+Making owner of /usr/lib/tmpfiles.d/jetty.conf to root:root
+Setting permission of /usr/lib/tmpfiles.d/jetty.conf to 644
+File /install/community-edition-setup/output/jetty/fido2 was backed up as /install/community-edition-setup/output/jetty/fido2.gluu-4.2.0-1~
+File /etc/default/fido2 was backed up as /etc/default/fido2.gluu-4.2.0-1~
+Making owner of /etc/default/fido2 to root:root
+File /usr/lib/tmpfiles.d/jetty.conf was backed up as /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-1~
+Making owner of /usr/lib/tmpfiles.d/jetty.conf to root:root
+Setting permission of /usr/lib/tmpfiles.d/jetty.conf to 644
+File /install/community-edition-setup/output/jetty/identity was backed up as /install/community-edition-setup/output/jetty/identity.gluu-4.2.0-1~
+File /etc/default/identity was backed up as /etc/default/identity.gluu-4.2.0-1~
+Making owner of /etc/default/identity to root:root
+File /install/community-edition-setup/output/jetty/identity_web_resources.xml was backed up as /install/community-edition-setup/output/jetty/identity_web_resources.xml.gluu-4.2.0-1~
+File /install/community-edition-setup/output/jetty/identity.xml was backed up as /install/community-edition-setup/output/jetty/identity.xml.gluu-4.2.0-1~
+File /usr/lib/tmpfiles.d/jetty.conf was backed up as /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-2~
+Making owner of /usr/lib/tmpfiles.d/jetty.conf to root:root
+Setting permission of /usr/lib/tmpfiles.d/jetty.conf to 644
+File /install/community-edition-setup/output/jetty/scim was backed up as /install/community-edition-setup/output/jetty/scim.gluu-4.2.0-1~
+File /etc/default/scim was backed up as /etc/default/scim.gluu-4.2.0-1~
+Making owner of /etc/default/scim to root:root
+File /usr/lib/tmpfiles.d/jetty.conf was backed up as /usr/lib/tmpfiles.d/jetty.conf.gluu-4.2.0-3~
+Making owner of /usr/lib/tmpfiles.d/jetty.conf to root:root
+Setting permission of /usr/lib/tmpfiles.d/jetty.conf to 644
